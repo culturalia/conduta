@@ -170,7 +170,7 @@ export default function FAQPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section className="cta-section" id="diagnostico" style={{ minHeight: '60vh' }}>
+      <section className="cta-section" id="diagnostico">
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Ainda tem dúvidas?</span>
           <h2>
