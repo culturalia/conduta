@@ -613,7 +613,7 @@ export default function Home() {
       {/* ── NOSSA CONDUTA (values teaser) ── */}
       <section className="section-pad" id="nossa-conduta" style={{ background: '#FFFFFF' }}>
         <div className="container">
-          <div className="services-header reveal" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
+          <div className="reveal" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
             <span className="eyebrow">Nossa conduta</span>
             <h2 className="section-title">
               Nosso nome não é acidental.
