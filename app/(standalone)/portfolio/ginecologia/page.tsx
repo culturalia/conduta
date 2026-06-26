@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Dra. Juliana Mendes — Reprodução Humana | Ribeirão Preto",
+  title: "Dra. Carolina Ribeiro — Ginecologista e Obstetra | Ribeirão Preto",
   description:
-    "Dra. Juliana Mendes, Especialista em Reprodução Humana em Ribeirão Preto. FIV, ICSI, preservação de fertilidade, inseminação artificial. Realizando o sonho de ser mãe e pai.",
+    "Dra. Carolina Ribeiro, Ginecologista e Obstetra em Ribeirão Preto. Pré-natal, parto humanizado, ginecologia geral, contracepção, menopausa. Cuidando de cada fase da sua vida.",
 };
 
 const styles = `
 /* ── RESET SCOPE ── */
-.demo-fertil-root *,
-.demo-fertil-root *::before,
-.demo-fertil-root *::after {
+.demo-go-root *,
+.demo-go-root *::before,
+.demo-go-root *::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.demo-fertil-root {
+.demo-go-root {
   font-family: var(--font-inter), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #1A1A2E;
   background: #FAF5FF;
@@ -27,20 +27,20 @@ const styles = `
   line-height: 1.7;
 }
 
-.demo-fertil-root a {
+.demo-go-root a {
   text-decoration: none;
   color: inherit;
 }
-.demo-fertil-root a[class*="btn-primary"] { color: #FFFFFF; }
-.demo-fertil-root a[class*="btn-white"] { color: var(--violet); }
+.demo-go-root a[class*="btn-primary"] { color: #FFFFFF; }
+.demo-go-root a[class*="btn-white"] { color: var(--violet); }
 
-.demo-fertil-root img {
+.demo-go-root img {
   max-width: 100%;
   display: block;
 }
 
 /* ── VARIABLES ── */
-.demo-fertil-root {
+.demo-go-root {
   --violet: #7C3AED;
   --violet-hover: #6D28D9;
   --violet-dark: #5B21B6;
@@ -63,21 +63,21 @@ const styles = `
 }
 
 /* ── UTILITIES ── */
-.demo-fertil-container {
+.demo-go-container {
   max-width: 1120px;
   margin: 0 auto;
   padding: 0 24px;
 }
 
-.demo-fertil-section {
+.demo-go-section {
   padding: 96px 0;
 }
 
-.demo-fertil-section-sm {
+.demo-go-section-sm {
   padding: 72px 0;
 }
 
-.demo-fertil-section-title {
+.demo-go-section-title {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 2.25rem;
   font-weight: 700;
@@ -87,14 +87,14 @@ const styles = `
   margin-bottom: 12px;
 }
 
-.demo-fertil-section-subtitle {
+.demo-go-section-subtitle {
   font-size: 1.0625rem;
   color: var(--text-secondary);
   max-width: 560px;
   line-height: 1.7;
 }
 
-.demo-fertil-eyebrow {
+.demo-go-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -106,7 +106,7 @@ const styles = `
   margin-bottom: 16px;
 }
 
-.demo-fertil-eyebrow::before {
+.demo-go-eyebrow::before {
   content: "";
   display: inline-block;
   width: 24px;
@@ -116,7 +116,7 @@ const styles = `
 }
 
 /* ── BUTTON ── */
-.demo-fertil-btn {
+.demo-go-btn {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -131,42 +131,42 @@ const styles = `
   text-decoration: none;
 }
 
-.demo-fertil-btn-primary {
+.demo-go-btn-primary {
   background: var(--violet);
   color: var(--white);
 }
 
-.demo-fertil-btn-primary:hover {
+.demo-go-btn-primary:hover {
   background: var(--violet-hover);
   transform: translateY(-1px);
   box-shadow: 0 6px 24px rgba(124, 58, 237, 0.3);
 }
 
-.demo-fertil-btn-outline {
+.demo-go-btn-outline {
   background: transparent;
   color: var(--violet);
   border: 2px solid var(--violet-border);
 }
 
-.demo-fertil-btn-outline:hover {
+.demo-go-btn-outline:hover {
   background: var(--violet);
   color: var(--white);
   border-color: var(--violet);
   transform: translateY(-1px);
 }
 
-.demo-fertil-btn-white {
+.demo-go-btn-white {
   background: var(--white);
   color: var(--violet);
 }
 
-.demo-fertil-btn-white:hover {
+.demo-go-btn-white:hover {
   background: var(--violet-light);
   transform: translateY(-1px);
 }
 
 /* ── NAVIGATION ── */
-.demo-fertil-nav {
+.demo-go-nav {
   position: sticky;
   top: 0;
   z-index: 100;
@@ -176,21 +176,21 @@ const styles = `
   border-bottom: 1px solid var(--violet-border);
 }
 
-.demo-fertil-nav-inner {
+.demo-go-nav-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 72px;
 }
 
-.demo-fertil-logo {
+.demo-go-logo {
   display: flex;
   flex-direction: column;
   gap: 1px;
   text-decoration: none;
 }
 
-.demo-fertil-logo-name {
+.demo-go-logo-name {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 1.0625rem;
   font-weight: 700;
@@ -199,7 +199,7 @@ const styles = `
   letter-spacing: -0.01em;
 }
 
-.demo-fertil-logo-specialty {
+.demo-go-logo-specialty {
   font-size: 0.75rem;
   font-weight: 500;
   color: var(--violet);
@@ -207,39 +207,39 @@ const styles = `
   text-transform: uppercase;
 }
 
-.demo-fertil-nav-links {
+.demo-go-nav-links {
   display: flex;
   align-items: center;
   gap: 32px;
   list-style: none;
 }
 
-.demo-fertil-nav-links a {
+.demo-go-nav-links a {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--text-secondary);
   transition: color 0.2s;
 }
 
-.demo-fertil-nav-links a:hover {
+.demo-go-nav-links a:hover {
   color: var(--violet);
 }
 
-.demo-fertil-nav-right {
+.demo-go-nav-right {
   display: flex;
   align-items: center;
   gap: 16px;
 }
 
 /* ── HERO ── */
-.demo-fertil-hero {
+.demo-go-hero {
   background: linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 30%, #FDF2F8 60%, #FAF5FF 100%);
   padding: 112px 0 96px;
   position: relative;
   overflow: hidden;
 }
 
-.demo-fertil-hero::before {
+.demo-go-hero::before {
   content: "";
   position: absolute;
   top: -30%;
@@ -251,7 +251,7 @@ const styles = `
   pointer-events: none;
 }
 
-.demo-fertil-hero::after {
+.demo-go-hero::after {
   content: "";
   position: absolute;
   bottom: -20%;
@@ -263,7 +263,7 @@ const styles = `
   pointer-events: none;
 }
 
-.demo-fertil-hero-inner {
+.demo-go-hero-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
@@ -272,7 +272,7 @@ const styles = `
   z-index: 1;
 }
 
-.demo-fertil-hero-badge {
+.demo-go-hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -287,21 +287,21 @@ const styles = `
   box-shadow: 0 2px 8px rgba(124, 58, 237, 0.08);
 }
 
-.demo-fertil-hero-badge-dot {
+.demo-go-hero-badge-dot {
   width: 8px;
   height: 8px;
   background: var(--violet);
   border-radius: 50%;
   flex-shrink: 0;
-  animation: demo-fertil-pulse 2s ease-in-out infinite;
+  animation: demo-go-pulse 2s ease-in-out infinite;
 }
 
-@keyframes demo-fertil-pulse {
+@keyframes demo-go-pulse {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.4; }
 }
 
-.demo-fertil-hero-title {
+.demo-go-hero-title {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 3.25rem;
   font-weight: 800;
@@ -311,14 +311,14 @@ const styles = `
   margin-bottom: 20px;
 }
 
-.demo-fertil-hero-title span {
+.demo-go-hero-title span {
   background: linear-gradient(135deg, var(--violet) 0%, var(--rose) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-.demo-fertil-hero-subtitle {
+.demo-go-hero-subtitle {
   font-size: 1.125rem;
   color: var(--text-secondary);
   line-height: 1.7;
@@ -326,14 +326,14 @@ const styles = `
   max-width: 480px;
 }
 
-.demo-fertil-hero-actions {
+.demo-go-hero-actions {
   display: flex;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-.demo-fertil-hero-stats {
+.demo-go-hero-stats {
   display: flex;
   gap: 36px;
   margin-top: 48px;
@@ -341,13 +341,13 @@ const styles = `
   border-top: 1px solid var(--violet-border);
 }
 
-.demo-fertil-stat-item {
+.demo-go-stat-item {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.demo-fertil-stat-number {
+.demo-go-stat-number {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 1.625rem;
   font-weight: 800;
@@ -358,21 +358,21 @@ const styles = `
   line-height: 1;
 }
 
-.demo-fertil-stat-label {
+.demo-go-stat-label {
   font-size: 0.8125rem;
   color: var(--text-muted);
   font-weight: 500;
 }
 
 /* Hero visual side */
-.demo-fertil-hero-visual {
+.demo-go-hero-visual {
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
 }
 
-.demo-fertil-hero-photo {
+.demo-go-hero-photo {
   width: 340px;
   height: 420px;
   border-radius: 24px;
@@ -386,7 +386,7 @@ const styles = `
   position: relative;
 }
 
-.demo-fertil-hero-photo-img {
+.demo-go-hero-photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -394,7 +394,7 @@ const styles = `
   display: block;
 }
 
-.demo-fertil-hero-card {
+.demo-go-hero-card {
   position: absolute;
   background: white;
   border-radius: 14px;
@@ -405,17 +405,17 @@ const styles = `
   gap: 10px;
 }
 
-.demo-fertil-hero-card-left {
+.demo-go-hero-card-left {
   bottom: 32px;
   left: -40px;
 }
 
-.demo-fertil-hero-card-right {
+.demo-go-hero-card-right {
   top: 32px;
   right: -40px;
 }
 
-.demo-fertil-hero-card-icon {
+.demo-go-hero-card-icon {
   width: 40px;
   height: 40px;
   border-radius: 10px;
@@ -427,13 +427,13 @@ const styles = `
   flex-shrink: 0;
 }
 
-.demo-fertil-hero-card-text {
+.demo-go-hero-card-text {
   display: flex;
   flex-direction: column;
   gap: 1px;
 }
 
-.demo-fertil-hero-card-value {
+.demo-go-hero-card-value {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 0.9375rem;
   font-weight: 700;
@@ -441,31 +441,31 @@ const styles = `
   line-height: 1.2;
 }
 
-.demo-fertil-hero-card-desc {
+.demo-go-hero-card-desc {
   font-size: 0.75rem;
   color: var(--text-muted);
 }
 
 /* ── SOBRE ── */
-.demo-fertil-sobre {
+.demo-go-sobre {
   background: var(--white);
 }
 
-.demo-fertil-sobre-inner {
+.demo-go-sobre-inner {
   display: grid;
   grid-template-columns: 1fr 1.3fr;
   gap: 72px;
   align-items: center;
 }
 
-.demo-fertil-sobre-photo-wrap {
+.demo-go-sobre-photo-wrap {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 24px;
 }
 
-.demo-fertil-sobre-photo {
+.demo-go-sobre-photo {
   width: 280px;
   height: 340px;
   border-radius: 20px;
@@ -479,7 +479,7 @@ const styles = `
   position: relative;
 }
 
-.demo-fertil-sobre-photo-img {
+.demo-go-sobre-photo-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -487,7 +487,7 @@ const styles = `
   display: block;
 }
 
-.demo-fertil-crm-badge {
+.demo-go-crm-badge {
   background: var(--violet-light);
   border: 1px solid var(--violet-border);
   border-radius: 10px;
@@ -495,7 +495,7 @@ const styles = `
   text-align: center;
 }
 
-.demo-fertil-crm-label {
+.demo-go-crm-label {
   font-size: 0.75rem;
   color: var(--text-muted);
   text-transform: uppercase;
@@ -504,7 +504,7 @@ const styles = `
   display: block;
 }
 
-.demo-fertil-crm-value {
+.demo-go-crm-value {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 0.9375rem;
   font-weight: 700;
@@ -513,19 +513,19 @@ const styles = `
   margin-top: 2px;
 }
 
-.demo-fertil-sobre-content {
+.demo-go-sobre-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
 
-.demo-fertil-sobre-bio {
+.demo-go-sobre-bio {
   font-size: 1.0625rem;
   color: var(--text-secondary);
   line-height: 1.8;
 }
 
-.demo-fertil-sobre-list {
+.demo-go-sobre-list {
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -533,7 +533,7 @@ const styles = `
   margin-top: 4px;
 }
 
-.demo-fertil-sobre-list li {
+.demo-go-sobre-list li {
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -542,7 +542,7 @@ const styles = `
   line-height: 1.5;
 }
 
-.demo-fertil-check {
+.demo-go-check {
   width: 20px;
   height: 20px;
   background: var(--violet-light);
@@ -554,20 +554,20 @@ const styles = `
   margin-top: 1px;
 }
 
-.demo-fertil-check svg {
+.demo-go-check svg {
   width: 11px;
   height: 11px;
   color: var(--violet);
 }
 
-.demo-fertil-tags {
+.demo-go-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 4px;
 }
 
-.demo-fertil-tag {
+.demo-go-tag {
   background: var(--violet-light);
   border: 1px solid var(--violet-border);
   color: #5B21B6;
@@ -578,26 +578,26 @@ const styles = `
 }
 
 /* ── TRATAMENTOS ── */
-.demo-fertil-tratamentos {
+.demo-go-tratamentos {
   background: var(--bg);
 }
 
-.demo-fertil-tratamentos-header {
+.demo-go-tratamentos-header {
   text-align: center;
   margin-bottom: 56px;
 }
 
-.demo-fertil-tratamentos-header .demo-fertil-section-subtitle {
+.demo-go-tratamentos-header .demo-go-section-subtitle {
   margin: 0 auto;
 }
 
-.demo-fertil-trat-grid {
+.demo-go-trat-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.demo-fertil-trat-card {
+.demo-go-trat-card {
   background: var(--white);
   border-radius: var(--radius);
   padding: 32px 28px;
@@ -609,7 +609,7 @@ const styles = `
   overflow: hidden;
 }
 
-.demo-fertil-trat-card::before {
+.demo-go-trat-card::before {
   content: "";
   position: absolute;
   top: 0;
@@ -622,17 +622,17 @@ const styles = `
   transition: transform 0.35s ease;
 }
 
-.demo-fertil-trat-card:hover {
+.demo-go-trat-card:hover {
   box-shadow: var(--shadow-hover);
   border-color: var(--violet-border);
   transform: translateY(-4px);
 }
 
-.demo-fertil-trat-card:hover::before {
+.demo-go-trat-card:hover::before {
   transform: scaleX(1);
 }
 
-.demo-fertil-trat-icon {
+.demo-go-trat-icon {
   width: 52px;
   height: 52px;
   background: var(--violet-light);
@@ -643,13 +643,13 @@ const styles = `
   margin-bottom: 20px;
 }
 
-.demo-fertil-trat-icon svg {
+.demo-go-trat-icon svg {
   width: 24px;
   height: 24px;
   color: var(--violet);
 }
 
-.demo-fertil-trat-name {
+.demo-go-trat-name {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
@@ -658,13 +658,13 @@ const styles = `
   line-height: 1.3;
 }
 
-.demo-fertil-trat-desc {
+.demo-go-trat-desc {
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
 
-.demo-fertil-trat-link {
+.demo-go-trat-link {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -675,25 +675,25 @@ const styles = `
   transition: gap 0.2s;
 }
 
-.demo-fertil-trat-card:hover .demo-fertil-trat-link {
+.demo-go-trat-card:hover .demo-go-trat-link {
   gap: 10px;
 }
 
 /* ── JORNADA ── */
-.demo-fertil-jornada {
+.demo-go-jornada {
   background: var(--white);
 }
 
-.demo-fertil-jornada-header {
+.demo-go-jornada-header {
   text-align: center;
   margin-bottom: 64px;
 }
 
-.demo-fertil-jornada-header .demo-fertil-section-subtitle {
+.demo-go-jornada-header .demo-go-section-subtitle {
   margin: 0 auto;
 }
 
-.demo-fertil-timeline {
+.demo-go-timeline {
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -702,7 +702,7 @@ const styles = `
   margin: 0 auto;
 }
 
-.demo-fertil-timeline::before {
+.demo-go-timeline::before {
   content: "";
   position: absolute;
   left: 28px;
@@ -713,7 +713,7 @@ const styles = `
   border-radius: 2px;
 }
 
-.demo-fertil-timeline-step {
+.demo-go-timeline-step {
   display: flex;
   gap: 28px;
   align-items: flex-start;
@@ -721,11 +721,11 @@ const styles = `
   padding-bottom: 40px;
 }
 
-.demo-fertil-timeline-step:last-child {
+.demo-go-timeline-step:last-child {
   padding-bottom: 0;
 }
 
-.demo-fertil-timeline-marker {
+.demo-go-timeline-marker {
   width: 56px;
   height: 56px;
   border-radius: 50%;
@@ -738,19 +738,19 @@ const styles = `
   box-shadow: 0 4px 16px rgba(124, 58, 237, 0.2);
 }
 
-.demo-fertil-timeline-number {
+.demo-go-timeline-number {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 1.125rem;
   font-weight: 800;
   color: var(--white);
 }
 
-.demo-fertil-timeline-content {
+.demo-go-timeline-content {
   padding-top: 8px;
   flex: 1;
 }
 
-.demo-fertil-timeline-title {
+.demo-go-timeline-title {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
@@ -759,7 +759,7 @@ const styles = `
   line-height: 1.3;
 }
 
-.demo-fertil-timeline-subtitle {
+.demo-go-timeline-subtitle {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--violet);
@@ -768,33 +768,33 @@ const styles = `
   letter-spacing: 0.04em;
 }
 
-.demo-fertil-timeline-desc {
+.demo-go-timeline-desc {
   font-size: 0.9375rem;
   color: var(--text-secondary);
   line-height: 1.7;
 }
 
 /* ── PARA QUEM ── */
-.demo-fertil-paraquem {
+.demo-go-paraquem {
   background: var(--accent-bg);
 }
 
-.demo-fertil-paraquem-header {
+.demo-go-paraquem-header {
   text-align: center;
   margin-bottom: 56px;
 }
 
-.demo-fertil-paraquem-header .demo-fertil-section-subtitle {
+.demo-go-paraquem-header .demo-go-section-subtitle {
   margin: 0 auto;
 }
 
-.demo-fertil-paraquem-grid {
+.demo-go-paraquem-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
 }
 
-.demo-fertil-paraquem-card {
+.demo-go-paraquem-card {
   background: var(--white);
   border-radius: var(--radius);
   padding: 32px 24px;
@@ -804,13 +804,13 @@ const styles = `
   transition: all 0.3s ease;
 }
 
-.demo-fertil-paraquem-card:hover {
+.demo-go-paraquem-card:hover {
   border-color: var(--violet-border);
   box-shadow: var(--shadow-hover);
   transform: translateY(-3px);
 }
 
-.demo-fertil-paraquem-icon {
+.demo-go-paraquem-icon {
   width: 60px;
   height: 60px;
   border-radius: 16px;
@@ -821,13 +821,13 @@ const styles = `
   margin: 0 auto 18px;
 }
 
-.demo-fertil-paraquem-icon svg {
+.demo-go-paraquem-icon svg {
   width: 28px;
   height: 28px;
   color: var(--violet);
 }
 
-.demo-fertil-paraquem-name {
+.demo-go-paraquem-name {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 1rem;
   font-weight: 700;
@@ -836,33 +836,33 @@ const styles = `
   line-height: 1.3;
 }
 
-.demo-fertil-paraquem-desc {
+.demo-go-paraquem-desc {
   font-size: 0.875rem;
   color: var(--text-secondary);
   line-height: 1.6;
 }
 
 /* ── DEPOIMENTOS ── */
-.demo-fertil-depoimentos {
+.demo-go-depoimentos {
   background: var(--white);
 }
 
-.demo-fertil-depoimentos-header {
+.demo-go-depoimentos-header {
   text-align: center;
   margin-bottom: 56px;
 }
 
-.demo-fertil-depoimentos-header .demo-fertil-section-subtitle {
+.demo-go-depoimentos-header .demo-go-section-subtitle {
   margin: 0 auto;
 }
 
-.demo-fertil-dep-grid {
+.demo-go-dep-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.demo-fertil-dep-card {
+.demo-go-dep-card {
   background: linear-gradient(145deg, var(--violet-light) 0%, var(--rose-light) 100%);
   border: 1px solid var(--violet-border);
   border-radius: var(--radius);
@@ -873,19 +873,19 @@ const styles = `
   transition: all 0.3s ease;
 }
 
-.demo-fertil-dep-card:hover {
+.demo-go-dep-card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-3px);
 }
 
-.demo-fertil-dep-hearts {
+.demo-go-dep-hearts {
   display: flex;
   gap: 4px;
   color: var(--rose);
   font-size: 0.875rem;
 }
 
-.demo-fertil-dep-quote {
+.demo-go-dep-quote {
   font-size: 0.9375rem;
   color: var(--dark);
   line-height: 1.75;
@@ -893,7 +893,7 @@ const styles = `
   flex: 1;
 }
 
-.demo-fertil-dep-author {
+.demo-go-dep-author {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -901,7 +901,7 @@ const styles = `
   border-top: 1px solid var(--violet-border);
 }
 
-.demo-fertil-dep-avatar {
+.demo-go-dep-avatar {
   width: 40px;
   height: 40px;
   background: linear-gradient(135deg, var(--violet) 0%, var(--rose) 100%);
@@ -915,55 +915,55 @@ const styles = `
   flex-shrink: 0;
 }
 
-.demo-fertil-dep-info {
+.demo-go-dep-info {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.demo-fertil-dep-name {
+.demo-go-dep-name {
   font-weight: 600;
   font-size: 0.9rem;
   color: var(--dark);
   line-height: 1.3;
 }
 
-.demo-fertil-dep-detail {
+.demo-go-dep-detail {
   font-size: 0.8rem;
   color: var(--text-muted);
 }
 
 /* ── LOCALIZAÇÃO ── */
-.demo-fertil-localizacao {
+.demo-go-localizacao {
   background: var(--bg);
 }
 
-.demo-fertil-loc-inner {
+.demo-go-loc-inner {
   display: grid;
   grid-template-columns: 1fr 1.4fr;
   gap: 56px;
   align-items: start;
 }
 
-.demo-fertil-loc-info {
+.demo-go-loc-info {
   display: flex;
   flex-direction: column;
   gap: 32px;
 }
 
-.demo-fertil-loc-block {
+.demo-go-loc-block {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.demo-fertil-loc-item {
+.demo-go-loc-item {
   display: flex;
   gap: 14px;
   align-items: flex-start;
 }
 
-.demo-fertil-loc-icon {
+.demo-go-loc-icon {
   width: 40px;
   height: 40px;
   background: var(--violet-light);
@@ -975,19 +975,19 @@ const styles = `
   border: 1px solid var(--violet-border);
 }
 
-.demo-fertil-loc-icon svg {
+.demo-go-loc-icon svg {
   width: 18px;
   height: 18px;
   color: var(--violet);
 }
 
-.demo-fertil-loc-text {
+.demo-go-loc-text {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.demo-fertil-loc-label {
+.demo-go-loc-label {
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-muted);
@@ -995,27 +995,27 @@ const styles = `
   letter-spacing: 0.06em;
 }
 
-.demo-fertil-loc-value {
+.demo-go-loc-value {
   font-size: 0.9375rem;
   color: var(--dark);
   font-weight: 500;
   line-height: 1.5;
 }
 
-.demo-fertil-hours-grid {
+.demo-go-hours-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
   margin-top: 4px;
 }
 
-.demo-fertil-hours-row {
+.demo-go-hours-row {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.demo-fertil-hours-day {
+.demo-go-hours-day {
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--text-muted);
@@ -1023,13 +1023,13 @@ const styles = `
   letter-spacing: 0.05em;
 }
 
-.demo-fertil-hours-time {
+.demo-go-hours-time {
   font-size: 0.9375rem;
   color: var(--dark);
   font-weight: 500;
 }
 
-.demo-fertil-map-placeholder {
+.demo-go-map-placeholder {
   background: var(--white);
   border-radius: var(--radius);
   height: 360px;
@@ -1044,7 +1044,7 @@ const styles = `
   overflow: hidden;
 }
 
-.demo-fertil-map-bg {
+.demo-go-map-bg {
   position: absolute;
   inset: 0;
   background:
@@ -1065,7 +1065,7 @@ const styles = `
   opacity: 0.4;
 }
 
-.demo-fertil-map-pin {
+.demo-go-map-pin {
   position: relative;
   z-index: 1;
   width: 56px;
@@ -1079,7 +1079,7 @@ const styles = `
   justify-content: center;
 }
 
-.demo-fertil-map-pin-inner {
+.demo-go-map-pin-inner {
   width: 20px;
   height: 20px;
   background: white;
@@ -1087,7 +1087,7 @@ const styles = `
   transform: rotate(45deg);
 }
 
-.demo-fertil-map-label {
+.demo-go-map-label {
   position: relative;
   z-index: 1;
   background: white;
@@ -1098,27 +1098,27 @@ const styles = `
   box-shadow: var(--shadow-card);
 }
 
-.demo-fertil-map-address {
+.demo-go-map-address {
   font-size: 0.875rem;
   font-weight: 600;
   color: var(--dark);
 }
 
-.demo-fertil-map-city {
+.demo-go-map-city {
   font-size: 0.8rem;
   color: var(--text-muted);
   margin-top: 2px;
 }
 
 /* ── CONTATO / CTA ── */
-.demo-fertil-contato {
+.demo-go-contato {
   background: linear-gradient(135deg, var(--violet) 0%, var(--violet-dark) 40%, var(--rose) 100%);
   padding: 96px 0;
   position: relative;
   overflow: hidden;
 }
 
-.demo-fertil-contato::before {
+.demo-go-contato::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -1129,7 +1129,7 @@ const styles = `
   border-radius: 50%;
 }
 
-.demo-fertil-contato::after {
+.demo-go-contato::after {
   content: "";
   position: absolute;
   bottom: -30%;
@@ -1140,7 +1140,7 @@ const styles = `
   border-radius: 50%;
 }
 
-.demo-fertil-contato-inner {
+.demo-go-contato-inner {
   text-align: center;
   position: relative;
   z-index: 1;
@@ -1148,7 +1148,7 @@ const styles = `
   margin: 0 auto;
 }
 
-.demo-fertil-contato-eyebrow {
+.demo-go-contato-eyebrow {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1162,7 +1162,7 @@ const styles = `
   margin-bottom: 24px;
 }
 
-.demo-fertil-contato-title {
+.demo-go-contato-title {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 2.625rem;
   font-weight: 800;
@@ -1172,14 +1172,14 @@ const styles = `
   margin-bottom: 16px;
 }
 
-.demo-fertil-contato-subtitle {
+.demo-go-contato-subtitle {
   font-size: 1.0625rem;
   color: rgba(255,255,255,0.85);
   line-height: 1.7;
   margin-bottom: 40px;
 }
 
-.demo-fertil-contato-actions {
+.demo-go-contato-actions {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1187,7 +1187,7 @@ const styles = `
   flex-wrap: wrap;
 }
 
-.demo-fertil-btn-whatsapp {
+.demo-go-btn-whatsapp {
   background: #25D366;
   color: white;
   display: inline-flex;
@@ -1202,13 +1202,13 @@ const styles = `
   text-decoration: none;
 }
 
-.demo-fertil-btn-whatsapp:hover {
+.demo-go-btn-whatsapp:hover {
   background: #1DAA54;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px rgba(37, 211, 102, 0.35);
 }
 
-.demo-fertil-contato-note {
+.demo-go-contato-note {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -1218,12 +1218,12 @@ const styles = `
 }
 
 /* ── FOOTER ── */
-.demo-fertil-footer {
+.demo-go-footer {
   background: var(--dark);
   padding: 56px 0 36px;
 }
 
-.demo-fertil-footer-inner {
+.demo-go-footer-inner {
   display: grid;
   grid-template-columns: 1.5fr 1fr 1fr;
   gap: 48px;
@@ -1231,7 +1231,7 @@ const styles = `
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.demo-fertil-footer-brand-name {
+.demo-go-footer-brand-name {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
@@ -1239,7 +1239,7 @@ const styles = `
   line-height: 1.3;
 }
 
-.demo-fertil-footer-brand-specialty {
+.demo-go-footer-brand-specialty {
   font-size: 0.8125rem;
   color: var(--violet);
   font-weight: 500;
@@ -1247,7 +1247,7 @@ const styles = `
   margin-top: 2px;
 }
 
-.demo-fertil-footer-bio {
+.demo-go-footer-bio {
   font-size: 0.875rem;
   color: rgba(255,255,255,0.5);
   line-height: 1.65;
@@ -1255,13 +1255,13 @@ const styles = `
   max-width: 300px;
 }
 
-.demo-fertil-footer-crm {
+.demo-go-footer-crm {
   font-size: 0.8125rem;
   color: rgba(255,255,255,0.35);
   margin-top: 10px;
 }
 
-.demo-fertil-footer-col-title {
+.demo-go-footer-col-title {
   font-family: var(--font-work-sans), sans-serif;
   font-size: 0.875rem;
   font-weight: 700;
@@ -1271,24 +1271,24 @@ const styles = `
   margin-bottom: 16px;
 }
 
-.demo-fertil-footer-links {
+.demo-go-footer-links {
   list-style: none;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.demo-fertil-footer-links a {
+.demo-go-footer-links a {
   font-size: 0.875rem;
   color: rgba(255,255,255,0.5);
   transition: color 0.2s;
 }
 
-.demo-fertil-footer-links a:hover {
+.demo-go-footer-links a:hover {
   color: var(--violet);
 }
 
-.demo-fertil-footer-contact-item {
+.demo-go-footer-contact-item {
   display: flex;
   align-items: flex-start;
   gap: 8px;
@@ -1298,13 +1298,13 @@ const styles = `
   margin-bottom: 10px;
 }
 
-.demo-fertil-footer-contact-icon {
+.demo-go-footer-contact-icon {
   font-size: 0.9rem;
   margin-top: 1px;
   flex-shrink: 0;
 }
 
-.demo-fertil-footer-bottom {
+.demo-go-footer-bottom {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1313,183 +1313,183 @@ const styles = `
   gap: 12px;
 }
 
-.demo-fertil-footer-copy {
+.demo-go-footer-copy {
   font-size: 0.8125rem;
   color: rgba(255,255,255,0.3);
 }
 
-.demo-fertil-footer-credit {
+.demo-go-footer-credit {
   font-size: 0.8125rem;
   color: rgba(255,255,255,0.4);
 }
 
-.demo-fertil-footer-credit a {
+.demo-go-footer-credit a {
   color: var(--violet);
   font-weight: 600;
   transition: opacity 0.2s;
 }
 
-.demo-fertil-footer-credit a:hover {
+.demo-go-footer-credit a:hover {
   opacity: 0.8;
 }
 
 /* ── REVEAL ANIMATIONS ── */
-.demo-fertil-reveal {
+.demo-go-reveal {
   opacity: 0;
   transform: translateY(24px);
   transition: opacity 0.7s ease, transform 0.7s ease;
 }
 
-.demo-fertil-reveal.demo-fertil-visible {
+.demo-go-reveal.demo-go-visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-.demo-fertil-reveal-delay-1 { transition-delay: 0.1s; }
-.demo-fertil-reveal-delay-2 { transition-delay: 0.2s; }
-.demo-fertil-reveal-delay-3 { transition-delay: 0.3s; }
-.demo-fertil-reveal-delay-4 { transition-delay: 0.4s; }
-.demo-fertil-reveal-delay-5 { transition-delay: 0.5s; }
-.demo-fertil-reveal-delay-6 { transition-delay: 0.6s; }
+.demo-go-reveal-delay-1 { transition-delay: 0.1s; }
+.demo-go-reveal-delay-2 { transition-delay: 0.2s; }
+.demo-go-reveal-delay-3 { transition-delay: 0.3s; }
+.demo-go-reveal-delay-4 { transition-delay: 0.4s; }
+.demo-go-reveal-delay-5 { transition-delay: 0.5s; }
+.demo-go-reveal-delay-6 { transition-delay: 0.6s; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  .demo-fertil-section {
+  .demo-go-section {
     padding: 64px 0;
   }
 
-  .demo-fertil-section-sm {
+  .demo-go-section-sm {
     padding: 48px 0;
   }
 
-  .demo-fertil-section-title {
+  .demo-go-section-title {
     font-size: 1.75rem;
   }
 
   /* Nav */
-  .demo-fertil-nav-links {
+  .demo-go-nav-links {
     display: none;
   }
 
-  .demo-fertil-nav-inner {
+  .demo-go-nav-inner {
     height: 64px;
   }
 
   /* Hero */
-  .demo-fertil-hero {
+  .demo-go-hero {
     padding: 64px 0 56px;
   }
 
-  .demo-fertil-hero-inner {
+  .demo-go-hero-inner {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
   }
 
-  .demo-fertil-hero-title {
+  .demo-go-hero-title {
     font-size: 2.125rem;
   }
 
-  .demo-fertil-hero-subtitle {
+  .demo-go-hero-subtitle {
     margin: 0 auto 36px;
   }
 
-  .demo-fertil-hero-actions {
+  .demo-go-hero-actions {
     justify-content: center;
   }
 
-  .demo-fertil-hero-stats {
+  .demo-go-hero-stats {
     justify-content: center;
     gap: 24px;
   }
 
-  .demo-fertil-hero-visual {
+  .demo-go-hero-visual {
     order: -1;
   }
 
-  .demo-fertil-hero-photo {
+  .demo-go-hero-photo {
     width: 240px;
     height: 300px;
   }
 
-  .demo-fertil-hero-card-left,
-  .demo-fertil-hero-card-right {
+  .demo-go-hero-card-left,
+  .demo-go-hero-card-right {
     display: none;
   }
 
   /* Sobre */
-  .demo-fertil-sobre-inner {
+  .demo-go-sobre-inner {
     grid-template-columns: 1fr;
     gap: 40px;
     text-align: center;
   }
 
-  .demo-fertil-sobre-list li {
+  .demo-go-sobre-list li {
     text-align: left;
   }
 
-  .demo-fertil-tags {
+  .demo-go-tags {
     justify-content: center;
   }
 
   /* Tratamentos */
-  .demo-fertil-trat-grid {
+  .demo-go-trat-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
   /* Jornada */
-  .demo-fertil-timeline::before {
+  .demo-go-timeline::before {
     left: 20px;
   }
 
-  .demo-fertil-timeline-marker {
+  .demo-go-timeline-marker {
     width: 40px;
     height: 40px;
   }
 
-  .demo-fertil-timeline-number {
+  .demo-go-timeline-number {
     font-size: 0.9375rem;
   }
 
-  .demo-fertil-timeline-step {
+  .demo-go-timeline-step {
     gap: 18px;
   }
 
   /* Para Quem */
-  .demo-fertil-paraquem-grid {
+  .demo-go-paraquem-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
   }
 
   /* Depoimentos */
-  .demo-fertil-dep-grid {
+  .demo-go-dep-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
   /* Localização */
-  .demo-fertil-loc-inner {
+  .demo-go-loc-inner {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 
-  .demo-fertil-map-placeholder {
+  .demo-go-map-placeholder {
     height: 280px;
   }
 
   /* CTA */
-  .demo-fertil-contato-title {
+  .demo-go-contato-title {
     font-size: 2rem;
   }
 
   /* Footer */
-  .demo-fertil-footer-inner {
+  .demo-go-footer-inner {
     grid-template-columns: 1fr;
     gap: 32px;
   }
 
-  .demo-fertil-footer-bottom {
+  .demo-go-footer-bottom {
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -1497,15 +1497,15 @@ const styles = `
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  .demo-fertil-trat-grid {
+  .demo-go-trat-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .demo-fertil-paraquem-grid {
+  .demo-go-paraquem-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .demo-fertil-hero-title {
+  .demo-go-hero-title {
     font-size: 2.5rem;
   }
 }
@@ -1514,20 +1514,20 @@ const styles = `
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Physician",
-  name: "Dra. Juliana Mendes",
+  name: "Dra. Carolina Ribeiro",
   description:
-    "Especialista em Reprodução Humana em Ribeirão Preto. FIV, ICSI, preservação de fertilidade, inseminação artificial. Atendimento humanizado e personalizado.",
-  medicalSpecialty: "Reproductive Medicine",
+    "Ginecologista e Obstetra em Ribeirão Preto. Pré-natal, parto humanizado, ginecologia geral, contracepção, menopausa. Cuidando de cada fase da sua vida.",
+  medicalSpecialty: "Obstetrics and Gynecology",
   identifier: [
     {
       "@type": "PropertyValue",
       name: "CRM",
-      value: "CRM/SP 567890",
+      value: "CRM-SP 154.832",
     },
     {
       "@type": "PropertyValue",
       name: "RQE",
-      value: "RQE 23456",
+      value: "RQE 72.456",
     },
   ],
   address: {
@@ -1538,7 +1538,7 @@ const jsonLd = {
     addressCountry: "BR",
   },
   telephone: "+55-16-99999-0000",
-  url: "https://drajulianamendes.com.br",
+  url: "https://dracarolinaribeiro.com.br",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
@@ -1557,103 +1557,103 @@ const jsonLd = {
 
 const treatments = [
   {
-    name: "Fertilização In Vitro (FIV)",
-    desc: "A FIV é o tratamento mais avançado de reprodução assistida, indicada para diversos casos de infertilidade. Acompanhamos cada etapa com carinho e transparência.",
+    name: "Pré-natal e Gestação",
+    desc: "Acompanhamento completo da gestação, do primeiro ultrassom ao pós-parto. Cada consulta pensada para que você e seu bebê estejam seguros e acolhidos.",
   },
   {
-    name: "Injeção Intracitoplasmática (ICSI)",
-    desc: "Técnica de alta precisão onde o espermatozoide é selecionado e injetado diretamente no óvulo, aumentando significativamente as chances de fertilização.",
+    name: "Parto Humanizado",
+    desc: "Parto normal ou cesárea — a decisão é sua, com informação e respeito. Acompanho cada momento para que o nascimento seja seguro e como você escolheu.",
   },
   {
-    name: "Inseminação Artificial",
-    desc: "Procedimento menos invasivo, ideal para casais com causas leves de infertilidade. Os espermatozoides são preparados e colocados diretamente no útero.",
+    name: "Ginecologia Geral",
+    desc: "Check-up ginecológico, Papanicolau, ultrassom, rastreamento de câncer de mama e colo de útero. Prevenção é o melhor cuidado que existe.",
   },
   {
-    name: "Preservação de Fertilidade",
-    desc: "Congelamento de óvulos para preservar sua fertilidade para o futuro. Indicado para mulheres que desejam adiar a maternidade com segurança.",
+    name: "Contracepção",
+    desc: "DIU, implante hormonal, pílula — oriento sobre cada método para que você escolha o que faz sentido para o seu corpo e o seu momento de vida.",
   },
   {
-    name: "Doação de Óvulos",
-    desc: "Programa de ovodoação que possibilita a gestação para mulheres com baixa reserva ovariana ou outras indicações, com total sigilo e acolhimento.",
+    name: "Menopausa e Climatério",
+    desc: "Qualidade de vida durante a menopausa. Reposição hormonal quando indicada, saúde óssea, bem-estar emocional. Uma nova fase com saúde e vitalidade.",
   },
   {
-    name: "Investigação de Infertilidade",
-    desc: "Avaliação completa e individualizada do casal, com exames específicos para identificar as causas e definir o melhor caminho para o tratamento.",
+    name: "Saúde da Adolescente",
+    desc: "Primeira consulta ginecológica acolhedora. Orientação sobre ciclo menstrual, vacinas, saúde íntima. Um espaço seguro para as primeiras dúvidas.",
   },
 ];
 
 const journeySteps = [
   {
-    title: "Consulta Inicial",
-    subtitle: "Acolhimento e escuta",
-    desc: "O primeiro passo é uma conversa sincera. Queremos ouvir sua história, entender seus desejos e acolher suas emoções. Aqui, você não é um número — é uma pessoa com um sonho.",
+    title: "Primeira Consulta",
+    subtitle: "Escuta e acolhimento",
+    desc: "O primeiro passo é uma conversa sem pressa. Quero ouvir você, entender sua história, seus medos e seus objetivos. Aqui, você não é um número — é uma pessoa que merece atenção.",
   },
   {
-    title: "Investigação",
-    subtitle: "Exames e diagnóstico",
-    desc: "Com delicadeza e precisão, realizamos os exames necessários para compreender o cenário completo. Cada resultado é explicado com clareza, sem jargões, com toda a paciência que você merece.",
+    title: "Exames e Diagnóstico",
+    subtitle: "Avaliação completa",
+    desc: "Com delicadeza e precisão, realizamos os exames necessários. Cada resultado é explicado com clareza, sem jargão, com toda a paciência que você merece.",
   },
   {
-    title: "Planejamento",
-    subtitle: "Tratamento personalizado",
-    desc: "Juntos, desenhamos o plano de tratamento mais adequado para a sua realidade. Não existe receita pronta — cada história é única e cada plano é feito sob medida.",
+    title: "Plano de Cuidado",
+    subtitle: "Personalizado para você",
+    desc: "Juntas, desenhamos o plano de cuidado mais adequado para a sua realidade e o seu momento de vida. Não existe receita pronta — cada mulher é única.",
   },
   {
-    title: "Tratamento",
-    subtitle: "Acompanhamento próximo",
-    desc: "Durante todo o tratamento, estamos ao seu lado. Cada consulta, cada exame, cada etapa — você terá suporte médico e emocional. Nosso telefone está sempre aberto para suas dúvidas.",
+    title: "Acompanhamento",
+    subtitle: "Presente em cada etapa",
+    desc: "Do pré-natal ao pós-parto, do check-up anual ao início da menopausa — estou ao seu lado em cada etapa. Meu telefone está sempre aberto para suas dúvidas.",
   },
   {
-    title: "Resultado",
-    subtitle: "Celebramos juntos",
-    desc: "O momento que todos esperamos. Seja qual for o resultado, estaremos com você. E quando o positivo chega... não existe alegria maior do que compartilhar esse momento.",
+    title: "Cada Fase, Juntas",
+    subtitle: "Parceria de vida",
+    desc: "Saúde feminina não é um evento — é uma jornada. Da adolescência à maturidade, quero ser a médica que te acompanha, te escuta e cuida de você em cada fase.",
   },
 ];
 
 const audiences = [
   {
-    name: "Casais Heterossexuais",
-    desc: "Investigação completa e tratamentos personalizados para casais que buscam realizar o sonho da gestação.",
+    name: "Gestantes",
+    desc: "Pré-natal completo, do primeiro ultrassom ao pós-parto. Acompanhamento que prioriza a sua escolha, a sua saúde e a do seu bebê.",
   },
   {
-    name: "Casais Homoafetivos",
-    desc: "Acolhimento e suporte especializado com protocolos adaptados para casais do mesmo sexo que desejam formar sua família.",
+    name: "Mulheres em Check-up",
+    desc: "Preventivo, exames de rotina e cuidados ginecológicos para quem quer manter a saúde em dia — sem medo, sem vergonha.",
   },
   {
-    name: "Produção Independente",
-    desc: "Apoio integral para mulheres que escolhem a maternidade solo, com todo o carinho e respeito pela sua decisão.",
+    name: "Adolescentes",
+    desc: "Primeira consulta acolhedora, orientação sobre ciclo menstrual, vacinas e saúde íntima. Um espaço seguro para tirar todas as dúvidas.",
   },
   {
-    name: "Preservação de Fertilidade",
-    desc: "Para quem deseja adiar a maternidade ou paternidade e quer preservar suas chances futuras com segurança.",
+    name: "Mulheres na Menopausa",
+    desc: "Qualidade de vida, reposição hormonal quando indicada, saúde óssea e bem-estar emocional. Uma nova fase vivida com plenitude.",
   },
 ];
 
 const testimonials = [
   {
-    initials: "CM",
-    name: "Camila e Marcos R.",
-    detail: "Pais do Theo, nascido em 2024",
+    initials: "LS",
+    name: "Larissa S.",
+    detail: "Mãe do Pedro, parto humanizado em 2024",
     quote:
-      "Após 3 tentativas e muitas lágrimas, a Dra. Juliana nunca nos deixou desistir. Ela segurava nossas mãos e dizia: 'confiem no processo'. Hoje, nosso Theo tem 1 ano e cada sorriso dele é a prova de que valeu cada segundo. Obrigada por acreditar quando nós quase paramos de acreditar.",
+      "A Dra. Carolina me acompanhou desde a primeira consulta do pré-natal. Eu tinha medo do parto, mas ela me ouviu, me explicou cada opção e respeitou minhas escolhas. O Pedro nasceu de parto normal, no tempo dele, e eu me senti segura o tempo inteiro. Não existe gratidão que dê conta.",
   },
   {
-    initials: "FS",
-    name: "Fernanda S.",
-    detail: "Mãe da Valentina, produção independente",
+    initials: "MF",
+    name: "Márcia F.",
+    detail: "Paciente há 8 anos, menopausa",
     quote:
-      "Aos 38 anos, tomei a decisão mais corajosa da minha vida: ser mãe sozinha. A Dra. Juliana não apenas me deu suporte médico — ela me deu coragem. Nunca me senti julgada, só acolhida. A Valentina nasceu em março e eu nunca fui tão feliz. Esse consultório muda vidas.",
+      "Quando a menopausa chegou, achei que ia perder qualidade de vida. A Dra. Carolina me mostrou que é uma fase, não um fim. Com o tratamento certo, voltei a dormir bem, a ter disposição e a me sentir eu mesma. Ela cuida de mim há 8 anos e eu não troco por nada.",
   },
   {
-    initials: "RA",
-    name: "Renata e Amanda L.",
-    detail: "Mães do Bento, nascido em 2025",
+    initials: "AP",
+    name: "Ana Paula R.",
+    detail: "Levou a filha Isabella, 14 anos, à primeira consulta",
     quote:
-      "Como casal homoafetivo, tínhamos medo de não sermos bem recebidas. A Dra. Juliana desfez todos os nossos medos na primeira consulta. O tratamento foi leve, humano e respeitoso. Nosso Bento é a prova de que família é amor, independente da forma. Gratidão eterna.",
+      "Minha filha morria de vergonha de ir ao ginecologista pela primeira vez. A Dra. Carolina recebeu a Isabella com tanta naturalidade e carinho que, na saída, ela me disse: 'mãe, não era nada do que eu imaginava'. Saímos as duas aliviadas e felizes. Toda menina merece uma médica assim.",
   },
 ];
 
-export default function FertilidadeDemoPage() {
+export default function GinecologiaDemoPage() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: styles }} />
@@ -1664,17 +1664,17 @@ export default function FertilidadeDemoPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <div className="demo-fertil-root">
+      <div className="demo-go-root">
         {/* ── NAV ── */}
-        <nav className="demo-fertil-nav" aria-label="Navegação principal">
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-nav-inner">
-              <a href="#" className="demo-fertil-logo" aria-label="Início">
-                <span className="demo-fertil-logo-name">Dra. Juliana Mendes</span>
-                <span className="demo-fertil-logo-specialty">Reprodução Humana</span>
+        <nav className="demo-go-nav" aria-label="Navegação principal">
+          <div className="demo-go-container">
+            <div className="demo-go-nav-inner">
+              <a href="#" className="demo-go-logo" aria-label="Início">
+                <span className="demo-go-logo-name">Dra. Carolina Ribeiro</span>
+                <span className="demo-go-logo-specialty">Ginecologia e Obstetrícia</span>
               </a>
 
-              <ul className="demo-fertil-nav-links" role="list">
+              <ul className="demo-go-nav-links" role="list">
                 <li>
                   <a href="#sobre">Sobre</a>
                 </li>
@@ -1692,10 +1692,10 @@ export default function FertilidadeDemoPage() {
                 </li>
               </ul>
 
-              <div className="demo-fertil-nav-right">
+              <div className="demo-go-nav-right">
                 <a
                   href="#contato"
-                  className="demo-fertil-btn demo-fertil-btn-primary"
+                  className="demo-go-btn demo-go-btn-primary"
                   style={{ padding: "10px 22px", fontSize: "0.875rem" }}
                 >
                   Agendar consulta
@@ -1706,32 +1706,32 @@ export default function FertilidadeDemoPage() {
         </nav>
 
         {/* ── HERO ── */}
-        <section className="demo-fertil-hero" aria-labelledby="hero-title">
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-hero-inner">
+        <section className="demo-go-hero" aria-labelledby="hero-title">
+          <div className="demo-go-container">
+            <div className="demo-go-hero-inner">
               {/* Content */}
               <div>
-                <div className="demo-fertil-hero-badge">
-                  <span className="demo-fertil-hero-badge-dot" />
-                  Atendimento humanizado
+                <div className="demo-go-hero-badge">
+                  <span className="demo-go-hero-badge-dot" />
+                  Cuidado integral
                 </div>
 
-                <h1 className="demo-fertil-hero-title" id="hero-title">
-                  Realizando o sonho<br />
-                  de ser{" "}
-                  <span>mãe e pai</span>
+                <h1 className="demo-go-hero-title" id="hero-title">
+                  Cuidando da sua saúde<br />
+                  em{" "}
+                  <span>cada fase da vida.</span>
                 </h1>
 
-                <p className="demo-fertil-hero-subtitle">
-                  Cada família tem uma história. A nossa missão é caminhar ao seu lado,
-                  com empatia, ciência e carinho, para que o sonho de ter um filho
-                  se torne realidade.
+                <p className="demo-go-hero-subtitle">
+                  Da adolescência à menopausa, da gestação ao pós-parto. Meu consultório
+                  é um espaço de escuta, confiança e cuidado — para que você se sinta
+                  segura em todas as fases.
                 </p>
 
-                <div className="demo-fertil-hero-actions">
+                <div className="demo-go-hero-actions">
                   <a
                     href="#contato"
-                    className="demo-fertil-btn demo-fertil-btn-primary"
+                    className="demo-go-btn demo-go-btn-primary"
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
@@ -1740,63 +1740,63 @@ export default function FertilidadeDemoPage() {
                   </a>
                   <a
                     href="#tratamentos"
-                    className="demo-fertil-btn demo-fertil-btn-outline"
+                    className="demo-go-btn demo-go-btn-outline"
                   >
-                    Conhecer tratamentos
+                    Conhecer serviços
                   </a>
                 </div>
 
-                <div className="demo-fertil-hero-stats">
-                  <div className="demo-fertil-stat-item">
-                    <span className="demo-fertil-stat-number">+800</span>
-                    <span className="demo-fertil-stat-label">Bebês nascidos</span>
+                <div className="demo-go-hero-stats">
+                  <div className="demo-go-stat-item">
+                    <span className="demo-go-stat-number">+2.000</span>
+                    <span className="demo-go-stat-label">Partos realizados</span>
                   </div>
-                  <div className="demo-fertil-stat-item">
-                    <span className="demo-fertil-stat-number">12</span>
-                    <span className="demo-fertil-stat-label">Anos de experiência</span>
+                  <div className="demo-go-stat-item">
+                    <span className="demo-go-stat-number">15</span>
+                    <span className="demo-go-stat-label">Anos de experiência</span>
                   </div>
-                  <div className="demo-fertil-stat-item">
-                    <span className="demo-fertil-stat-number">97%</span>
-                    <span className="demo-fertil-stat-label">De satisfação</span>
+                  <div className="demo-go-stat-item">
+                    <span className="demo-go-stat-number">98%</span>
+                    <span className="demo-go-stat-label">De satisfação</span>
                   </div>
                 </div>
               </div>
 
               {/* Visual */}
-              <div className="demo-fertil-hero-visual" aria-hidden="true">
-                <div className="demo-fertil-hero-photo">
+              <div className="demo-go-hero-visual" aria-hidden="true">
+                <div className="demo-go-hero-photo">
                   <Image
-                    className="demo-fertil-hero-photo-img"
-                    src="/images/demos/doctor-tablet.jpg"
-                    alt="Dra. Juliana Mendes, especialista em reprodução humana"
+                    className="demo-go-hero-photo-img"
+                    src="/images/demos/doctor-woman-smile.jpg"
+                    alt="Dra. Carolina Ribeiro, ginecologista e obstetra"
                     width={340}
                     height={420}
                   />
                 </div>
 
                 {/* Floating cards */}
-                <div className="demo-fertil-hero-card demo-fertil-hero-card-left">
-                  <div className="demo-fertil-hero-card-icon">
+                <div className="demo-go-hero-card demo-go-hero-card-left">
+                  <div className="demo-go-hero-card-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
                     </svg>
                   </div>
-                  <div className="demo-fertil-hero-card-text">
-                    <span className="demo-fertil-hero-card-value">+800 bebês</span>
-                    <span className="demo-fertil-hero-card-desc">Sonhos realizados</span>
+                  <div className="demo-go-hero-card-text">
+                    <span className="demo-go-hero-card-value">+2.000 partos</span>
+                    <span className="demo-go-hero-card-desc">Nascimentos acompanhados</span>
                   </div>
                 </div>
 
-                <div className="demo-fertil-hero-card demo-fertil-hero-card-right">
-                  <div className="demo-fertil-hero-card-icon">
+                <div className="demo-go-hero-card demo-go-hero-card-right">
+                  <div className="demo-go-hero-card-icon">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
                       <polyline points="22 4 12 14.01 9 11.01" />
                     </svg>
                   </div>
-                  <div className="demo-fertil-hero-card-text">
-                    <span className="demo-fertil-hero-card-value">SBRA</span>
-                    <span className="demo-fertil-hero-card-desc">Membro certificado</span>
+                  <div className="demo-go-hero-card-text">
+                    <span className="demo-go-hero-card-value">FEBRASGO</span>
+                    <span className="demo-go-hero-card-desc">Título de especialista</span>
                   </div>
                 </div>
               </div>
@@ -1807,76 +1807,75 @@ export default function FertilidadeDemoPage() {
         {/* ── SOBRE ── */}
         <section
           id="sobre"
-          className="demo-fertil-sobre demo-fertil-section"
+          className="demo-go-sobre demo-go-section"
           aria-labelledby="sobre-title"
         >
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-sobre-inner">
+          <div className="demo-go-container">
+            <div className="demo-go-sobre-inner">
               {/* Photo column */}
-              <div className="demo-fertil-sobre-photo-wrap demo-fertil-reveal">
-                <div className="demo-fertil-sobre-photo">
+              <div className="demo-go-sobre-photo-wrap demo-go-reveal">
+                <div className="demo-go-sobre-photo">
                   <Image
-                    className="demo-fertil-sobre-photo-img"
-                    src="/images/demos/doctor-tablet.jpg"
-                    alt="Dra. Juliana Mendes em seu consultório"
+                    className="demo-go-sobre-photo-img"
+                    src="/images/demos/doctor-woman-smile.jpg"
+                    alt="Dra. Carolina Ribeiro em seu consultório"
                     width={280}
                     height={340}
                   />
                 </div>
 
-                <div className="demo-fertil-crm-badge">
-                  <span className="demo-fertil-crm-label">Registro médico</span>
-                  <span className="demo-fertil-crm-value">CRM/SP 567890</span>
+                <div className="demo-go-crm-badge">
+                  <span className="demo-go-crm-label">Registro médico</span>
+                  <span className="demo-go-crm-value">CRM-SP 154.832</span>
                 </div>
-                <div className="demo-fertil-crm-badge">
-                  <span className="demo-fertil-crm-label">Especialidade</span>
-                  <span className="demo-fertil-crm-value">RQE 23456</span>
+                <div className="demo-go-crm-badge">
+                  <span className="demo-go-crm-label">Especialidade</span>
+                  <span className="demo-go-crm-value">RQE 72.456</span>
                 </div>
               </div>
 
               {/* Content column */}
-              <div className="demo-fertil-sobre-content demo-fertil-reveal demo-fertil-reveal-delay-2">
+              <div className="demo-go-sobre-content demo-go-reveal demo-go-reveal-delay-2">
                 <div>
-                  <span className="demo-fertil-eyebrow">Sobre a médica</span>
-                  <h2 className="demo-fertil-section-title" id="sobre-title">
-                    Dra. Juliana Mendes
+                  <span className="demo-go-eyebrow">Sobre a médica</span>
+                  <h2 className="demo-go-section-title" id="sobre-title">
+                    Dra. Carolina Ribeiro
                   </h2>
                   <p style={{ fontSize: "1.125rem", color: "#7C3AED", fontWeight: 600, marginBottom: 16 }}>
-                    Especialista em Reprodução Humana · CRM/SP 567890 · RQE 23456
+                    Ginecologista e Obstetra · CRM-SP 154.832 · RQE 72.456
                   </p>
                 </div>
 
-                <p className="demo-fertil-sobre-bio">
-                  Para mim, medicina reprodutiva vai muito além da ciência — é sobre
-                  esperança. Cada casal, cada pessoa que chega ao consultório traz consigo
-                  um sonho, e eu tenho o privilégio de caminhar junto nessa jornada.
-                  Acredito que <strong>cada história é única</strong>, e por isso cada
-                  tratamento precisa ser pensado individualmente, com respeito, empatia
-                  e transparência total.
+                <p className="demo-go-sobre-bio">
+                  Acredito que toda mulher merece ser ouvida. Meu consultório é um espaço
+                  seguro para você tirar dúvidas, fazer seus exames de rotina, planejar uma
+                  gestação ou atravessar a menopausa com qualidade de vida.{" "}
+                  <strong>Cada fase merece atenção</strong>, e por isso cada atendimento é
+                  pensado individualmente, com respeito, empatia e transparência.
                 </p>
 
-                <p className="demo-fertil-sobre-bio">
-                  Com 12 anos de experiência em reprodução humana, formação pela USP e
-                  residência no Hospital das Clínicas da FMUSP, trago o que há de mais
-                  moderno na ciência reprodutiva aliado a um atendimento profundamente
+                <p className="demo-go-sobre-bio">
+                  Com 15 anos de experiência, formação pela USP e residência em GO no
+                  Hospital das Clínicas da FMUSP, trago o que há de mais atual na
+                  ginecologia e obstetrícia aliado a um atendimento profundamente
                   humanizado. Porque não existe protocolo que substitua o olhar atento
-                  e a escuta genuína.
+                  e a escuta sem pressa.
                 </p>
 
                 <div>
                   <p style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#1A1A2E", marginBottom: 12 }}>
                     Formação e títulos
                   </p>
-                  <ul className="demo-fertil-sobre-list">
+                  <ul className="demo-go-sobre-list">
                     {[
                       "Graduação em Medicina — Universidade de São Paulo (USP)",
                       "Residência em Ginecologia e Obstetrícia — HCFMUSP",
-                      "Especialização em Reprodução Humana — HCFMUSP",
-                      "Membro da SBRA (Sociedade Brasileira de Reprodução Assistida)",
-                      "Membro da ESHRE (European Society of Human Reproduction)",
+                      "TEGO — Título de Especialista em GO (FEBRASGO/AMB)",
+                      "Membro da FEBRASGO (Federação Brasileira de Ginecologia e Obstetrícia)",
+                      "Membro da SOGESP (Associação de Obstetrícia e Ginecologia de SP)",
                     ].map((item) => (
                       <li key={item}>
-                        <span className="demo-fertil-check" aria-hidden="true">
+                        <span className="demo-go-check" aria-hidden="true">
                           <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                             <polyline points="2 6 5 9 10 3" />
                           </svg>
@@ -1891,16 +1890,16 @@ export default function FertilidadeDemoPage() {
                   <p style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#1A1A2E", marginBottom: 12 }}>
                     Áreas de atuação
                   </p>
-                  <div className="demo-fertil-tags">
+                  <div className="demo-go-tags">
                     {[
-                      "Fertilização In Vitro",
-                      "ICSI",
-                      "Inseminação Artificial",
-                      "Preservação de Fertilidade",
-                      "Doação de Óvulos",
-                      "Investigação de Infertilidade",
+                      "Pré-natal",
+                      "Parto Humanizado",
+                      "Ginecologia Preventiva",
+                      "Contracepção",
+                      "Menopausa",
+                      "Saúde da Adolescente",
                     ].map((tag) => (
-                      <span key={tag} className="demo-fertil-tag">{tag}</span>
+                      <span key={tag} className="demo-go-tag">{tag}</span>
                     ))}
                   </div>
                 </div>
@@ -1912,29 +1911,29 @@ export default function FertilidadeDemoPage() {
         {/* ── TRATAMENTOS ── */}
         <section
           id="tratamentos"
-          className="demo-fertil-tratamentos demo-fertil-section"
+          className="demo-go-tratamentos demo-go-section"
           aria-labelledby="trat-title"
         >
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-tratamentos-header">
-              <span className="demo-fertil-eyebrow">Tratamentos</span>
-              <h2 className="demo-fertil-section-title" id="trat-title">
-                Caminhos para realizar o seu sonho
+          <div className="demo-go-container">
+            <div className="demo-go-tratamentos-header">
+              <span className="demo-go-eyebrow">Serviços</span>
+              <h2 className="demo-go-section-title" id="trat-title">
+                Cuidado para cada fase da sua vida
               </h2>
-              <p className="demo-fertil-section-subtitle">
-                Cada caso é único. Oferecemos diferentes tratamentos de reprodução
-                assistida, sempre com transparência sobre as possibilidades e o
-                acompanhamento que você merece.
+              <p className="demo-go-section-subtitle">
+                Da primeira consulta ginecológica ao acompanhamento na menopausa.
+                Cada atendimento é pensado para o seu momento — com escuta,
+                respeito e ciência.
               </p>
             </div>
 
-            <div className="demo-fertil-trat-grid">
+            <div className="demo-go-trat-grid">
               {treatments.map((trat, i) => (
                 <article
                   key={trat.name}
-                  className={`demo-fertil-trat-card demo-fertil-reveal demo-fertil-reveal-delay-${(i % 3) + 1}`}
+                  className={`demo-go-trat-card demo-go-reveal demo-go-reveal-delay-${(i % 3) + 1}`}
                 >
-                  <div className="demo-fertil-trat-icon" aria-hidden="true">
+                  <div className="demo-go-trat-icon" aria-hidden="true">
                     {i === 0 && (
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                         <circle cx="12" cy="12" r="10" />
@@ -1976,9 +1975,9 @@ export default function FertilidadeDemoPage() {
                       </svg>
                     )}
                   </div>
-                  <h3 className="demo-fertil-trat-name">{trat.name}</h3>
-                  <p className="demo-fertil-trat-desc">{trat.desc}</p>
-                  <span className="demo-fertil-trat-link">
+                  <h3 className="demo-go-trat-name">{trat.name}</h3>
+                  <p className="demo-go-trat-desc">{trat.desc}</p>
+                  <span className="demo-go-trat-link">
                     Saiba mais
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                       <line x1="5" y1="12" x2="19" y2="12" />
@@ -1994,35 +1993,35 @@ export default function FertilidadeDemoPage() {
         {/* ── JORNADA ── */}
         <section
           id="jornada"
-          className="demo-fertil-jornada demo-fertil-section"
+          className="demo-go-jornada demo-go-section"
           aria-labelledby="jornada-title"
         >
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-jornada-header">
-              <span className="demo-fertil-eyebrow">Sua jornada</span>
-              <h2 className="demo-fertil-section-title" id="jornada-title">
-                Estamos com você em cada etapa
+          <div className="demo-go-container">
+            <div className="demo-go-jornada-header">
+              <span className="demo-go-eyebrow">Sua jornada</span>
+              <h2 className="demo-go-section-title" id="jornada-title">
+                Com você em cada etapa
               </h2>
-              <p className="demo-fertil-section-subtitle">
-                Sabemos que a jornada da reprodução assistida envolve muitas emoções.
-                Por isso, criamos um processo pensado para que você se sinta segura,
-                informada e acolhida do início ao fim.
+              <p className="demo-go-section-subtitle">
+                Saúde feminina é uma jornada, não um evento. Por isso, cada etapa
+                do atendimento é pensada para que você se sinta segura, informada
+                e acolhida — sempre.
               </p>
             </div>
 
-            <div className="demo-fertil-timeline">
+            <div className="demo-go-timeline">
               {journeySteps.map((step, i) => (
                 <div
                   key={step.title}
-                  className={`demo-fertil-timeline-step demo-fertil-reveal demo-fertil-reveal-delay-${i + 1}`}
+                  className={`demo-go-timeline-step demo-go-reveal demo-go-reveal-delay-${i + 1}`}
                 >
-                  <div className="demo-fertil-timeline-marker">
-                    <span className="demo-fertil-timeline-number">{i + 1}</span>
+                  <div className="demo-go-timeline-marker">
+                    <span className="demo-go-timeline-number">{i + 1}</span>
                   </div>
-                  <div className="demo-fertil-timeline-content">
-                    <p className="demo-fertil-timeline-subtitle">{step.subtitle}</p>
-                    <h3 className="demo-fertil-timeline-title">{step.title}</h3>
-                    <p className="demo-fertil-timeline-desc">{step.desc}</p>
+                  <div className="demo-go-timeline-content">
+                    <p className="demo-go-timeline-subtitle">{step.subtitle}</p>
+                    <h3 className="demo-go-timeline-title">{step.title}</h3>
+                    <p className="demo-go-timeline-desc">{step.desc}</p>
                   </div>
                 </div>
               ))}
@@ -2032,28 +2031,29 @@ export default function FertilidadeDemoPage() {
 
         {/* ── PARA QUEM ── */}
         <section
-          className="demo-fertil-paraquem demo-fertil-section"
+          className="demo-go-paraquem demo-go-section"
           aria-labelledby="paraquem-title"
         >
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-paraquem-header">
-              <span className="demo-fertil-eyebrow">Para quem</span>
-              <h2 className="demo-fertil-section-title" id="paraquem-title">
-                Cada família tem sua história
+          <div className="demo-go-container">
+            <div className="demo-go-paraquem-header">
+              <span className="demo-go-eyebrow">Para quem</span>
+              <h2 className="demo-go-section-title" id="paraquem-title">
+                Para mulheres em todas as fases
               </h2>
-              <p className="demo-fertil-section-subtitle">
-                Não importa como sua família será formada — o que importa é o amor.
-                Recebemos todas as pessoas com o mesmo respeito e dedicação.
+              <p className="demo-go-section-subtitle">
+                Da adolescente que vem pela primeira vez à mulher que quer viver
+                a menopausa com qualidade. Cada paciente é recebida com o mesmo
+                cuidado e atenção.
               </p>
             </div>
 
-            <div className="demo-fertil-paraquem-grid">
+            <div className="demo-go-paraquem-grid">
               {audiences.map((aud, i) => (
                 <article
                   key={aud.name}
-                  className={`demo-fertil-paraquem-card demo-fertil-reveal demo-fertil-reveal-delay-${i + 1}`}
+                  className={`demo-go-paraquem-card demo-go-reveal demo-go-reveal-delay-${i + 1}`}
                 >
-                  <div className="demo-fertil-paraquem-icon" aria-hidden="true">
+                  <div className="demo-go-paraquem-icon" aria-hidden="true">
                     {i === 0 && (
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
@@ -2079,8 +2079,8 @@ export default function FertilidadeDemoPage() {
                       </svg>
                     )}
                   </div>
-                  <h3 className="demo-fertil-paraquem-name">{aud.name}</h3>
-                  <p className="demo-fertil-paraquem-desc">{aud.desc}</p>
+                  <h3 className="demo-go-paraquem-name">{aud.name}</h3>
+                  <p className="demo-go-paraquem-desc">{aud.desc}</p>
                 </article>
               ))}
             </div>
@@ -2090,28 +2090,28 @@ export default function FertilidadeDemoPage() {
         {/* ── DEPOIMENTOS ── */}
         <section
           id="depoimentos"
-          className="demo-fertil-depoimentos demo-fertil-section"
+          className="demo-go-depoimentos demo-go-section"
           aria-labelledby="dep-title"
         >
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-depoimentos-header">
-              <span className="demo-fertil-eyebrow">Depoimentos</span>
-              <h2 className="demo-fertil-section-title" id="dep-title">
-                Histórias que nos emocionam
+          <div className="demo-go-container">
+            <div className="demo-go-depoimentos-header">
+              <span className="demo-go-eyebrow">Depoimentos</span>
+              <h2 className="demo-go-section-title" id="dep-title">
+                Quem confia na Dra. Carolina
               </h2>
-              <p className="demo-fertil-section-subtitle">
-                Cada bebê que nasce é uma história de coragem, persistência e amor.
-                Estas são algumas das famílias que confiaram em nós.
+              <p className="demo-go-section-subtitle">
+                Histórias reais de pacientes que encontraram escuta, cuidado e
+                confiança no consultório.
               </p>
             </div>
 
-            <div className="demo-fertil-dep-grid">
+            <div className="demo-go-dep-grid">
               {testimonials.map((t, i) => (
                 <article
                   key={t.name}
-                  className={`demo-fertil-dep-card demo-fertil-reveal demo-fertil-reveal-delay-${i + 1}`}
+                  className={`demo-go-dep-card demo-go-reveal demo-go-reveal-delay-${i + 1}`}
                 >
-                  <div className="demo-fertil-dep-hearts" aria-label="5 corações">
+                  <div className="demo-go-dep-hearts" aria-label="5 corações">
                     {Array.from({ length: 5 }).map((_, j) => (
                       <svg key={j} width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                         <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
@@ -2120,16 +2120,16 @@ export default function FertilidadeDemoPage() {
                   </div>
 
                   <blockquote>
-                    <p className="demo-fertil-dep-quote">&ldquo;{t.quote}&rdquo;</p>
+                    <p className="demo-go-dep-quote">&ldquo;{t.quote}&rdquo;</p>
                   </blockquote>
 
-                  <div className="demo-fertil-dep-author">
-                    <div className="demo-fertil-dep-avatar" aria-hidden="true">
+                  <div className="demo-go-dep-author">
+                    <div className="demo-go-dep-avatar" aria-hidden="true">
                       {t.initials}
                     </div>
-                    <div className="demo-fertil-dep-info">
-                      <span className="demo-fertil-dep-name">{t.name}</span>
-                      <span className="demo-fertil-dep-detail">{t.detail}</span>
+                    <div className="demo-go-dep-info">
+                      <span className="demo-go-dep-name">{t.name}</span>
+                      <span className="demo-go-dep-detail">{t.detail}</span>
                     </div>
                   </div>
                 </article>
@@ -2141,35 +2141,35 @@ export default function FertilidadeDemoPage() {
         {/* ── LOCALIZAÇÃO ── */}
         <section
           id="localizacao"
-          className="demo-fertil-localizacao demo-fertil-section"
+          className="demo-go-localizacao demo-go-section"
           aria-labelledby="loc-title"
         >
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-loc-inner">
+          <div className="demo-go-container">
+            <div className="demo-go-loc-inner">
               {/* Info */}
-              <div className="demo-fertil-loc-info demo-fertil-reveal">
+              <div className="demo-go-loc-info demo-go-reveal">
                 <div>
-                  <span className="demo-fertil-eyebrow">Como chegar</span>
-                  <h2 className="demo-fertil-section-title" id="loc-title">
+                  <span className="demo-go-eyebrow">Como chegar</span>
+                  <h2 className="demo-go-section-title" id="loc-title">
                     Localização e horários
                   </h2>
-                  <p className="demo-fertil-section-subtitle">
+                  <p className="demo-go-section-subtitle">
                     Nosso consultório foi pensado para receber você com todo o conforto
                     e acolhimento que esse momento merece.
                   </p>
                 </div>
 
-                <div className="demo-fertil-loc-block">
-                  <div className="demo-fertil-loc-item">
-                    <div className="demo-fertil-loc-icon" aria-hidden="true">
+                <div className="demo-go-loc-block">
+                  <div className="demo-go-loc-item">
+                    <div className="demo-go-loc-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                         <circle cx="12" cy="10" r="3" />
                       </svg>
                     </div>
-                    <div className="demo-fertil-loc-text">
-                      <span className="demo-fertil-loc-label">Endereço</span>
-                      <span className="demo-fertil-loc-value">
+                    <div className="demo-go-loc-text">
+                      <span className="demo-go-loc-label">Endereço</span>
+                      <span className="demo-go-loc-value">
                         Av. Brasil, 1200 — Sala 501<br />
                         Centro, Ribeirão Preto — SP<br />
                         CEP 14010-000
@@ -2177,27 +2177,27 @@ export default function FertilidadeDemoPage() {
                     </div>
                   </div>
 
-                  <div className="demo-fertil-loc-item">
-                    <div className="demo-fertil-loc-icon" aria-hidden="true">
+                  <div className="demo-go-loc-item">
+                    <div className="demo-go-loc-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                       </svg>
                     </div>
-                    <div className="demo-fertil-loc-text">
-                      <span className="demo-fertil-loc-label">Telefone</span>
-                      <span className="demo-fertil-loc-value">(16) 99999-0000</span>
+                    <div className="demo-go-loc-text">
+                      <span className="demo-go-loc-label">Telefone</span>
+                      <span className="demo-go-loc-value">(16) 99999-0000</span>
                     </div>
                   </div>
 
-                  <div className="demo-fertil-loc-item">
-                    <div className="demo-fertil-loc-icon" aria-hidden="true">
+                  <div className="demo-go-loc-item">
+                    <div className="demo-go-loc-icon" aria-hidden="true">
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
                       </svg>
                     </div>
-                    <div className="demo-fertil-loc-text">
-                      <span className="demo-fertil-loc-label">WhatsApp</span>
-                      <span className="demo-fertil-loc-value">(16) 99999-0001</span>
+                    <div className="demo-go-loc-text">
+                      <span className="demo-go-loc-label">WhatsApp</span>
+                      <span className="demo-go-loc-value">(16) 99999-0001</span>
                     </div>
                   </div>
                 </div>
@@ -2206,18 +2206,18 @@ export default function FertilidadeDemoPage() {
                   <p style={{ fontWeight: 600, fontSize: "0.9375rem", color: "#1A1A2E", marginBottom: 14 }}>
                     Horário de atendimento
                   </p>
-                  <div className="demo-fertil-hours-grid">
-                    <div className="demo-fertil-hours-row">
-                      <span className="demo-fertil-hours-day">Seg — Sex</span>
-                      <span className="demo-fertil-hours-time">08h — 18h</span>
+                  <div className="demo-go-hours-grid">
+                    <div className="demo-go-hours-row">
+                      <span className="demo-go-hours-day">Seg — Sex</span>
+                      <span className="demo-go-hours-time">08h — 18h</span>
                     </div>
-                    <div className="demo-fertil-hours-row">
-                      <span className="demo-fertil-hours-day">Sábado</span>
-                      <span className="demo-fertil-hours-time">08h — 12h</span>
+                    <div className="demo-go-hours-row">
+                      <span className="demo-go-hours-day">Sábado</span>
+                      <span className="demo-go-hours-time">08h — 12h</span>
                     </div>
-                    <div className="demo-fertil-hours-row">
-                      <span className="demo-fertil-hours-day">Domingo</span>
-                      <span className="demo-fertil-hours-time" style={{ color: "#7C3AED" }}>Fechado</span>
+                    <div className="demo-go-hours-row">
+                      <span className="demo-go-hours-day">Domingo</span>
+                      <span className="demo-go-hours-time" style={{ color: "#7C3AED" }}>Fechado</span>
                     </div>
                   </div>
                 </div>
@@ -2225,19 +2225,19 @@ export default function FertilidadeDemoPage() {
 
               {/* Map placeholder */}
               <div
-                className="demo-fertil-map-placeholder demo-fertil-reveal demo-fertil-reveal-delay-2"
+                className="demo-go-map-placeholder demo-go-reveal demo-go-reveal-delay-2"
                 role="img"
                 aria-label="Mapa com localização do consultório na Av. Brasil, 1200, Ribeirão Preto"
               >
-                <div className="demo-fertil-map-bg" aria-hidden="true" />
+                <div className="demo-go-map-bg" aria-hidden="true" />
 
-                <div className="demo-fertil-map-pin" aria-hidden="true">
-                  <div className="demo-fertil-map-pin-inner" />
+                <div className="demo-go-map-pin" aria-hidden="true">
+                  <div className="demo-go-map-pin-inner" />
                 </div>
 
-                <div className="demo-fertil-map-label">
-                  <p className="demo-fertil-map-address">Av. Brasil, 1200 — Sala 501</p>
-                  <p className="demo-fertil-map-city">Centro · Ribeirão Preto, SP</p>
+                <div className="demo-go-map-label">
+                  <p className="demo-go-map-address">Av. Brasil, 1200 — Sala 501</p>
+                  <p className="demo-go-map-city">Centro · Ribeirão Preto, SP</p>
                 </div>
               </div>
             </div>
@@ -2247,32 +2247,32 @@ export default function FertilidadeDemoPage() {
         {/* ── CONTATO / CTA ── */}
         <section
           id="contato"
-          className="demo-fertil-contato"
+          className="demo-go-contato"
           aria-labelledby="cta-title"
         >
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-contato-inner">
-              <div className="demo-fertil-contato-eyebrow">
+          <div className="demo-go-container">
+            <div className="demo-go-contato-inner">
+              <div className="demo-go-contato-eyebrow">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" />
                 </svg>
                 Primeiro passo
               </div>
 
-              <h2 className="demo-fertil-contato-title" id="cta-title">
-                Vamos conversar sobre o seu sonho?
+              <h2 className="demo-go-contato-title" id="cta-title">
+                Vamos cuidar de você?
               </h2>
 
-              <p className="demo-fertil-contato-subtitle">
-                O primeiro passo é uma conversa, sem compromisso. Estamos aqui para
-                ouvir você, tirar suas dúvidas e mostrar que você não está sozinha
-                nessa jornada. Quando estiver pronta, é só nos chamar.
+              <p className="demo-go-contato-subtitle">
+                O primeiro passo é uma conversa, sem compromisso. Estou aqui para
+                ouvir você, tirar suas dúvidas e começar a cuidar da sua saúde
+                com a atenção que você merece. Quando estiver pronta, é só chamar.
               </p>
 
-              <div className="demo-fertil-contato-actions">
+              <div className="demo-go-contato-actions">
                 <a
                   href="https://wa.me/5516999990001"
-                  className="demo-fertil-btn-whatsapp"
+                  className="demo-go-btn-whatsapp"
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Agendar consulta via WhatsApp"
@@ -2285,7 +2285,7 @@ export default function FertilidadeDemoPage() {
 
                 <a
                   href="#"
-                  className="demo-fertil-btn demo-fertil-btn-white"
+                  className="demo-go-btn demo-go-btn-white"
                 >
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                     <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
@@ -2294,40 +2294,40 @@ export default function FertilidadeDemoPage() {
                 </a>
               </div>
 
-              <p className="demo-fertil-contato-note">
+              <p className="demo-go-contato-note">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M22 11.08V12a10 10 0 11-5.93-9.14" />
                   <polyline points="22 4 12 14.01 9 11.01" />
                 </svg>
-                Primeiro passo sem compromisso. Estamos aqui para ouvir.
+                Primeiro passo sem compromisso. Estou aqui para ouvir.
               </p>
             </div>
           </div>
         </section>
 
         {/* ── FOOTER ── */}
-        <footer className="demo-fertil-footer">
-          <div className="demo-fertil-container">
-            <div className="demo-fertil-footer-inner">
+        <footer className="demo-go-footer">
+          <div className="demo-go-container">
+            <div className="demo-go-footer-inner">
               {/* Brand */}
               <div>
-                <p className="demo-fertil-footer-brand-name">Dra. Juliana Mendes</p>
-                <p className="demo-fertil-footer-brand-specialty">Reprodução Humana</p>
-                <p className="demo-fertil-footer-bio">
-                  Consultório de reprodução humana em Ribeirão Preto. Fertilização
-                  in vitro, ICSI, inseminação artificial e preservação de fertilidade
-                  com atendimento humanizado.
+                <p className="demo-go-footer-brand-name">Dra. Carolina Ribeiro</p>
+                <p className="demo-go-footer-brand-specialty">Ginecologia e Obstetrícia</p>
+                <p className="demo-go-footer-bio">
+                  Consultório de ginecologia e obstetrícia em Ribeirão Preto.
+                  Pré-natal, parto humanizado, ginecologia preventiva, contracepção
+                  e menopausa com atendimento acolhedor e personalizado.
                 </p>
-                <p className="demo-fertil-footer-crm">CRM/SP 567890 · RQE 23456</p>
+                <p className="demo-go-footer-crm">CRM-SP 154.832 · RQE 72.456</p>
               </div>
 
               {/* Links */}
               <div>
-                <p className="demo-fertil-footer-col-title">Navegação</p>
-                <ul className="demo-fertil-footer-links" role="list">
+                <p className="demo-go-footer-col-title">Navegação</p>
+                <ul className="demo-go-footer-links" role="list">
                   <li><a href="#sobre">Sobre a médica</a></li>
-                  <li><a href="#tratamentos">Tratamentos</a></li>
-                  <li><a href="#jornada">Jornada do paciente</a></li>
+                  <li><a href="#tratamentos">Serviços</a></li>
+                  <li><a href="#jornada">Sua jornada</a></li>
                   <li><a href="#depoimentos">Depoimentos</a></li>
                   <li><a href="#localizacao">Localização</a></li>
                   <li><a href="#contato">Agendar consulta</a></li>
@@ -2336,9 +2336,9 @@ export default function FertilidadeDemoPage() {
 
               {/* Contact */}
               <div>
-                <p className="demo-fertil-footer-col-title">Contato</p>
-                <div className="demo-fertil-footer-contact-item">
-                  <span className="demo-fertil-footer-contact-icon">
+                <p className="demo-go-footer-col-title">Contato</p>
+                <div className="demo-go-footer-contact-item">
+                  <span className="demo-go-footer-contact-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
                       <circle cx="12" cy="10" r="3" />
@@ -2346,24 +2346,24 @@ export default function FertilidadeDemoPage() {
                   </span>
                   <span>Av. Brasil, 1200 — Sala 501<br />Centro · Ribeirão Preto, SP</span>
                 </div>
-                <div className="demo-fertil-footer-contact-item">
-                  <span className="demo-fertil-footer-contact-icon">
+                <div className="demo-go-footer-contact-item">
+                  <span className="demo-go-footer-contact-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z" />
                     </svg>
                   </span>
                   <span>(16) 99999-0000</span>
                 </div>
-                <div className="demo-fertil-footer-contact-item">
-                  <span className="demo-fertil-footer-contact-icon">
+                <div className="demo-go-footer-contact-item">
+                  <span className="demo-go-footer-contact-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z" />
                     </svg>
                   </span>
                   <span>WhatsApp: (16) 99999-0001</span>
                 </div>
-                <div className="demo-fertil-footer-contact-item">
-                  <span className="demo-fertil-footer-contact-icon">
+                <div className="demo-go-footer-contact-item">
+                  <span className="demo-go-footer-contact-icon">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                       <circle cx="12" cy="12" r="10" />
                       <polyline points="12 6 12 12 16 14" />
@@ -2374,11 +2374,11 @@ export default function FertilidadeDemoPage() {
               </div>
             </div>
 
-            <div className="demo-fertil-footer-bottom">
-              <p className="demo-fertil-footer-copy">
-                © 2025 Dra. Juliana Mendes — Reprodução Humana. Todos os direitos reservados.
+            <div className="demo-go-footer-bottom">
+              <p className="demo-go-footer-copy">
+                © 2025 Dra. Carolina Ribeiro — Ginecologia e Obstetrícia. Todos os direitos reservados.
               </p>
-              <p className="demo-fertil-footer-credit">
+              <p className="demo-go-footer-credit">
                 Site criado por{" "}
                 <a
                   href="https://condutasaude.com"
@@ -2400,14 +2400,14 @@ export default function FertilidadeDemoPage() {
   var io = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
-        entry.target.classList.add('demo-fertil-visible');
+        entry.target.classList.add('demo-go-visible');
         io.unobserve(entry.target);
       }
     });
   }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 
   function init() {
-    var els = document.querySelectorAll('.demo-fertil-reveal');
+    var els = document.querySelectorAll('.demo-go-reveal');
     els.forEach(function(el) { io.observe(el); });
   }
 

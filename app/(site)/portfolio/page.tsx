@@ -64,12 +64,12 @@ export default function SitesMedicosPage() {
               Cada especialidade tem sua <strong>linguagem.</strong>
             </h2>
             <p className="section-desc" style={{ margin: '0 auto' }}>
-              Fertilidade pede acolhimento. Cardiologia pede confiança. Pediatria pede
+              Ginecologia pede acolhimento. Cardiologia pede confiança. Pediatria pede
               leveza. O site precisa falar a língua do seu paciente.
             </p>
           </div>
           <div className="showcase-grid">
-            <a href="/portfolio/fertilidade" className="showcase-card reveal" target="_blank">
+            <a href="/portfolio/ginecologia" className="showcase-card reveal" target="_blank">
               <div
                 className="showcase-preview"
                 style={{ background: 'linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)' }}
@@ -79,8 +79,8 @@ export default function SitesMedicosPage() {
                 </svg>
               </div>
               <div className="showcase-info">
-                <h3>Fertilidade</h3>
-                <p>Acolhedor, delicado, jornada do casal</p>
+                <h3>Ginecologia</h3>
+                <p>Acolhedor, empoderador, saúde feminina</p>
                 <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
