@@ -173,8 +173,8 @@
       border-radius: 2px;
       transition: width 0.25s ease;
     }
-    .nav-links a:hover { color: var(--text); }
-    .nav-links a:hover::after { width: 100%; }
+    .nav-links a:hover, .nav-links a.active { color: var(--text); }
+    .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
 
     .nav-cta {
       font-family: 'Inter', sans-serif;
@@ -686,36 +686,77 @@
     /* ── CTA ── */
 
     .cta-section {
-      background: var(--accent-light);
+      background: linear-gradient(135deg, #0D9488 0%, #14B8A6 50%, #0EA5E9 100%);
       text-align: center;
-      padding: 96px clamp(20px, 5vw, 64px);
+      padding: 0 clamp(20px, 5vw, 64px);
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.08) 0%, transparent 60%),
+                  radial-gradient(circle at 80% 20%, rgba(255,255,255,0.06) 0%, transparent 50%);
+    }
+    .cta-inner {
+      position: relative; z-index: 1;
+      max-width: 680px;
+    }
+    .cta-eyebrow {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 2.5px; text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 28px;
+      padding: 6px 16px;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 20px;
     }
     .cta-section h2 {
       font-family: 'Work Sans', sans-serif;
-      font-size: clamp(32px, 4.5vw, 52px);
+      font-size: clamp(36px, 5vw, 56px);
       font-weight: 300;
-      color: var(--text);
+      color: #FFFFFF;
       letter-spacing: -1px;
-      margin-bottom: 16px;
-      line-height: 1.2;
+      margin-bottom: 20px;
+      line-height: 1.15;
     }
     .cta-section h2 strong {
       font-weight: 600;
-      color: var(--accent-hover);
     }
-    .cta-section > p {
+    .cta-section > .cta-inner > p {
       font-family: 'Inter', sans-serif;
-      font-size: 17px;
-      color: var(--text-secondary);
-      margin-bottom: 36px;
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 40px;
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
+      line-height: 1.7;
+    }
+    .cta-section .btn-cta {
+      font-family: 'Inter', sans-serif;
+      display: inline-block;
+      padding: 18px 44px;
+      border-radius: 12px;
+      font-size: 16px; font-weight: 600;
+      background: #FFFFFF;
+      color: var(--accent-hover);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+    .cta-section .btn-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
     }
     .cta-note {
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-top: 16px;
+      font-size: 14px;
+      color: rgba(255,255,255,0.6);
+      margin-top: 20px;
     }
 
 
@@ -759,7 +800,7 @@
       .hero-actions { justify-content: flex-start; }
 
       .section-pad { padding: 64px clamp(20px, 5vw, 40px); }
-      .cta-section { padding: 72px clamp(20px, 5vw, 40px); }
+      .cta-section { min-height: 80vh; }
 
       .hero-stats { padding-bottom: 56px; }
       .stats-grid { grid-template-columns: 1fr 1fr; }
@@ -845,10 +886,11 @@
     </svg>
   </a>
   <div class="nav-links">
+    <a href="#problema">O problema</a>
     <a href="#servicos">Serviços</a>
-    <a href="#ferramentas">Ferramentas &amp; IA</a>
-    <a href="#como-funciona">Como funciona</a>
-    <a href="#para-quem">Para quem</a>
+    <a href="#ferramentas">Ferramentas</a>
+    <a href="#como-funciona">Processo</a>
+    <a href="#diagnostico">Diagnóstico</a>
   </div>
   <a href="https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA" target="_blank" rel="noopener" class="nav-cta">Agendar diagnóstico</a>
 </nav>
@@ -878,20 +920,20 @@
     </div>
     <div class="stats-grid" aria-label="Dados sobre o mercado de clínicas">
       <div class="stat-card">
-        <div class="stat-number">72%</div>
-        <div class="stat-label">das clínicas nunca mapearam seus processos internos</div>
+        <div class="stat-number">59%</div>
+        <div class="stat-label">dos agendamentos acontecem fora do horário comercial</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">40%</div>
-        <div class="stat-label">de redução de no-show com confirmação automatizada</div>
+        <div class="stat-number">53%</div>
+        <div class="stat-label">dos pacientes faltam porque simplesmente esquecem</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">R$1.200</div>
-        <div class="stat-label">perda mensal por consulta cancelada sem reposição</div>
+        <div class="stat-number">42%</div>
+        <div class="stat-label">das clínicas têm dificuldade em confirmar consultas</div>
       </div>
       <div class="stat-card">
-        <div class="stat-number">5min</div>
-        <div class="stat-label">tempo máximo que o paciente espera antes de ir à concorrência</div>
+        <div class="stat-number">R$144mil</div>
+        <div class="stat-label">perda anual com problemas de agendamento por clínica</div>
       </div>
     </div>
   </div>
@@ -1142,11 +1184,12 @@
 
 <!-- ── CTA ── -->
 <section class="cta-section" id="diagnostico">
-  <div class="reveal">
+  <div class="cta-inner reveal">
+    <span class="cta-eyebrow">Diagnóstico gratuito</span>
     <h2>Pronto para <strong>transformar</strong> sua clínica?</h2>
-    <p>Comece com um diagnóstico gratuito de 60 minutos. Sem custo, sem compromisso.</p>
-    <a href="https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA" target="_blank" rel="noopener" class="btn-primary" style="font-size:15px; padding:16px 38px; border-radius:14px;">Agendar diagnóstico gratuito</a>
-    <p class="cta-note">Ou fale direto pelo WhatsApp · Remoto</p>
+    <p>Comece com um diagnóstico gratuito de 60 minutos. Sem custo, sem compromisso — e descubra onde sua clínica pode melhorar.</p>
+    <a href="https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA" target="_blank" rel="noopener" class="btn-cta">Agendar diagnóstico gratuito</a>
+    <p class="cta-note">Ou fale direto pelo WhatsApp · Atendimento remoto</p>
   </div>
 </section>
 
@@ -1186,20 +1229,41 @@
 </footer>
 
 <script>
-  // IntersectionObserver fade-up + scale reveals
   (function () {
-    var obs = new IntersectionObserver(function (entries) {
+    // Scroll-reveal animations
+    var revealObs = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) {
           e.target.classList.add('visible');
-          obs.unobserve(e.target);
+          revealObs.unobserve(e.target);
         }
       });
     }, { threshold: 0.10, rootMargin: '0px 0px -40px 0px' });
-
     document.querySelectorAll('.reveal').forEach(function (el) {
-      obs.observe(el);
+      revealObs.observe(el);
     });
+
+    // Nav scroll-spy (active link follows visible section)
+    var navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+    var sections = [];
+    navLinks.forEach(function (link) {
+      var id = link.getAttribute('href').slice(1);
+      var sec = document.getElementById(id);
+      if (sec) sections.push({ el: sec, link: link });
+    });
+    if (sections.length) {
+      var navObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            navLinks.forEach(function (l) { l.classList.remove('active'); });
+            sections.forEach(function (s) {
+              if (s.el === e.target) s.link.classList.add('active');
+            });
+          }
+        });
+      }, { threshold: 0.2, rootMargin: '-64px 0px -50% 0px' });
+      sections.forEach(function (s) { navObs.observe(s.el); });
+    }
   })();
 </script>
 
