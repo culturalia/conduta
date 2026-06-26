@@ -1,6 +1,5 @@
 // No extra metadata needed — layout.tsx handles defaults
 import Image from 'next/image';
-import WaveDivider from '@/components/WaveDivider';
 import StatCard from '@/components/StatCard';
 
 const WHATSAPP_URL =
@@ -262,8 +261,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <WaveDivider color="#FAFAF7" bgColor="#FFFFFF" />
-      <section className="services section-pad" id="servicos">
+<section className="services section-pad" id="servicos">
         <div className="container">
           <div className="services-header reveal">
             <div>
@@ -364,8 +362,7 @@ export default function Home() {
       </section>
 
       {/* ── TECHNOLOGY ── */}
-      <WaveDivider color="#0C4A6E" bgColor="#FAFAF7" />
-      <section className="technology section-pad" id="ferramentas">
+<section className="technology section-pad" id="ferramentas">
         <div className="container">
           <div className="tech-header reveal">
             <span className="eyebrow">Implementação de ferramentas</span>
@@ -440,8 +437,7 @@ export default function Home() {
       </section>
 
       {/* ── PROCESS ── */}
-      <WaveDivider color="#FFFFFF" bgColor="#0369A1" flip />
-      <section className="process section-pad" id="como-funciona">
+<section className="process section-pad" id="como-funciona">
         <div className="container">
           <div
             className="process-header reveal"
@@ -605,8 +601,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <WaveDivider color="#0C4A6E" bgColor="#FAFAF7" />
-      <section className="cta-section" id="diagnostico">
+<section className="cta-section" id="diagnostico">
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Diagnóstico gratuito</span>
           <h2>
