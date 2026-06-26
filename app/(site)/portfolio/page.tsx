@@ -44,10 +44,10 @@ export default function SitesMedicosPage() {
             Presença digital para sua <strong>clínica</strong>
           </h1>
           <p className="hero-sub hero-anim" style={{ maxWidth: '640px' }}>
-            Seus pacientes estão no Google. A Conduta cria sites profissionais, otimizados para SEO,
-            com agendamento integrado e design pensado para cada especialidade. Sites que
-            transmitem credibilidade, convertem visitantes em pacientes e posicionam você como
-            referência na sua região.
+            Seus pacientes pesquisam no Google antes de agendar. Como parte da nossa consultoria,
+            criamos sua presença digital — otimizada para SEO, com agendamento integrado e design
+            pensado para cada especialidade. Uma extensão da sua operação que transmite credibilidade
+            e converte visitantes em pacientes.
           </p>
         </div>
       </section>

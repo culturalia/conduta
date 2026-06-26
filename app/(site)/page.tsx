@@ -55,7 +55,7 @@ const medicalBusinessSchema = {
           '@type': 'Service',
           name: 'Treinamento Personalizado',
           description:
-            'Acompanhamento individual para que você domine as ferramentas e processos do seu consultório.',
+            'Acompanhamento para que sua equipe domine as ferramentas e processos da sua operação.',
         },
       },
       {
