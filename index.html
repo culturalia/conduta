@@ -4,387 +4,516 @@
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Conduta Saúde — Consultoria em Processos e Automação para Clínicas</title>
+  <meta name="description" content="A Conduta Saúde estrutura processos e implementa automação inteligente para clínicas médicas e odontológicas. Diagnóstico gratuito de 60 minutos."/>
+  <meta name="theme-color" content="#FFFFFF"/>
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png"/>
   <link rel="apple-touch-icon" href="favicon.png"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --sky:      #0EA5E9;
-      --teal:     #14B8A6;
-      --slate-950:#020617;
-      --slate-900:#0F172A;
-      --slate-800:#1E293B;
-      --slate-700:#334155;
-      --slate-600:#475569;
-      --slate-500:#64748B;
-      --slate-400:#94A3B8;
-      --slate-300:#CBD5E1;
-      --slate-200:#E2E8F0;
-      --white:    #FFFFFF;
+      --bg: #FFFFFF;
+      --bg-alt: #F8FAFC;
+      --bg-dark: #0F172A;
+      --bg-dark-alt: #1E293B;
+      --text: #0F172A;
+      --text-secondary: #475569;
+      --text-muted: #94A3B8;
+      --text-light: #CBD5E1;
+      --accent: #14B8A6;
+      --accent-hover: #0D9488;
+      --accent-light: #F0FDFA;
+      --sky: #0EA5E9;
+      --border: #E2E8F0;
     }
 
     html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
     body {
-      font-family: 'Inter', sans-serif;
-      background: var(--slate-900);
-      color: var(--slate-300);
-      line-height: 1.6;
-      overflow-x: hidden;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    /* ══ NAV ══ */
+    ::selection {
+      background: rgba(20,184,166,0.15);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+    }
+
+
+    /* ── NAV ── */
+
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       padding: 0 48px;
       display: flex; align-items: center; justify-content: space-between;
-      height: 68px;
-      background: rgba(15,23,42,0.92);
+      height: 64px;
+      background: rgba(255,255,255,0.92);
       backdrop-filter: blur(12px);
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
     }
+
+    .nav-logo { display: flex; align-items: center; }
     .nav-logo svg { display: block; }
-    .nav-links { display: flex; gap: 36px; align-items: center; }
+
+    .nav-links { display: flex; gap: 32px; align-items: center; }
     .nav-links a {
-      font-size: 13px; font-weight: 400; color: var(--slate-400);
-      text-decoration: none; transition: color .2s; letter-spacing: 0.2px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px; font-weight: 500; color: var(--text-secondary);
+      text-decoration: none; transition: color .2s;
     }
-    .nav-links a:hover { color: var(--white); }
+    .nav-links a:hover { color: var(--text); }
+
     .nav-cta {
-      padding: 9px 22px; border-radius: 6px; font-size: 13px; font-weight: 600;
-      background: var(--teal); color: var(--slate-900);
-      text-decoration: none; transition: opacity .2s; letter-spacing: 0.2px;
+      font-family: 'Inter', sans-serif;
+      padding: 10px 22px; border-radius: 6px;
+      font-size: 13px; font-weight: 600;
+      background: var(--accent); color: var(--bg-dark);
+      text-decoration: none; transition: background .2s;
     }
-    .nav-cta:hover { opacity: .88; }
+    .nav-cta:hover { background: var(--accent-hover); }
 
 
-    /* ══ HERO ══ */
+    /* ── HERO ── */
+
     .hero {
-      min-height: 100vh;
-      background: var(--slate-900);
-      display: flex; flex-direction: column; justify-content: center;
-      padding: 140px 48px 96px;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
+      padding: 152px 48px 88px;
+      background: var(--bg);
     }
-    .hero-inner { max-width: 1160px; margin: 0 auto; width: 100%; }
-    .hero-label {
-      font-size: 11px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
-      color: var(--teal); margin-bottom: 32px; display: block;
+
+    .hero-inner {
+      max-width: 1080px; margin: 0 auto;
     }
+
+    .hero-eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 28px; display: block;
+    }
+
     .hero h1 {
-      font-size: clamp(44px, 6vw, 80px);
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(40px, 5.5vw, 64px);
       font-weight: 800;
-      color: var(--white);
-      line-height: 1.04;
+      color: var(--text);
+      line-height: 1.06;
       letter-spacing: -2.5px;
-      margin-bottom: 28px;
-      max-width: 820px;
+      margin-bottom: 24px;
+      max-width: 720px;
     }
+
     .hero h1 em {
       font-style: normal;
-      color: var(--teal);
+      color: var(--accent);
     }
+
     .hero-sub {
-      font-size: 17px;
-      font-weight: 300;
-      color: var(--slate-400);
-      max-width: 520px;
-      line-height: 1.8;
-      margin-bottom: 48px;
-      font-family: 'DM Sans', sans-serif;
+      font-size: 17px; font-weight: 400;
+      color: var(--text-secondary);
+      max-width: 520px; line-height: 1.75;
+      margin-bottom: 40px;
     }
+
     .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+
     .btn-primary {
-      padding: 14px 32px; border-radius: 6px; font-size: 15px; font-weight: 600;
-      background: var(--teal); color: var(--slate-900);
-      text-decoration: none; transition: opacity .2s; display: inline-block;
+      font-family: 'Inter', sans-serif;
+      padding: 14px 28px; border-radius: 6px;
+      font-size: 14px; font-weight: 600;
+      background: var(--accent); color: var(--bg-dark);
+      text-decoration: none; transition: background .2s;
+      display: inline-block;
     }
-    .btn-primary:hover { opacity: .88; }
+    .btn-primary:hover { background: var(--accent-hover); }
+
     .btn-ghost {
-      padding: 14px 32px; border-radius: 6px; font-size: 15px; font-weight: 500;
-      border: 1px solid rgba(255,255,255,0.14); color: var(--slate-300);
+      font-family: 'Inter', sans-serif;
+      padding: 14px 28px; border-radius: 6px;
+      font-size: 14px; font-weight: 500;
+      border: 1px solid var(--border); color: var(--text-secondary);
       text-decoration: none; transition: border-color .2s, color .2s;
     }
-    .btn-ghost:hover { border-color: rgba(255,255,255,0.32); color: white; }
+    .btn-ghost:hover { border-color: var(--text-muted); color: var(--text); }
 
 
-    /* ══ SECTION BASE ══ */
-    section { padding: 104px 48px; }
-    .container { max-width: 1160px; margin: 0 auto; }
-    .section-eyebrow {
-      font-size: 11px; font-weight: 600; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--teal); margin-bottom: 20px; display: block;
+    /* ── ECG DIVIDER ── */
+
+    .ecg-divider {
+      padding: 0 48px;
     }
+
+    .ecg-divider svg {
+      display: block;
+      width: 100%; height: 40px;
+    }
+
+
+    /* ── STATS STRIP ── */
+
+    .stats-strip {
+      padding: 0 48px;
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(4, 1fr);
+    }
+
+    .stat-item {
+      padding: 28px 24px 28px 0;
+      border-right: 1px solid var(--border);
+    }
+    .stat-item:last-child { border-right: none; padding-right: 0; }
+    .stat-item:first-child { padding-left: 0; }
+
+    .stat-number {
+      font-family: 'Inter', sans-serif;
+      font-size: 32px; font-weight: 800;
+      color: var(--text);
+      letter-spacing: -1px; line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-label {
+      font-size: 13px; color: var(--text-muted); line-height: 1.5;
+    }
+
+
+    /* ── SHARED SECTION ── */
+
+    .section-pad { padding: 96px 48px; }
+
+    .container { max-width: 1080px; margin: 0 auto; }
+
+    .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px; font-weight: 600; letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 20px; display: block;
+    }
+
     .section-title {
-      font-size: clamp(28px, 4vw, 46px); font-weight: 800;
-      color: var(--white); line-height: 1.08;
-      margin-bottom: 16px; letter-spacing: -1.5px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(26px, 3.5vw, 40px);
+      font-weight: 700; color: var(--text);
+      line-height: 1.12; letter-spacing: -1px;
+      margin-bottom: 16px;
     }
-    .section-title em { font-style: normal; color: var(--teal); }
+    .section-title em { font-style: normal; color: var(--accent); }
+
     .section-desc {
-      font-size: 16px; color: var(--slate-400);
-      max-width: 520px; line-height: 1.85;
-      font-family: 'DM Sans', sans-serif;
+      font-size: 16px; color: var(--text-secondary);
+      max-width: 520px; line-height: 1.75;
     }
 
 
-    /* ══ PROBLEMA ══ */
-    .problema { background: var(--slate-800); }
-    .problema-grid {
+    /* ── CHALLENGE ── */
+
+    .challenge { background: var(--bg); }
+
+    .challenge-header { margin-bottom: 48px; }
+
+    .pain-grid {
       display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: start; margin-top: 60px;
+      border-top: 1px solid var(--border);
     }
-    .problema-list { display: flex; flex-direction: column; gap: 0; }
-    .problema-item {
+
+    .pain-item {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .pain-item:nth-child(odd) { padding-right: 32px; border-right: 1px solid var(--border); }
+    .pain-item:nth-child(even) { padding-left: 32px; }
+
+    .pain-item h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; font-weight: 600;
+      color: var(--text); margin-bottom: 6px;
+    }
+
+    .pain-item p {
+      font-size: 14px; color: var(--text-muted); line-height: 1.65;
+    }
+
+
+    /* ── SERVICES ── */
+
+    .services { background: var(--bg-alt); }
+
+    .services-header {
+      display: flex; justify-content: space-between;
+      align-items: end; gap: 48px;
+      margin-bottom: 48px;
+    }
+
+    .service-row {
+      display: grid; grid-template-columns: 260px 1fr;
+      gap: 40px; padding: 32px 0;
+      border-top: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .service-row:last-child { border-bottom: 1px solid var(--border); }
+
+    .service-name {
+      font-family: 'Inter', sans-serif;
+      font-size: 19px; font-weight: 700;
+      color: var(--text); letter-spacing: -0.3px;
+      line-height: 1.3;
+    }
+
+    .service-body p {
+      font-size: 15px; color: var(--text-secondary);
+      line-height: 1.75; margin-bottom: 16px;
+    }
+
+    .service-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .service-tag {
+      font-family: 'Inter', sans-serif;
+      padding: 4px 12px; border-radius: 4px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.3px;
+      background: var(--accent-light); color: var(--accent-hover);
+      border: 1px solid rgba(20,184,166,0.12);
+    }
+
+
+    /* ── TECHNOLOGY (dark) ── */
+
+    .technology {
+      background: var(--bg-dark);
+    }
+
+    .technology .eyebrow { color: var(--sky); }
+    .technology .section-title { color: #FFFFFF; }
+    .technology .section-desc { color: var(--text-light); }
+
+    .tech-content { max-width: 640px; }
+
+    .tech-features {
+      margin-top: 40px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .tech-feat {
       display: flex; gap: 20px; align-items: flex-start;
       padding: 24px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .problema-item:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
-    .problema-num {
-      font-size: 11px; font-weight: 700; letter-spacing: 2px;
-      color: var(--teal); padding-top: 3px; flex-shrink: 0; min-width: 28px;
-    }
-    .problema-item h4 { font-size: 15px; font-weight: 600; color: var(--white); margin-bottom: 6px; }
-    .problema-item p { font-size: 13px; color: var(--slate-400); line-height: 1.65; font-family: 'DM Sans', sans-serif; }
-    .problema-right { display: flex; flex-direction: column; gap: 0; padding-top: 0; }
-    .stat-row {
-      display: flex; gap: 24px; align-items: baseline;
-      padding: 32px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .stat-row:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
-    .stat-num {
-      font-size: 48px; font-weight: 800; color: var(--white);
-      line-height: 1; white-space: nowrap; letter-spacing: -2px;
-      min-width: 120px;
-    }
-    .stat-num.small { font-size: 36px; min-width: 120px; }
-    .stat-text { font-size: 14px; color: var(--slate-400); line-height: 1.6; font-family: 'DM Sans', sans-serif; }
-
-
-    /* ══ SERVIÇOS ══ */
-    .servicos { background: var(--slate-900); }
-    .servicos-intro {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 64px; align-items: end; margin-bottom: 64px;
-    }
-    .servicos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
-    .servico-card {
-      padding: 40px 36px; position: relative;
-      background: var(--slate-800);
-      transition: background .25s;
-    }
-    .servico-card:hover { background: #243047; }
-    .servico-num {
-      font-size: 11px; font-weight: 700; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--teal); margin-bottom: 24px; display: block;
-    }
-    .servico-card h3 {
-      font-size: 20px; font-weight: 700; color: var(--white);
-      margin-bottom: 14px; letter-spacing: -0.3px;
-    }
-    .servico-card p {
-      font-size: 14px; color: var(--slate-400); line-height: 1.8;
-      font-family: 'DM Sans', sans-serif;
-    }
-    .servico-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
-    .servico-tag {
-      padding: 4px 12px; border-radius: 4px; font-size: 11px; font-weight: 600;
-      letter-spacing: 0.5px;
-      background: rgba(255,255,255,0.05); color: var(--slate-400);
-      border: 1px solid rgba(255,255,255,0.07);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
-
-    /* ══ FERRAMENTAS & IA ══ */
-    .cloudia { background: var(--slate-950); }
-    .cloudia .container {
-      display: grid; grid-template-columns: 1fr 1fr;
-      gap: 80px; align-items: center;
-    }
-    .cloudia-label {
-      font-size: 11px; font-weight: 600; letter-spacing: 3px;
-      text-transform: uppercase; color: var(--sky); margin-bottom: 20px; display: block;
-    }
-    .cloudia h2 {
-      font-size: clamp(26px, 3.5vw, 40px); font-weight: 800;
-      color: var(--white); line-height: 1.1; letter-spacing:-1px; margin-bottom: 16px;
-    }
-    .cloudia h2 span { color: var(--teal); }
-    .cloudia-desc {
-      font-size: 15px; color: var(--slate-400); line-height: 1.85;
-      font-family: 'DM Sans', sans-serif; margin-bottom: 40px;
-    }
-    .cloudia-features { display: flex; flex-direction: column; gap: 0; }
-    .cloudia-feat {
-      display: flex; align-items: flex-start; gap: 20px;
-      padding: 20px 0;
-      border-bottom: 1px solid rgba(255,255,255,0.06);
-    }
-    .cloudia-feat:first-child { border-top: 1px solid rgba(255,255,255,0.06); }
-    .cloudia-feat-mark {
+    .tech-dot {
       width: 6px; height: 6px; border-radius: 50%;
-      background: var(--teal); flex-shrink: 0; margin-top: 8px;
+      background: var(--accent); flex-shrink: 0;
+      margin-top: 8px;
     }
-    .cloudia-feat h4 { font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 4px; }
-    .cloudia-feat p { font-size: 13px; color: var(--slate-400); font-family: 'DM Sans', sans-serif; line-height: 1.6; }
-    .api-note-site {
-      margin-top: 28px; padding: 16px 20px; border-radius: 6px;
-      background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
-      font-size: 12px; color: var(--slate-500); line-height: 1.65; font-family: 'DM Sans', sans-serif;
-    }
-    .api-note-site strong { color: var(--slate-400); }
 
-    /* Phone mockup */
-    .cloudia-visual {
-      display: flex; align-items: center; justify-content: center;
+    .tech-feat h4 {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; font-weight: 600;
+      color: #FFFFFF; margin-bottom: 4px;
     }
-    .cloudia-phone {
-      width: 280px; background: var(--slate-800); border-radius: 24px;
-      padding: 24px 20px; border: 1px solid rgba(255,255,255,0.08);
+
+    .tech-feat p {
+      font-size: 14px; color: var(--text-light); line-height: 1.65;
     }
-    .phone-header {
-      display: flex; align-items: center; gap: 10px; margin-bottom: 20px;
-      padding-bottom: 16px; border-bottom: 1px solid rgba(255,255,255,0.06);
+
+    .api-note {
+      margin-top: 32px; padding: 16px 20px;
+      border-radius: 6px;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      font-size: 13px; color: rgba(255,255,255,0.4);
+      line-height: 1.65;
     }
-    .phone-avatar {
-      width: 36px; height: 36px; border-radius: 50%;
-      background: var(--teal); display: flex; align-items: center; justify-content: center;
-      font-size: 14px; font-weight: 700; color: var(--slate-900);
-    }
-    .phone-name { font-size: 13px; font-weight: 600; color: var(--white); }
-    .phone-status { font-size: 11px; color: var(--teal); }
-    .chat-bubble {
-      padding: 10px 14px; border-radius: 12px; font-size: 12px; line-height: 1.5;
-      margin-bottom: 8px; max-width: 88%; font-family: 'DM Sans', sans-serif;
-    }
-    .chat-bubble.bot {
-      background: rgba(255,255,255,0.06); color: var(--slate-300);
-      border-radius: 4px 12px 12px 12px;
-    }
-    .chat-bubble.user {
-      background: var(--teal); color: var(--slate-900);
-      margin-left: auto; border-radius: 12px 4px 12px 12px; font-weight: 500;
-    }
-    .chat-bubble.typing {
-      background: rgba(255,255,255,0.04); color: var(--slate-500); font-style: italic;
-    }
-    .chat-time { font-size: 10px; color: var(--slate-600); margin-bottom: 8px; }
+
+    .api-note strong { color: rgba(255,255,255,0.6); }
 
 
-    /* ══ COMO FUNCIONA ══ */
-    .como { background: var(--slate-800); }
-    .como-steps {
-      display: grid; grid-template-columns: repeat(5,1fr);
-      gap: 0; margin-top: 64px;
-      border-top: 1px solid rgba(255,255,255,0.06);
+    /* ── PROCESS ── */
+
+    .process { background: var(--bg); }
+
+    .process-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; margin-top: 48px;
+      align-items: start;
     }
-    .como-step {
-      padding: 36px 24px 36px 0;
-      border-right: 1px solid rgba(255,255,255,0.06);
+
+    .process-steps {
+      border-top: 1px solid var(--border);
     }
-    .como-step:last-child { border-right: none; padding-right: 0; }
-    .como-step:first-child { padding-left: 0; }
-    .como-step-num {
-      font-size: 11px; font-weight: 700; letter-spacing: 2px;
-      color: var(--teal); margin-bottom: 16px; display: block;
+
+    .process-step {
+      display: grid; grid-template-columns: 44px 1fr;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
     }
-    .como-step h3 {
-      font-size: 15px; font-weight: 700; color: var(--white);
-      margin-bottom: 10px; line-height: 1.3; letter-spacing: -0.2px;
+
+    .step-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; font-weight: 700;
+      color: var(--accent); letter-spacing: 1px;
+      padding-top: 1px;
     }
-    .como-step p { font-size: 13px; color: var(--slate-400); line-height: 1.7; font-family: 'DM Sans', sans-serif; }
+
+    .process-step h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 15px; font-weight: 600;
+      color: var(--text); margin-bottom: 6px;
+    }
+
+    .process-step p {
+      font-size: 14px; color: var(--text-muted); line-height: 1.65;
+    }
 
 
-    /* ══ PARA QUEM ══ */
-    .paraquem { background: var(--slate-900); }
-    .paraquem-grid {
-      display: grid; grid-template-columns: repeat(3,1fr);
-      gap: 0; margin-top: 56px;
-      border-top: 1px solid rgba(255,255,255,0.06);
+    /* ── AUDIENCE ── */
+
+    .audience { background: var(--bg-alt); }
+
+    .audience-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      margin-top: 48px;
+      border-top: 1px solid var(--border);
     }
-    .paraquem-card {
-      padding: 36px 32px 36px 0;
-      border-right: 1px solid rgba(255,255,255,0.06);
-      transition: color .2s;
+
+    .audience-card {
+      padding: 32px 32px 32px 0;
+      border-right: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
-    .paraquem-card:last-child { border-right: none; padding-right: 0; }
-    .paraquem-card h3 { font-size: 17px; font-weight: 700; color: var(--white); margin-bottom: 10px; }
-    .paraquem-card p { font-size: 14px; color: var(--slate-400); line-height: 1.7; font-family: 'DM Sans', sans-serif; }
+    .audience-card:last-child { border-right: none; padding-right: 0; }
+    .audience-card:nth-child(n+2) { padding-left: 32px; }
+
+    .audience-card h3 {
+      font-family: 'Inter', sans-serif;
+      font-size: 17px; font-weight: 600;
+      color: var(--text); margin-bottom: 8px;
+    }
+
+    .audience-card p {
+      font-size: 14px; color: var(--text-secondary); line-height: 1.65;
+    }
 
 
-    /* ══ CTA ══ */
+    /* ── CTA ── */
+
     .cta-section {
-      background: var(--slate-950); text-align: center;
-      padding: 120px 48px;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      background: var(--bg);
+      text-align: center;
+      padding: 112px 48px;
+      border-top: 1px solid var(--border);
     }
+
     .cta-section h2 {
-      font-size: clamp(32px,5vw,56px); font-weight: 800; color: var(--white);
-      letter-spacing:-2px; margin-bottom: 16px;
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(30px, 4.5vw, 48px);
+      font-weight: 800; color: var(--text);
+      letter-spacing: -1.5px; margin-bottom: 16px;
     }
-    .cta-section h2 em { font-style:normal; color:var(--teal); }
-    .cta-section p {
-      font-size: 17px; color: var(--slate-400); margin-bottom: 40px;
-      font-family:'DM Sans',sans-serif; font-weight:300;
+
+    .cta-section h2 em { font-style: normal; color: var(--accent); }
+
+    .cta-section > p {
+      font-size: 17px; color: var(--text-secondary);
+      margin-bottom: 36px;
     }
-    .cta-note { font-size: 13px; color: var(--slate-600); margin-top: 16px; }
+
+    .cta-note {
+      font-size: 13px; color: var(--text-muted); margin-top: 16px;
+    }
 
 
-    /* ══ FOOTER ══ */
+    /* ── FOOTER ── */
+
     footer {
-      background: var(--slate-950); padding: 40px 48px;
-      display: flex; align-items: center; justify-content: space-between;
+      background: var(--bg-dark);
+      padding: 36px 48px;
+      display: flex; align-items: center;
+      justify-content: space-between;
       flex-wrap: wrap; gap: 20px;
-      border-top: 1px solid rgba(255,255,255,0.06);
     }
-    .footer-copy { font-size: 12px; color: var(--slate-600); }
+
+    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
+
     .footer-links { display: flex; gap: 24px; }
-    .footer-links a { font-size: 12px; color: var(--slate-600); text-decoration: none; transition: color .2s; }
-    .footer-links a:hover { color: var(--teal); }
+    .footer-links a {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px; color: rgba(255,255,255,0.35);
+      text-decoration: none; transition: color .2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
 
 
-    /* ══ RESPONSIVO ══ */
+    /* ── RESPONSIVE ── */
+
     @media (max-width: 900px) {
       nav { padding: 0 24px; }
       .nav-links { display: none; }
-      section { padding: 72px 24px; }
-      .hero { padding: 112px 24px 80px; }
-      footer { padding: 40px 24px; }
-      .problema-grid,
-      .servicos-intro,
-      .servicos-grid,
-      .cloudia .container { grid-template-columns: 1fr; gap: 48px; }
-      .como-steps {
-        grid-template-columns: 1fr;
-        border-top: none;
+      .nav-logo svg { width: 156px; height: auto; }
+
+      .hero { padding: 120px 24px 72px; }
+
+      .section-pad { padding: 72px 24px; }
+      .ecg-divider { padding: 0 24px; }
+      .stats-strip { padding: 0 24px; }
+      .cta-section { padding: 80px 24px; }
+      footer { padding: 32px 24px; }
+
+      .stats-inner { grid-template-columns: 1fr 1fr; }
+      .stat-item { padding: 20px 0; }
+      .stat-item:nth-child(odd) { padding-right: 20px; border-right: 1px solid var(--border); }
+      .stat-item:nth-child(even) { padding-left: 20px; border-right: none; }
+      .stat-item:nth-child(n+3) { border-top: 1px solid var(--border); }
+
+      .pain-grid { grid-template-columns: 1fr; }
+      .pain-item:nth-child(odd) { padding-right: 0; border-right: none; }
+      .pain-item:nth-child(even) { padding-left: 0; }
+
+      .services-header { flex-direction: column; align-items: start; gap: 16px; }
+      .service-row { grid-template-columns: 1fr; gap: 12px; }
+
+      .process-grid { grid-template-columns: 1fr; gap: 40px; }
+
+      .audience-grid { grid-template-columns: 1fr; }
+      .audience-card {
+        border-right: none; padding: 24px 0;
       }
-      .como-step {
-        border-right: none;
-        border-top: 1px solid rgba(255,255,255,0.06);
-        padding: 28px 0;
-      }
-      .paraquem-grid { grid-template-columns: 1fr; }
-      .paraquem-card { border-right: none; border-top: 1px solid rgba(255,255,255,0.06); padding: 28px 0; }
+      .audience-card:nth-child(n+2) { padding-left: 0; }
     }
   </style>
 </head>
 <body>
 
-<!-- ══ NAV ══ -->
+<!-- ── NAV ── -->
 <nav>
   <a href="#" class="nav-logo">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="208" height="48">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="176" height="40">
       <defs>
         <linearGradient id="ng1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0EA5E9"/><stop offset="100%" style="stop-color:#14B8A6"/></linearGradient>
         <linearGradient id="ng2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0EA5E9"/><stop offset="100%" style="stop-color:#14B8A6"/></linearGradient>
       </defs>
       <path d="M 90 15 A 48 48 0 1 0 90 105" fill="none" stroke="url(#ng1)" stroke-width="7" stroke-linecap="round"/>
       <polyline points="52,60 62,60 68,38 75,82 82,48 89,60 100,60 108,60" fill="none" stroke="url(#ng1)" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="128" y="56" font-family="Inter,'Helvetica Neue',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="-0.5" fill="white">conduta</text>
-      <line x1="128" y1="64" x2="390" y2="64" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+      <text x="128" y="56" font-family="Inter,'Helvetica Neue',Arial,sans-serif" font-size="34" font-weight="700" letter-spacing="-0.5" fill="#0F172A">conduta</text>
+      <line x1="128" y1="64" x2="390" y2="64" stroke="rgba(15,23,42,0.08)" stroke-width="1"/>
       <text x="128" y="88" font-family="Inter,'Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="300" letter-spacing="6" fill="url(#ng2)">SAÚDE</text>
     </svg>
   </a>
@@ -398,10 +527,10 @@
 </nav>
 
 
-<!-- ══ HERO ══ -->
+<!-- ── HERO ── -->
 <section class="hero" id="inicio">
   <div class="hero-inner">
-    <span class="hero-label">Consultoria especializada em clínicas</span>
+    <span class="hero-eyebrow">Consultoria especializada em clínicas</span>
     <h1>Processos organizados.<br/>Automação <em>que funciona.</em></h1>
     <p class="hero-sub">A Conduta Saúde estrutura os processos da sua clínica e implementa automações que realmente funcionam no dia a dia — para você parar de apagar incêndio e começar a crescer.</p>
     <div class="hero-actions">
@@ -412,123 +541,124 @@
 </section>
 
 
-<!-- ══ PROBLEMA ══ -->
-<section class="problema" id="problema">
+<!-- ── ECG DIVIDER ── -->
+<div class="ecg-divider" aria-hidden="true">
+  <svg viewBox="0 0 1200 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0 20 H560 L572 14 L584 20 L588 22 L598 4 L608 32 L614 20 L624 12 L636 20 H1200" stroke="#14B8A6" stroke-width="1.5" fill="none" opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</div>
+
+
+<!-- ── STATS ── -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number">72%</div>
+      <div class="stat-label">das clínicas nunca mapearam seus processos internos</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">40%</div>
+      <div class="stat-label">de redução de no-show com confirmação automatizada</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">R$1.200</div>
+      <div class="stat-label">perda mensal por consulta cancelada sem reposição</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">5min</div>
+      <div class="stat-label">tempo máximo que o paciente espera antes de ir à concorrência</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ── CHALLENGE ── -->
+<section class="challenge section-pad" id="problema">
   <div class="container">
-    <span class="section-eyebrow">01 — O problema</span>
-    <div class="problema-grid">
-      <div>
-        <h2 class="section-title">Já tentou usar uma IA ou uma ferramenta e <em>não saiu do lugar?</em></h2>
-        <p class="section-desc">A maioria das clínicas sabe que precisa se modernizar — mas entre contratar uma ferramenta e colocá-la para funcionar de verdade, existe um abismo. A Conduta existe para atravessar esse abismo com você.</p>
-        <div class="problema-list" style="margin-top:40px;">
-          <div class="problema-item">
-            <span class="problema-num">01</span>
-            <div>
-              <h4>"Contratei uma IA e ninguém usa"</h4>
-              <p>Ferramentas implementadas pela metade, sem treinamento do time e sem processo por trás — não funcionam.</p>
-            </div>
-          </div>
-          <div class="problema-item">
-            <span class="problema-num">02</span>
-            <div>
-              <h4>"Cada um faz do seu jeito"</h4>
-              <p>Sem processos definidos, nenhuma ferramenta resolve. A tecnologia amplifica o caos, não resolve.</p>
-            </div>
-          </div>
-          <div class="problema-item">
-            <span class="problema-num">03</span>
-            <div>
-              <h4>"Ainda perdemos consultas por falha de comunicação"</h4>
-              <p>Confirmações manuais, remarcações esquecidas e agenda ociosa — tudo resolvível com a ferramenta certa implementada do jeito certo.</p>
-            </div>
-          </div>
-          <div class="problema-item">
-            <span class="problema-num">04</span>
-            <div>
-              <h4>"Demoro para responder e perco o paciente"</h4>
-              <p>Paciente que não recebe resposta em minutos vai para a clínica concorrente. Atendimento lento custa novos pacientes todos os dias.</p>
-            </div>
-          </div>
-        </div>
+    <div class="challenge-header">
+      <span class="eyebrow">O problema</span>
+      <h2 class="section-title">Já tentou usar uma IA ou uma ferramenta e <em>não saiu do lugar?</em></h2>
+      <p class="section-desc">A maioria das clínicas sabe que precisa se modernizar — mas entre contratar uma ferramenta e colocá-la para funcionar de verdade, existe um abismo. A Conduta existe para atravessar esse abismo com você.</p>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-item">
+        <h4>"Contratei uma IA e ninguém usa"</h4>
+        <p>Ferramentas implementadas pela metade, sem treinamento do time e sem processo por trás — não funcionam.</p>
       </div>
-      <div class="problema-right">
-        <div class="stat-row">
-          <div class="stat-num">72%</div>
-          <div class="stat-text">das clínicas nunca fizeram um diagnóstico formal dos seus processos internos</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-num">40%</div>
-          <div class="stat-text">de redução de no-show em clínicas com confirmação automatizada no WhatsApp</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-num small">R$1.200</div>
-          <div class="stat-text">perda mensal estimada por cada consulta cancelada sem reposição de vaga</div>
-        </div>
-        <div class="stat-row">
-          <div class="stat-num">5min</div>
-          <div class="stat-text">é o tempo máximo que um paciente espera por resposta antes de procurar outra clínica</div>
-        </div>
+      <div class="pain-item">
+        <h4>"Cada um faz do seu jeito"</h4>
+        <p>Sem processos definidos, nenhuma ferramenta resolve. A tecnologia amplifica o caos, não resolve.</p>
+      </div>
+      <div class="pain-item">
+        <h4>"Ainda perdemos consultas por falha de comunicação"</h4>
+        <p>Confirmações manuais, remarcações esquecidas e agenda ociosa — tudo resolvível com a ferramenta certa implementada do jeito certo.</p>
+      </div>
+      <div class="pain-item">
+        <h4>"Demoro para responder e perco o paciente"</h4>
+        <p>Paciente que não recebe resposta em minutos vai para a clínica concorrente. Atendimento lento custa novos pacientes todos os dias.</p>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══ SERVIÇOS ══ -->
-<section class="servicos" id="servicos">
+<!-- ── SERVICES ── -->
+<section class="services section-pad" id="servicos">
   <div class="container">
-    <div class="servicos-intro">
+    <div class="services-header">
       <div>
-        <span class="section-eyebrow">02 — O que fazemos</span>
+        <span class="eyebrow">O que fazemos</span>
         <h2 class="section-title">Quatro frentes,<br/>uma <em>solução integrada</em></h2>
       </div>
       <p class="section-desc">Atuamos nas áreas que mais impactam resultado. A combinação de frentes é definida no diagnóstico — personalizada para cada clínica.</p>
     </div>
 
-    <div class="servicos-grid">
-      <div class="servico-card">
-        <span class="servico-num">Frente 01</span>
-        <h3>Gestão de Processos</h3>
+    <div class="service-row">
+      <h3 class="service-name">Gestão de Processos</h3>
+      <div class="service-body">
         <p>Mapeamento e redesenho dos fluxos operacionais. Eliminação de gargalos, criação de rotinas, SOPs e checklists que o time realmente usa. Acompanhamento contínuo com reuniões e relatórios.</p>
-        <div class="servico-tags">
-          <span class="servico-tag">Mapeamento de fluxos</span>
-          <span class="servico-tag">SOPs</span>
-          <span class="servico-tag">KPIs</span>
-          <span class="servico-tag">Relatórios mensais</span>
+        <div class="service-tags">
+          <span class="service-tag">Mapeamento de fluxos</span>
+          <span class="service-tag">SOPs</span>
+          <span class="service-tag">KPIs</span>
+          <span class="service-tag">Relatórios mensais</span>
         </div>
       </div>
+    </div>
 
-      <div class="servico-card">
-        <span class="servico-num">Frente 02</span>
-        <h3>Implementação de IA no atendimento</h3>
+    <div class="service-row">
+      <h3 class="service-name">Implementação de IA no atendimento</h3>
+      <div class="service-body">
         <p>Ajudamos a clínica a escolher, implementar e colocar em operação a IA certa para o seu atendimento — agendamento, confirmação, follow-up e comunicação automática com pacientes via WhatsApp.</p>
-        <div class="servico-tags">
-          <span class="servico-tag">Automação WhatsApp</span>
-          <span class="servico-tag">Redução de no-show</span>
-          <span class="servico-tag">Dashboard</span>
+        <div class="service-tags">
+          <span class="service-tag">Automação WhatsApp</span>
+          <span class="service-tag">Redução de no-show</span>
+          <span class="service-tag">Dashboard</span>
         </div>
       </div>
+    </div>
 
-      <div class="servico-card">
-        <span class="servico-num">Frente 03</span>
-        <h3>Capacitação de Times</h3>
+    <div class="service-row">
+      <h3 class="service-name">Capacitação de Times</h3>
+      <div class="service-body">
         <p>Treinamento completo da equipe para adoção dos novos processos e ferramentas. Gestão de mudança organizacional para garantir que a transformação aconteça na prática — não só no papel.</p>
-        <div class="servico-tags">
-          <span class="servico-tag">Onboarding</span>
-          <span class="servico-tag">Gestão de mudança</span>
-          <span class="servico-tag">Adoção de processos</span>
+        <div class="service-tags">
+          <span class="service-tag">Onboarding</span>
+          <span class="service-tag">Gestão de mudança</span>
+          <span class="service-tag">Adoção de processos</span>
         </div>
       </div>
+    </div>
 
-      <div class="servico-card">
-        <span class="servico-num">Frente 04</span>
-        <h3>Presença Digital & Autoridade</h3>
+    <div class="service-row">
+      <h3 class="service-name">Presença Digital & Autoridade</h3>
+      <div class="service-body">
         <p>Gestão de redes sociais, produção de conteúdo, Google Meu Negócio e reputação online. Posicionamento da clínica como referência e autoridade na sua especialidade e região.</p>
-        <div class="servico-tags">
-          <span class="servico-tag">Redes sociais</span>
-          <span class="servico-tag">Conteúdo</span>
-          <span class="servico-tag">Google Meu Negócio</span>
-          <span class="servico-tag">Reputação</span>
+        <div class="service-tags">
+          <span class="service-tag">Redes sociais</span>
+          <span class="service-tag">Conteúdo</span>
+          <span class="service-tag">Google Meu Negócio</span>
+          <span class="service-tag">Reputação</span>
         </div>
       </div>
     </div>
@@ -536,123 +666,120 @@
 </section>
 
 
-<!-- ══ FERRAMENTAS & IA ══ -->
-<section class="cloudia" id="ferramentas">
+<!-- ── TECHNOLOGY ── -->
+<section class="technology section-pad" id="ferramentas">
   <div class="container">
-    <div>
-      <span class="cloudia-label">Implementação de ferramentas</span>
-      <h2>Ajudamos você a implementar<br/><span>IA no seu atendimento</span></h2>
-      <p class="cloudia-desc">Não basta contratar uma ferramenta — ela precisa ser configurada, integrada ao processo da clínica e o time precisa saber usar. É exatamente isso que a Conduta faz.</p>
-      <div class="cloudia-features">
-        <div class="cloudia-feat">
-          <div class="cloudia-feat-mark"></div>
+    <div class="tech-content">
+      <span class="eyebrow">Implementação de ferramentas</span>
+      <h2 class="section-title">Ajudamos você a implementar<br/>IA no seu atendimento</h2>
+      <p class="section-desc">Não basta contratar uma ferramenta — ela precisa ser configurada, integrada ao processo da clínica e o time precisa saber usar. É exatamente isso que a Conduta faz.</p>
+
+      <div class="tech-features">
+        <div class="tech-feat">
+          <div class="tech-dot"></div>
           <div>
             <h4>Escolhemos a ferramenta certa</h4>
             <p>Avaliamos o perfil da clínica e indicamos a solução que realmente faz sentido — sem empurrar o que não funciona.</p>
           </div>
         </div>
-        <div class="cloudia-feat">
-          <div class="cloudia-feat-mark"></div>
+        <div class="tech-feat">
+          <div class="tech-dot"></div>
           <div>
             <h4>Implementamos do zero</h4>
             <p>Configuramos, integramos e colocamos em operação. A clínica não precisa saber nada de tecnologia para isso.</p>
           </div>
         </div>
-        <div class="cloudia-feat">
-          <div class="cloudia-feat-mark"></div>
+        <div class="tech-feat">
+          <div class="tech-dot"></div>
           <div>
             <h4>Treinamos o time</h4>
             <p>Sem treinamento, a ferramenta fica parada. Garantimos a adoção real pela equipe da clínica.</p>
           </div>
         </div>
-        <div class="cloudia-feat">
-          <div class="cloudia-feat-mark"></div>
+        <div class="tech-feat">
+          <div class="tech-dot"></div>
           <div>
             <h4>Acompanhamos e ajustamos</h4>
             <p>Ficamos junto depois da implementação para ajustar, otimizar e garantir que o resultado apareça.</p>
           </div>
         </div>
       </div>
-      <div class="api-note-site">
+
+      <div class="api-note">
         Quando a implementação envolve automação via WhatsApp, trabalhamos <strong>exclusivamente com a API Oficial do WhatsApp (Meta)</strong> — para reduzir o risco de banimento do número da clínica. Custo Meta de USD 0,05 por mensagem de template cobrado à parte conforme uso.
       </div>
     </div>
+  </div>
+</section>
 
-    <div class="cloudia-visual">
-      <div class="cloudia-phone">
-        <div class="phone-header">
-          <div class="phone-avatar">CS</div>
+
+<!-- ── PROCESS ── -->
+<section class="process section-pad" id="como-funciona">
+  <div class="container">
+    <div class="process-grid">
+      <div>
+        <span class="eyebrow">O processo</span>
+        <h2 class="section-title">Como funciona na prática</h2>
+        <p class="section-desc">Nada começa com uma proposta. Tudo começa com escuta.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <span class="step-num">01</span>
           <div>
-            <div class="phone-name">Assistente · Clínica Saúde+</div>
-            <div class="phone-status">Online agora</div>
+            <h3>Diagnóstico gratuito</h3>
+            <p>60 minutos para entender os processos, as dores e os objetivos da clínica. Remoto. Sem compromisso.</p>
           </div>
         </div>
-        <div class="chat-time">Hoje, 22h47</div>
-        <div class="chat-bubble bot">Olá, Ana! Sua consulta está confirmada para amanhã às 14h com Dr. Rodrigues. Posso te ajudar com mais alguma coisa?</div>
-        <div class="chat-bubble user">Preciso remarcar para depois das 16h</div>
-        <div class="chat-bubble bot">Claro! Tenho disponível amanhã às 16h30 ou sexta às 17h. Qual prefere?</div>
-        <div class="chat-bubble user">Sexta às 17h</div>
-        <div class="chat-bubble bot">Consulta remarcada para sexta-feira às 17h. Você receberá uma confirmação em breve.</div>
-        <div class="chat-bubble typing">Digitando...</div>
+        <div class="process-step">
+          <span class="step-num">02</span>
+          <div>
+            <h3>Proposta personalizada</h3>
+            <p>Com base no diagnóstico, montamos uma proposta com as frentes de atuação que fazem sentido para aquele momento específico.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">03</span>
+          <div>
+            <h3>Mapeamento e Planejamento</h3>
+            <p>Mapeamos todos os fluxos e planejamos as mudanças — com clareza e sem achismo — antes de mexer em qualquer coisa.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">04</span>
+          <div>
+            <h3>Implementação e Execução</h3>
+            <p>Configuramos as ferramentas, redesenhamos os processos e treinamos o time para que a mudança aconteça de verdade.</p>
+          </div>
+        </div>
+        <div class="process-step">
+          <span class="step-num">05</span>
+          <div>
+            <h3>Acompanhamento Contínuo</h3>
+            <p>Ficamos junto após a implementação — monitorando resultados, ajustando o que for necessário e garantindo que as melhorias se sustentem.</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
 
-<!-- ══ COMO FUNCIONA ══ -->
-<section class="como" id="como-funciona">
+<!-- ── AUDIENCE ── -->
+<section class="audience section-pad" id="para-quem">
   <div class="container">
-    <span class="section-eyebrow" style="text-align:left;">03 — O processo</span>
-    <h2 class="section-title">Como funciona na prática</h2>
-    <p class="section-desc">Nada começa com uma proposta. Tudo começa com escuta.</p>
-    <div class="como-steps">
-      <div class="como-step">
-        <span class="como-step-num">01</span>
-        <h3>Diagnóstico gratuito</h3>
-        <p>60 minutos para entender os processos, as dores e os objetivos da clínica. Remoto. Sem compromisso.</p>
-      </div>
-      <div class="como-step" style="padding-left:24px;">
-        <span class="como-step-num">02</span>
-        <h3>Proposta personalizada</h3>
-        <p>Com base no diagnóstico, montamos uma proposta com as frentes de atuação que fazem sentido para aquele momento específico.</p>
-      </div>
-      <div class="como-step" style="padding-left:24px;">
-        <span class="como-step-num">03</span>
-        <h3>Mapeamento e Planejamento</h3>
-        <p>Mapeamos todos os fluxos e planejamos as mudanças — com clareza e sem achismo — antes de mexer em qualquer coisa.</p>
-      </div>
-      <div class="como-step" style="padding-left:24px;">
-        <span class="como-step-num">04</span>
-        <h3>Implementação e Execução</h3>
-        <p>Configuramos as ferramentas, redesenhamos os processos e treinamos o time para que a mudança aconteça de verdade.</p>
-      </div>
-      <div class="como-step" style="padding-left:24px;">
-        <span class="como-step-num">05</span>
-        <h3>Acompanhamento Contínuo</h3>
-        <p>Ficamos junto após a implementação — monitorando resultados, ajustando o que for necessário e garantindo que as melhorias se sustentem.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ══ PARA QUEM ══ -->
-<section class="paraquem" id="para-quem">
-  <div class="container">
-    <span class="section-eyebrow">04 — Para quem</span>
+    <span class="eyebrow">Para quem</span>
     <h2 class="section-title">Feito para quem cuida de pessoas</h2>
     <p class="section-desc">A Conduta atende clínicas em diferentes estágios — do consultório que quer se organizar ao grupo que quer escalar.</p>
-    <div class="paraquem-grid">
-      <div class="paraquem-card">
+    <div class="audience-grid">
+      <div class="audience-card">
         <h3>Clínicas médicas</h3>
         <p>Clínicas gerais, especialidades e centros de saúde que querem processos mais eficientes e menor taxa de no-show.</p>
       </div>
-      <div class="paraquem-card" style="padding-left:32px;">
+      <div class="audience-card">
         <h3>Clínicas odontológicas</h3>
         <p>Consultórios e clínicas de odontologia que precisam organizar agenda, atendimento e comunicação com pacientes.</p>
       </div>
-      <div class="paraquem-card" style="padding-left:32px;">
+      <div class="audience-card">
         <h3>Grupos e redes</h3>
         <p>Grupos com múltiplas unidades que precisam de padronização e escala com qualidade consistente em todas as unidades.</p>
       </div>
@@ -661,18 +788,18 @@
 </section>
 
 
-<!-- ══ CTA ══ -->
+<!-- ── CTA ── -->
 <section class="cta-section" id="diagnostico">
   <h2>Pronto para <em>transformar</em><br/>sua clínica?</h2>
   <p>Comece com um diagnóstico gratuito de 60 minutos. Sem custo, sem compromisso.</p>
-  <a href="https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA" target="_blank" rel="noopener" class="btn-primary" style="font-size:16px; padding:16px 40px;">Agendar diagnóstico gratuito</a>
+  <a href="https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA" target="_blank" rel="noopener" class="btn-primary" style="font-size:15px; padding:16px 36px;">Agendar diagnóstico gratuito</a>
   <p class="cta-note">Ou fale direto pelo WhatsApp · Remoto</p>
 </section>
 
 
-<!-- ══ FOOTER ══ -->
+<!-- ── FOOTER ── -->
 <footer>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="182" height="42">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 120" width="156" height="36">
     <defs>
       <linearGradient id="fg1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#0EA5E9"/><stop offset="100%" style="stop-color:#14B8A6"/></linearGradient>
       <linearGradient id="fg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#0EA5E9"/><stop offset="100%" style="stop-color:#14B8A6"/></linearGradient>
