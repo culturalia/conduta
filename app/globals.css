@@ -10,7 +10,7 @@
   --accent: #0EA5E9;
   --accent-dark: #0369A1;
   --accent-hover: #0C4A6E;
-  --accent-light: #F0F9FF;
+  --accent-light: rgba(14,165,233,0.08);
   --accent-tag-bg: #E0F2FE;
   --accent-tag-text: #075985;
   --border: #E8E8E0;
@@ -328,7 +328,7 @@ button:focus-visible {
 
 .hero-actions {
   display: flex;
-  gap: 14px;
+  gap: 12px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -578,7 +578,7 @@ button:focus-visible {
 .technology .eyebrow {
   color: rgba(255,255,255,0.75);
   background: rgba(255,255,255,0.12);
-  padding: 5px 12px;
+  padding: 4px 12px;
   border-radius: 20px;
 }
 .technology .section-title { color: var(--white); }

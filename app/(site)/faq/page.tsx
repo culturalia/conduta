@@ -4,6 +4,7 @@ export const metadata: Metadata = {
   title: 'Perguntas Frequentes | Conduta Saúde',
   description:
     'Tire suas dúvidas sobre a consultoria da Conduta Saúde para médicos que atendem particular: diagnóstico gratuito, automação com IA, criação de site profissional e investimento mensal.',
+  alternates: { canonical: 'https://condutasaude.com/faq' },
 };
 
 const WHATSAPP_URL =

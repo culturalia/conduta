@@ -73,7 +73,7 @@ Warm, trustworthy, human. Never dark/techy. Never generic SaaS.
 
 | Element | Size | Weight | Family |
 |---------|------|--------|--------|
-| Hero h1 | `clamp(40px, 5.5vw, 68px)` | 300 | Work Sans |
+| Hero h1 | `clamp(32px, 4vw, 52px)` | 300 | Work Sans |
 | Section h2 | `clamp(24px, 3vw, 36px)` | 300 | Work Sans |
 | Card h3 | `18-20px` | 600 | Work Sans |
 | Body | `15-16px` | 400 | Inter |
@@ -84,7 +84,7 @@ Warm, trustworthy, human. Never dark/techy. Never generic SaaS.
 
 | Element | Spacing |
 |---------|---------|
-| Hero h1 | `-1.5px` |
+| Hero h1 | `-1px` |
 | Section h2 | `-0.5px` |
 | Eyebrow/badge | `0.08em` (uppercase) |
 | Body | default |
@@ -122,7 +122,8 @@ Warm, trustworthy, human. Never dark/techy. Never generic SaaS.
 - All spacing values must be multiples of 4px
 - Stat cards: minimum 32px padding (numbers never "grudged" to borders)
 - Section padding: `88px` vertical, `clamp(20px, 5vw, 64px)` horizontal
-- Hero padding-top: `152px` (accounts for fixed nav 64px + breathing room)
+- Hero padding-top: `140px` for internal pages, `80px` for home (with min-height: 100vh)
+- Home hero uses `hero-split` class for 2-column layout with photo
 
 ---
 
@@ -184,8 +185,8 @@ font-weight: 600;
 background: #0369A1;
 color: #FFFFFF;
 padding: 12px 24px;
-border-radius: 8px;
-font-size: 13px;
+border-radius: 20px;
+font-size: 14px;
 font-weight: 600;
 ```
 
@@ -325,7 +326,7 @@ font-family: Inter;
 - Cream (#FAFAF7) backgrounds for sections
 - Generous whitespace (32px+ card padding)
 - Sky blue as accent, dark blue (#0369A1) for buttons
-- Wave SVG as section separators
+- Clean color transitions between sections (no decorative separators)
 - ECG divider from logo with generous spacing and gradient fade
 - Photos of real humans (doctors, patients, consultations)
 - `clamp()` for responsive typography and spacing
