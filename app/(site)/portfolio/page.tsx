@@ -10,9 +10,32 @@ export const metadata: Metadata = {
 const WHATSAPP_URL =
   'https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA';
 
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'Início',
+      item: 'https://condutasaude.com',
+    },
+    {
+      '@type': 'ListItem',
+      position: 2,
+      name: 'Portfólio',
+      item: 'https://condutasaude.com/portfolio',
+    },
+  ],
+};
+
 export default function SitesMedicosPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       {/* ── HERO / HEADER ── */}
       <section className="hero" style={{ paddingBottom: '48px' }}>
         <div className="hero-inner" style={{ maxWidth: '840px' }}>

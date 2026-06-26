@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 /* ─────────────────────────────────────────────
    DEMO — Dra. Camila Santos · Pediatria
@@ -201,7 +202,7 @@ export default function PediatriaDemo() {
                 style={{
                   fontSize: "11px",
                   fontWeight: 500,
-                  color: "#D97706",
+                  color: "#B45309",
                   letterSpacing: "0.06em",
                   textTransform: "uppercase",
                 }}
@@ -327,8 +328,8 @@ export default function PediatriaDemo() {
                   alignItems: "center",
                   gap: "8px",
                   background: "rgba(217,119,6,0.10)",
-                  color: "#D97706",
-                  padding: "6px 16px",
+                  color: "#B45309",
+                  padding: "8px 16px",
                   borderRadius: "50px",
                   fontSize: "13px",
                   fontWeight: 600,
@@ -471,50 +472,24 @@ export default function PediatriaDemo() {
                     width: "100%",
                     height: "100%",
                     borderRadius: "32px 32px 32px 8px",
-                    background: "linear-gradient(160deg, #FEF3C7 0%, #FDE68A 50%, #FCD34D 100%)",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    gap: "12px",
                     boxShadow:
                       "0 20px 60px rgba(217,119,6,0.20), 0 4px 16px rgba(0,0,0,0.06)",
                     overflow: "hidden",
                   }}
                 >
-                  <div
+                  <Image
+                    src="/images/demos/pediatrician-child.jpg"
+                    alt="Dra. Camila Santos, pediatra, em seu consultório"
+                    width={420}
+                    height={525}
                     style={{
-                      width: "100px",
-                      height: "100px",
-                      borderRadius: "50%",
-                      background: "linear-gradient(135deg, #D97706 0%, #92400E 100%)",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      color: "#FEF3C7",
-                      fontFamily: "var(--font-work-sans), 'Work Sans', sans-serif",
-                      fontWeight: 800,
-                      fontSize: "32px",
-                      boxShadow: "0 6px 24px rgba(217,119,6,0.4)",
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                      display: "block",
                     }}
-                  >
-                    CS
-                  </div>
-                  <div style={{ textAlign: "center" }}>
-                    <div
-                      style={{
-                        fontFamily: "var(--font-work-sans), 'Work Sans', sans-serif",
-                        fontWeight: 700,
-                        fontSize: "17px",
-                        color: "#92400E",
-                      }}
-                    >
-                      Dra. Camila Santos
-                    </div>
-                    <div style={{ fontSize: "13px", color: "#B45309", marginTop: "4px" }}>
-                      Pediatra · CRM/SP 789012
-                    </div>
-                  </div>
+                  />
                 </div>
 
                 {/* Floating badge: availability */}
@@ -604,61 +579,31 @@ export default function PediatriaDemo() {
               alignItems: "center",
             }}
           >
-            {/* Photo placeholder */}
+            {/* Photo */}
             <div className="reveal" style={{ display: "flex", justifyContent: "center" }}>
               <div
                 style={{
                   width: "clamp(240px, 30vw, 360px)",
                   aspectRatio: "3/4",
                   borderRadius: "24px 8px 24px 8px",
-                  background: "linear-gradient(145deg, #FFF7ED 0%, #FEF3C7 100%)",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  gap: "16px",
+                  overflow: "hidden",
                   boxShadow: "0 16px 48px rgba(217,119,6,0.16), 0 4px 12px rgba(0,0,0,0.06)",
-                  border: "1px solid rgba(217,119,6,0.12)",
                   position: "relative",
                 }}
               >
-                <div
+                <Image
+                  src="/images/demos/pediatrician-child.jpg"
+                  alt="Dra. Camila Santos em atendimento pediátrico"
+                  width={360}
+                  height={480}
                   style={{
-                    width: "88px",
-                    height: "88px",
-                    borderRadius: "50%",
-                    background: "linear-gradient(135deg, #D97706 0%, #92400E 100%)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    color: "#FFFFFF",
-                    fontFamily: "var(--font-work-sans), 'Work Sans', sans-serif",
-                    fontWeight: 800,
-                    fontSize: "28px",
-                    boxShadow: "0 4px 16px rgba(217,119,6,0.4)",
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    display: "block",
                   }}
-                >
-                  CS
-                </div>
-                <div style={{ textAlign: "center", padding: "0 24px" }}>
-                  <div
-                    style={{
-                      fontFamily: "var(--font-work-sans), 'Work Sans', sans-serif",
-                      fontWeight: 700,
-                      fontSize: "16px",
-                      color: "#1A1A2E",
-                    }}
-                  >
-                    Dra. Camila Santos
-                  </div>
-                  <div style={{ fontSize: "13px", color: "#D97706", marginTop: "4px", fontWeight: 600 }}>
-                    Pediatra
-                  </div>
-                  <div style={{ fontSize: "12px", color: "#7C7C8A", marginTop: "8px" }}>
-                    CRM/SP 789012 · RQE 34567
-                  </div>
-                </div>
-
+                />
                 {/* Credential ribbon */}
                 <div
                   style={{
@@ -693,8 +638,8 @@ export default function PediatriaDemo() {
                 style={{
                   display: "inline-block",
                   background: "rgba(217,119,6,0.08)",
-                  color: "#D97706",
-                  padding: "5px 14px",
+                  color: "#B45309",
+                  padding: "4px 12px",
                   borderRadius: "50px",
                   fontSize: "12px",
                   fontWeight: 700,

@@ -1,11 +1,14 @@
 // No extra metadata needed — layout.tsx handles defaults
+import Image from 'next/image';
+import WaveDivider from '@/components/WaveDivider';
+import StatCard from '@/components/StatCard';
 
 const WHATSAPP_URL =
   'https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA';
 
 const medicalBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'MedicalBusiness',
+  '@type': ['MedicalBusiness', 'Organization'],
   name: 'Conduta Saúde',
   description:
     'Consultoria especializada em presença digital e automação para médicos que atendem particular.',
@@ -14,6 +17,11 @@ const medicalBusinessSchema = {
   image: 'https://condutasaude.com/og-image.png',
   logo: 'https://condutasaude.com/favicon.svg',
   sameAs: ['https://www.instagram.com/conduta.saude/'],
+  areaServed: {
+    '@type': 'Country',
+    name: 'BR',
+  },
+  knowsLanguage: 'pt-BR',
   contactPoint: {
     '@type': 'ContactPoint',
     telephone: '+5516996131393',
@@ -135,28 +143,40 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="hero" id="inicio">
         <div className="hero-inner">
-          <span className="hero-eyebrow hero-anim">Consultoria especializada para médicos</span>
-          <h1 className="hero-anim">
-            Processos organizados.
-            <br />
-            Automação <strong>que funciona.</strong>
-          </h1>
-          <p className="hero-sub hero-anim">
-            A Conduta Saúde organiza sua rotina e implementa automações que realmente funcionam
-            — para você parar de apagar incêndio e focar no que importa: seus pacientes.
-          </p>
-          <div className="hero-actions hero-anim">
-            <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener"
-              className="btn-primary"
-            >
-              Agendar diagnóstico gratuito
-            </a>
-            <a href="#servicos" className="btn-ghost">
-              Ver como atuamos
-            </a>
+          <div className="hero-text">
+            <span className="hero-eyebrow hero-anim">Consultoria especializada para médicos</span>
+            <h1 className="hero-anim">
+              Processos organizados.
+              <br />
+              Automação <strong>que funciona.</strong>
+            </h1>
+            <p className="hero-sub hero-anim">
+              A Conduta Saúde organiza sua rotina e implementa automações que realmente funcionam
+              — para você parar de apagar incêndio e focar no que importa: seus pacientes.
+            </p>
+            <div className="hero-actions hero-anim">
+              <a
+                href={WHATSAPP_URL}
+                target="_blank"
+                rel="noopener"
+                className="btn-primary"
+              >
+                Agendar diagnóstico gratuito
+              </a>
+              <a href="#servicos" className="btn-ghost">
+                Ver como atuamos
+              </a>
+            </div>
+          </div>
+          <div className="hero-image hero-anim">
+            <Image
+              src="/images/demos/doctor-tablet.jpg"
+              alt="Médica sorrindo em consultório médico moderno"
+              width={480}
+              height={600}
+              priority
+              style={{ width: '100%', height: 'auto', borderRadius: '20px' }}
+            />
           </div>
         </div>
       </section>
@@ -177,30 +197,10 @@ export default function Home() {
             </svg>
           </div>
           <div className="stats-grid" aria-label="Dados sobre o mercado médico">
-            <div className="stat-card">
-              <div className="stat-number">59%</div>
-              <div className="stat-label">
-                dos agendamentos acontecem fora do horário comercial
-              </div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">53%</div>
-              <div className="stat-label">
-                dos pacientes faltam porque simplesmente esquecem
-              </div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">42%</div>
-              <div className="stat-label">
-                dos médicos têm dificuldade em confirmar consultas
-              </div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">R$144mil</div>
-              <div className="stat-label">
-                perda anual com problemas de agendamento por consultório
-              </div>
-            </div>
+            <StatCard value={59} suffix="%" label="dos agendamentos acontecem fora do horário comercial" />
+            <StatCard value={53} suffix="%" label="dos pacientes faltam porque simplesmente esquecem" />
+            <StatCard value={42} suffix="%" label="dos médicos têm dificuldade em confirmar consultas" />
+            <StatCard value={144} prefix="R$" suffix="mil" label="perda anual com problemas de agendamento por consultório" />
           </div>
         </div>
       </div>
@@ -262,6 +262,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
+      <WaveDivider color="#FAFAF7" />
       <section className="services section-pad" id="servicos">
         <div className="container">
           <div className="services-header reveal">
@@ -363,6 +364,7 @@ export default function Home() {
       </section>
 
       {/* ── TECHNOLOGY ── */}
+      <WaveDivider color="#0C4A6E" />
       <section className="technology section-pad" id="ferramentas">
         <div className="container">
           <div className="tech-header reveal">
@@ -438,6 +440,7 @@ export default function Home() {
       </section>
 
       {/* ── PROCESS ── */}
+      <WaveDivider color="#FFFFFF" flip />
       <section className="process section-pad" id="como-funciona">
         <div className="container">
           <div
@@ -602,6 +605,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
+      <WaveDivider color="#0C4A6E" />
       <section className="cta-section" id="diagnostico">
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Diagnóstico gratuito</span>

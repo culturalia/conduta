@@ -102,7 +102,9 @@ export default function Footer() {
           Contato
         </a>
         <Link href="/portfolio">Portfolio</Link>
+        <Link href="/sobre">Sobre</Link>
         <Link href="/faq">FAQ</Link>
+        <Link href="/privacidade">Privacidade</Link>
         <a
           href="https://www.instagram.com/conduta.saude/"
           target="_blank"

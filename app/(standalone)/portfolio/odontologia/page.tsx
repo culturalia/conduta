@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dr. Felipe Oliveira — Cirurgião-Dentista em São Paulo",
   description:
-    "Clínica odontológica do Dr. Felipe Oliveira em São Paulo. Implantes, clareamento, ortodontia, lente de contato dental e harmonização orofacial. Agende sua consulta.",
+    "Consultório odontológico do Dr. Felipe Oliveira em São Paulo. Implantes, clareamento, ortodontia, lente de contato dental e harmonização orofacial. Agende sua consulta.",
   robots: { index: false, follow: false },
 };
 
@@ -12,7 +13,7 @@ const dentistSchema = {
   "@type": "Dentist",
   name: "Dr. Felipe Oliveira — Cirurgião-Dentista",
   description:
-    "Clínica odontológica especializada em implantes dentários, clareamento, ortodontia, lente de contato dental, prótese e harmonização orofacial.",
+    "Consultório odontológico especializado em implantes dentários, clareamento, ortodontia, lente de contato dental, prótese e harmonização orofacial.",
   url: "https://condutasaude.com/demos/odontologia",
   telephone: "+5511999990000",
   image: "https://condutasaude.com/demos/odontologia/og.png",
@@ -315,21 +316,19 @@ export default function OdontologiaDemo() {
   width: 100%;
   aspect-ratio: 4/5;
   max-width: 440px;
+  overflow: hidden;
   margin: 0 auto;
-  background: linear-gradient(145deg, #BAE6FD 0%, #99F6E4 50%, #E0F2FE 100%);
   border-radius: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
   overflow: hidden;
   box-shadow: 0 20px 60px rgba(14,165,233,0.15), 0 4px 16px rgba(0,0,0,0.06);
 }
-.demo-odonto-hero-img-initials {
-  font-family: var(--font-work-sans, 'Work Sans', sans-serif);
-  font-size: 80px;
-  font-weight: 700;
-  color: rgba(14,165,233,0.4);
+.demo-odonto-hero-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
   letter-spacing: -2px;
   user-select: none;
 }
@@ -437,7 +436,7 @@ export default function OdontologiaDemo() {
 .demo-odonto-sobre-photo {
   width: 240px;
   height: 300px;
-  background: linear-gradient(145deg, #BAE6FD 0%, #7DD3FC 40%, #99F6E4 100%);
+  overflow: hidden;
   border-radius: 20px;
   display: flex;
   align-items: center;
@@ -446,12 +445,11 @@ export default function OdontologiaDemo() {
   position: relative;
   box-shadow: 0 12px 40px rgba(14,165,233,0.18);
 }
-.demo-odonto-sobre-initials {
-  font-family: var(--font-work-sans, 'Work Sans', sans-serif);
-  font-size: 64px;
-  font-weight: 700;
-  color: rgba(14,165,233,0.5);
-  user-select: none;
+.demo-odonto-sobre-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 .demo-odonto-sobre-cro {
   position: absolute;
@@ -1028,7 +1026,12 @@ export default function OdontologiaDemo() {
 
             <div className="demo-odonto-hero-visual" aria-hidden="true">
               <div className="demo-odonto-hero-img">
-                <span className="demo-odonto-hero-img-initials">FO</span>
+                <Image
+                  src="/images/demos/dentist-smile.jpg"
+                  alt="Dr. Felipe Oliveira realizando tratamento odontológico"
+                  width={440}
+                  height={550}
+                />
               </div>
               <div className="demo-odonto-hero-card">
                 <div className="demo-odonto-hero-card-icon">
@@ -1054,7 +1057,12 @@ export default function OdontologiaDemo() {
             <div className="demo-odonto-sobre-grid">
               <div className="demo-odonto-reveal" style={{"--od": "0s"} as React.CSSProperties}>
                 <div className="demo-odonto-sobre-photo" aria-label="Foto do Dr. Felipe Oliveira">
-                  <span className="demo-odonto-sobre-initials">FO</span>
+                  <Image
+                    src="/images/demos/dentist-portrait.jpg"
+                    alt="Dr. Felipe Oliveira em atendimento"
+                    width={240}
+                    height={300}
+                  />
                   <div className="demo-odonto-sobre-cro">CRO/SP 45678</div>
                 </div>
               </div>
@@ -1366,7 +1374,7 @@ export default function OdontologiaDemo() {
                   ))}
                 </div>
                 <p className="demo-odonto-dep-text">
-                  Tinha muito medo de dentista e o Dr. Felipe foi extremamente paciente. A clínica é moderna e aconchegante. Finalmente consegui tratar meus dentes sem ansiedade. Recomendo demais!
+                  Tinha muito medo de dentista e o Dr. Felipe foi extremamente paciente. O consultório é moderno e aconchegante. Finalmente consegui tratar meus dentes sem ansiedade. Recomendo demais!
                 </p>
                 <div className="demo-odonto-dep-author">
                   <div className="demo-odonto-dep-avatar" aria-hidden="true">PL</div>
@@ -1509,7 +1517,7 @@ export default function OdontologiaDemo() {
               <a href="https://condutasaude.com" target="_blank" rel="noopener">
                 Conduta Saúde
               </a>{" "}
-              · Esta é uma demonstração de site para clínicas odontológicas.
+              · Esta é uma demonstração de site para consultórios odontológicos.
             </p>
           </div>
         </footer>

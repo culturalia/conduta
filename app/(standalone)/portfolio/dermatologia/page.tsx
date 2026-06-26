@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dra. Marina Costa — Dermatologista | São Paulo",
@@ -353,8 +354,8 @@ const styles = `
 .demo-derma-hero-photo {
   width: 340px;
   height: 420px;
-  background: linear-gradient(145deg, #FECDD3 0%, #FDA4AF 100%);
   border-radius: 24px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -364,21 +365,12 @@ const styles = `
   position: relative;
 }
 
-.demo-derma-hero-initials {
-  font-family: var(--font-work-sans), sans-serif;
-  font-size: 5rem;
-  font-weight: 800;
-  color: white;
-  opacity: 0.95;
-  line-height: 1;
-}
-
-.demo-derma-hero-photo-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: white;
-  opacity: 0.8;
-  letter-spacing: 0.04em;
+.demo-derma-hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .demo-derma-hero-card {
@@ -455,8 +447,8 @@ const styles = `
 .demo-derma-sobre-photo {
   width: 280px;
   height: 340px;
-  background: linear-gradient(145deg, #FFE4E6 0%, #FECDD3 100%);
   border-radius: 20px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -466,19 +458,12 @@ const styles = `
   position: relative;
 }
 
-.demo-derma-sobre-initials {
-  font-family: var(--font-work-sans), sans-serif;
-  font-size: 4rem;
-  font-weight: 800;
-  color: var(--rose);
-  line-height: 1;
-}
-
-.demo-derma-sobre-photo-name {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--rose-hover);
-  letter-spacing: 0.03em;
+.demo-derma-sobre-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .demo-derma-crm-badge {
@@ -564,7 +549,7 @@ const styles = `
 .demo-derma-tag {
   background: var(--rose-light);
   border: 1px solid var(--rose-border);
-  color: var(--rose-hover);
+  color: #9F1239;
   font-size: 0.8125rem;
   font-weight: 500;
   padding: 5px 12px;
@@ -1514,8 +1499,13 @@ export default function DermatologiaDemoPage() {
               {/* Visual */}
               <div className="demo-derma-hero-visual" aria-hidden="true">
                 <div className="demo-derma-hero-photo">
-                  <span className="demo-derma-hero-initials">MC</span>
-                  <span className="demo-derma-hero-photo-label">Dra. Marina Costa</span>
+                  <Image
+                    className="demo-derma-hero-photo-img"
+                    src="/images/demos/doctor-consultation.jpg"
+                    alt="Dra. Marina Costa, dermatologista"
+                    width={340}
+                    height={420}
+                  />
                 </div>
 
                 {/* Floating cards */}
@@ -1549,9 +1539,14 @@ export default function DermatologiaDemoPage() {
             <div className="demo-derma-sobre-inner">
               {/* Photo column */}
               <div className="demo-derma-sobre-photo-wrap">
-                <div className="demo-derma-sobre-photo" aria-hidden="true">
-                  <span className="demo-derma-sobre-initials">MC</span>
-                  <span className="demo-derma-sobre-photo-name">Dra. Marina Costa</span>
+                <div className="demo-derma-sobre-photo">
+                  <Image
+                    className="demo-derma-sobre-photo-img"
+                    src="/images/demos/doctor-consultation.jpg"
+                    alt="Dra. Marina Costa em atendimento"
+                    width={280}
+                    height={340}
+                  />
                 </div>
 
                 <div className="demo-derma-crm-badge">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dra. Juliana Mendes — Reprodução Humana | Ribeirão Preto",
@@ -372,8 +373,8 @@ const styles = `
 .demo-fertil-hero-photo {
   width: 340px;
   height: 420px;
-  background: linear-gradient(145deg, #DDD6FE 0%, #C4B5FD 40%, #F9A8D4 100%);
   border-radius: 24px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -383,21 +384,12 @@ const styles = `
   position: relative;
 }
 
-.demo-fertil-hero-initials {
-  font-family: var(--font-work-sans), sans-serif;
-  font-size: 5rem;
-  font-weight: 800;
-  color: white;
-  opacity: 0.95;
-  line-height: 1;
-}
-
-.demo-fertil-hero-photo-label {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: white;
-  opacity: 0.8;
-  letter-spacing: 0.04em;
+.demo-fertil-hero-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .demo-fertil-hero-card {
@@ -474,8 +466,8 @@ const styles = `
 .demo-fertil-sobre-photo {
   width: 280px;
   height: 340px;
-  background: linear-gradient(145deg, #F3E8FF 0%, #DDD6FE 50%, #FBCFE8 100%);
   border-radius: 20px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -485,19 +477,12 @@ const styles = `
   position: relative;
 }
 
-.demo-fertil-sobre-initials {
-  font-family: var(--font-work-sans), sans-serif;
-  font-size: 4rem;
-  font-weight: 800;
-  color: var(--violet);
-  line-height: 1;
-}
-
-.demo-fertil-sobre-photo-name {
-  font-size: 0.875rem;
-  font-weight: 600;
-  color: var(--violet-hover);
-  letter-spacing: 0.03em;
+.demo-fertil-sobre-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .demo-fertil-crm-badge {
@@ -583,7 +568,7 @@ const styles = `
 .demo-fertil-tag {
   background: var(--violet-light);
   border: 1px solid var(--violet-border);
-  color: var(--violet-hover);
+  color: #5B21B6;
   font-size: 0.8125rem;
   font-weight: 500;
   padding: 5px 14px;
@@ -1778,8 +1763,13 @@ export default function FertilidadeDemoPage() {
               {/* Visual */}
               <div className="demo-fertil-hero-visual" aria-hidden="true">
                 <div className="demo-fertil-hero-photo">
-                  <span className="demo-fertil-hero-initials">JM</span>
-                  <span className="demo-fertil-hero-photo-label">Dra. Juliana Mendes</span>
+                  <Image
+                    className="demo-fertil-hero-photo-img"
+                    src="/images/demos/doctor-tablet.jpg"
+                    alt="Dra. Juliana Mendes, especialista em reprodução humana"
+                    width={340}
+                    height={420}
+                  />
                 </div>
 
                 {/* Floating cards */}
@@ -1822,9 +1812,14 @@ export default function FertilidadeDemoPage() {
             <div className="demo-fertil-sobre-inner">
               {/* Photo column */}
               <div className="demo-fertil-sobre-photo-wrap demo-fertil-reveal">
-                <div className="demo-fertil-sobre-photo" aria-hidden="true">
-                  <span className="demo-fertil-sobre-initials">JM</span>
-                  <span className="demo-fertil-sobre-photo-name">Dra. Juliana Mendes</span>
+                <div className="demo-fertil-sobre-photo">
+                  <Image
+                    className="demo-fertil-sobre-photo-img"
+                    src="/images/demos/doctor-tablet.jpg"
+                    alt="Dra. Juliana Mendes em seu consultório"
+                    width={280}
+                    height={340}
+                  />
                 </div>
 
                 <div className="demo-fertil-crm-badge">

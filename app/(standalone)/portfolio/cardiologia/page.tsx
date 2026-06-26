@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Dr. Ricardo Almeida — Cardiologista em São Paulo",
@@ -275,22 +276,10 @@ export default function CardiologiaDemo() {
   overflow: hidden;
   position: relative;
 }
-.demo-cardio-hero-photo-placeholder {
+.demo-cardio-hero-photo-img {
   width: 100%; aspect-ratio: 3/4;
-  background: linear-gradient(160deg, #1E3A5F 0%, #0c2040 40%, #0EA5E9 100%);
-  display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 12px;
-}
-.demo-cardio-hero-photo-initials {
-  font-family: var(--font-work-sans), 'Work Sans', sans-serif;
-  font-size: 72px; font-weight: 700;
-  color: rgba(255,255,255,0.90); letter-spacing: -0.02em;
-  line-height: 1;
-}
-.demo-cardio-hero-photo-label {
-  font-size: 13px; font-weight: 500;
-  color: rgba(255,255,255,0.55); letter-spacing: 0.08em;
-  text-transform: uppercase;
+  object-fit: cover; object-position: center top;
+  display: block;
 }
 .demo-cardio-hero-card-info {
   padding: 20px 24px;
@@ -361,20 +350,15 @@ export default function CardiologiaDemo() {
   position: sticky; top: 88px;
 }
 .demo-cardio-sobre-photo-wrap {
-  background: linear-gradient(160deg, #1E3A5F 0%, #0c2040 50%, #0EA5E9 100%);
   border-radius: 16px;
-  aspect-ratio: 4/5; display: flex;
-  flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+  overflow: hidden;
   box-shadow: 0 12px 40px rgba(30,58,95,0.20);
   margin-bottom: 20px;
 }
-.demo-cardio-sobre-initials {
-  font-family: var(--font-work-sans), 'Work Sans', sans-serif;
-  font-size: 80px; font-weight: 700; color: rgba(255,255,255,0.88); line-height: 1;
-}
-.demo-cardio-sobre-photo-lbl {
-  font-size: 13px; color: rgba(255,255,255,0.50);
-  letter-spacing: 0.08em; text-transform: uppercase;
+.demo-cardio-sobre-photo-img {
+  width: 100%; aspect-ratio: 4/5;
+  object-fit: cover; object-position: center top;
+  display: block;
 }
 
 .demo-cardio-sobre-affiliations {
@@ -869,10 +853,13 @@ export default function CardiologiaDemo() {
             {/* Right column — photo card */}
             <div>
               <div className="demo-cardio-hero-card demo-cardio-hero-anim">
-                <div className="demo-cardio-hero-photo-placeholder">
-                  <span className="demo-cardio-hero-photo-initials">RA</span>
-                  <span className="demo-cardio-hero-photo-label">Foto do médico</span>
-                </div>
+                <Image
+                  className="demo-cardio-hero-photo-img"
+                  src="/images/demos/doctor-man-professional.jpg"
+                  alt="Dr. Ricardo Almeida, cardiologista, em seu consultório"
+                  width={400}
+                  height={533}
+                />
                 <div className="demo-cardio-hero-card-info">
                   <div className="demo-cardio-hero-card-name">Dr. Ricardo Almeida</div>
                   <div className="demo-cardio-hero-card-crm">CRM/SP 654321 · RQE 12345</div>
@@ -892,8 +879,13 @@ export default function CardiologiaDemo() {
             {/* Left — photo + affiliations */}
             <div className="demo-cardio-sobre-photo demo-cardio-reveal">
               <div className="demo-cardio-sobre-photo-wrap">
-                <span className="demo-cardio-sobre-initials">RA</span>
-                <span className="demo-cardio-sobre-photo-lbl">Foto do médico</span>
+                <Image
+                  className="demo-cardio-sobre-photo-img"
+                  src="/images/demos/doctor-man-professional.jpg"
+                  alt="Dr. Ricardo Almeida em atendimento"
+                  width={380}
+                  height={475}
+                />
               </div>
               <div className="demo-cardio-sobre-affiliations">
                 <p style={{ fontSize: "12px", fontWeight: 700, color: "#9CA3AF", letterSpacing: "0.08em", textTransform: "uppercase", marginBottom: "8px" }}>
