@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const WHATSAPP_URL =
   "https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA";
 
@@ -99,8 +101,8 @@ export default function Footer() {
         <a href={WHATSAPP_URL} target="_blank" rel="noopener">
           Contato
         </a>
-        <a href="#servicos">Servi&ccedil;os</a>
-        <a href="#ferramentas">Ferramentas &amp; IA</a>
+        <Link href="/sites-medicos">Sites para Médicos</Link>
+        <Link href="/faq">FAQ</Link>
         <a
           href="https://www.instagram.com/conduta.saude/"
           target="_blank"

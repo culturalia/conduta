@@ -1,24 +1,31 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const WHATSAPP_URL =
   "https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA";
 
-const NAV_ITEMS = [
+const HOME_ANCHORS = [
   { label: "O problema", href: "#problema" },
   { label: "Serviços", href: "#servicos" },
-  { label: "Ferramentas", href: "#ferramentas" },
   { label: "Processo", href: "#como-funciona" },
-  { label: "Diagnóstico", href: "#diagnostico" },
+];
+
+const PAGE_LINKS = [
+  { label: "Sites para Médicos", href: "/sites-medicos" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 export default function Header() {
   const navLinksRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const navLinksEl = navLinksRef.current;
-    if (!navLinksEl) return;
+    if (!navLinksEl || !isHome) return;
 
     const links = navLinksEl.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
     const sections: { el: HTMLElement; link: HTMLAnchorElement }[] = [];
@@ -50,11 +57,11 @@ export default function Header() {
     return () => {
       navObs.disconnect();
     };
-  }, []);
+  }, [isHome]);
 
   return (
     <nav aria-label="Navegação principal">
-      <a href="#" className="nav-logo" aria-label="Conduta Saúde — início">
+      <Link href="/" className="nav-logo" aria-label="Conduta Saúde — início">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 520 120"
@@ -143,12 +150,23 @@ export default function Header() {
             SAÚDE
           </text>
         </svg>
-      </a>
+      </Link>
       <div className="nav-links" ref={navLinksRef}>
-        {NAV_ITEMS.map((item) => (
-          <a key={item.href} href={item.href}>
+        {isHome
+          ? HOME_ANCHORS.map((item) => (
+              <a key={item.href} href={item.href}>
+                {item.label}
+              </a>
+            ))
+          : null}
+        {PAGE_LINKS.map((item) => (
+          <Link
+            key={item.href}
+            href={item.href}
+            className={pathname === item.href ? "active" : ""}
+          >
             {item.label}
-          </a>
+          </Link>
         ))}
       </div>
       <a
