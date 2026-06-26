@@ -37,8 +37,8 @@ export default function SitesMedicosPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       {/* ── HERO / HEADER ── */}
-      <section className="hero" style={{ paddingBottom: '48px' }}>
-        <div className="hero-inner" style={{ maxWidth: '840px' }}>
+      <section className="hero">
+        <div className="hero-inner">
           <span className="hero-eyebrow hero-anim">Presença digital</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
             Criamos o site do seu <strong>consultório</strong>

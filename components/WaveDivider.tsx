@@ -1,13 +1,23 @@
 interface WaveDividerProps {
+  /** Color of the NEXT section (fills the wave shape) */
   color?: string;
+  /** Background color of the PREVIOUS section (fills above the wave) */
+  bgColor?: string;
   flip?: boolean;
 }
 
-export default function WaveDivider({ color = "#FFFFFF", flip = false }: WaveDividerProps) {
+export default function WaveDivider({
+  color = "#FFFFFF",
+  bgColor = "transparent",
+  flip = false,
+}: WaveDividerProps) {
   return (
     <div
-      className="wave-divider"
-      style={{ transform: flip ? "scaleY(-1)" : undefined }}
+      style={{
+        background: bgColor,
+        lineHeight: 0,
+        transform: flip ? "scaleY(-1)" : undefined,
+      }}
       aria-hidden="true"
     >
       <svg

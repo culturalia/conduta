@@ -115,7 +115,6 @@ export default function FAQPage() {
       {/* ── HERO / HEADER ── */}
       <section
         className="hero"
-        style={{ paddingBottom: '48px' }}
       >
         <div className="hero-inner">
           <span className="hero-eyebrow hero-anim">Perguntas frequentes</span>

@@ -65,8 +65,8 @@ export default function SobrePage() {
       />
 
       {/* ── HERO ── */}
-      <section className="hero" style={{ paddingBottom: '48px' }}>
-        <div className="hero-inner" style={{ maxWidth: '840px' }}>
+      <section className="hero">
+        <div className="hero-inner">
           <span className="hero-eyebrow hero-anim">Quem somos</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
             Processos claros. <strong>Tecnologia com propósito.</strong>
@@ -159,7 +159,7 @@ export default function SobrePage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gridTemplateColumns: 'repeat(2, 1fr)',
               gap: '24px',
             }}
           >

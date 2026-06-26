@@ -142,7 +142,7 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hero" id="inicio">
-        <div className="hero-inner">
+        <div className="hero-inner hero-split">
           <div className="hero-text">
             <span className="hero-eyebrow hero-anim">Consultoria especializada para médicos</span>
             <h1 className="hero-anim">
@@ -262,7 +262,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <WaveDivider color="#FAFAF7" />
+      <WaveDivider color="#FAFAF7" bgColor="#FFFFFF" />
       <section className="services section-pad" id="servicos">
         <div className="container">
           <div className="services-header reveal">
@@ -364,7 +364,7 @@ export default function Home() {
       </section>
 
       {/* ── TECHNOLOGY ── */}
-      <WaveDivider color="#0C4A6E" />
+      <WaveDivider color="#0C4A6E" bgColor="#FAFAF7" />
       <section className="technology section-pad" id="ferramentas">
         <div className="container">
           <div className="tech-header reveal">
@@ -440,7 +440,7 @@ export default function Home() {
       </section>
 
       {/* ── PROCESS ── */}
-      <WaveDivider color="#FFFFFF" flip />
+      <WaveDivider color="#FFFFFF" bgColor="#0369A1" flip />
       <section className="process section-pad" id="como-funciona">
         <div className="container">
           <div
@@ -605,7 +605,7 @@ export default function Home() {
       </section>
 
       {/* ── CTA ── */}
-      <WaveDivider color="#0C4A6E" />
+      <WaveDivider color="#0C4A6E" bgColor="#FAFAF7" />
       <section className="cta-section" id="diagnostico">
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Diagnóstico gratuito</span>
