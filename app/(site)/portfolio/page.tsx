@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sites para Médicos que Atendem Particular — Portfolio',
+  title: 'Presença Digital para Profissionais de Saúde — Portfolio',
   description:
-    'Veja exemplos de sites profissionais que criamos para médicos. SEO otimizado, design responsivo, agendamento integrado. Veja nosso portfolio.',
+    'Exemplos de presença digital que criamos para profissionais de saúde. SEO otimizado, design responsivo, agendamento integrado.',
   alternates: { canonical: 'https://condutasaude.com/portfolio' },
 };
 
@@ -41,11 +41,11 @@ export default function SitesMedicosPage() {
         <div className="hero-inner">
           <span className="hero-eyebrow hero-anim">Presença digital</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
-            Criamos o site do seu <strong>consultório</strong>
+            Presença digital para sua <strong>clínica</strong>
           </h1>
           <p className="hero-sub hero-anim" style={{ maxWidth: '640px' }}>
             Seus pacientes estão no Google. A Conduta cria sites profissionais, otimizados para SEO,
-            com agendamento integrado e design pensado para cada especialidade médica. Sites que
+            com agendamento integrado e design pensado para cada especialidade. Sites que
             transmitem credibilidade, convertem visitantes em pacientes e posicionam você como
             referência na sua região.
           </p>
@@ -160,7 +160,7 @@ export default function SitesMedicosPage() {
             </a>
           </div>
           <p className="reveal" style={{ textAlign: 'center', fontSize: '13px', color: 'var(--text-muted)', marginTop: '24px' }}>
-            * Exemplos com dados ilustrativos. Cada site é criado sob medida para o médico e sua especialidade.
+            * Exemplos com dados ilustrativos. Cada site é criado sob medida para o profissional e sua especialidade.
           </p>
         </div>
       </section>
@@ -188,7 +188,7 @@ export default function SitesMedicosPage() {
               <h3 className="service-name">SEO otimizado</h3>
               <div className="service-body">
                 <p>
-                  Estrutura semântica, meta tags, schema markup para médicos (MedicalBusiness,
+                  Estrutura semântica, meta tags, schema markup para saúde (MedicalBusiness,
                   Physician), sitemap XML e otimização de Core Web Vitals. Seu site aparece para quem
                   busca sua especialidade na sua região.
                 </p>
@@ -270,11 +270,10 @@ export default function SitesMedicosPage() {
         <div className="container">
           <div className="tech-header reveal">
             <span className="eyebrow">Por que a Conduta</span>
-            <h2 className="section-title">Mais do que um site bonito</h2>
+            <h2 className="section-title">Presença digital integrada à sua estratégia</h2>
             <p className="section-desc">
-              Não entregamos apenas um site — entregamos uma presença digital completa, integrada à
-              sua estratégia. O site é a porta de entrada; o processo por trás é o que
-              converte.
+              A presença digital é parte da nossa consultoria. Integramos seu site à estratégia de
+              processos e automação para que cada visitante se torne paciente.
             </p>
           </div>
 
@@ -295,7 +294,7 @@ export default function SitesMedicosPage() {
             >
               <div className="tech-dot"></div>
               <div>
-                <h4>Schema markup médico</h4>
+                <h4>Schema markup para saúde</h4>
                 <p>
                   Dados estruturados (MedicalBusiness, Physician, FAQPage) que ajudam o Google a
                   entender e destacar seu consultório nos resultados de busca.
@@ -345,7 +344,7 @@ export default function SitesMedicosPage() {
           <div className="challenge-header reveal" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 44px' }}>
             <span className="eyebrow">Checklist técnico</span>
             <h2 className="section-title">
-              O que todo site médico <strong>precisa ter</strong>
+              O que sua presença digital <strong>precisa ter</strong>
             </h2>
             <p className="section-desc" style={{ margin: '0 auto' }}>
               Cada site que entregamos passa por um checklist rigoroso de qualidade antes de ir ao ar.
@@ -418,7 +417,7 @@ export default function SitesMedicosPage() {
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Presença digital</span>
           <h2>
-            Pronto para colocar seu consultório <strong>no Google?</strong>
+            Pronto para posicionar sua clínica <strong>no Google?</strong>
           </h2>
           <p>
             Comece com um diagnóstico gratuito. Vamos entender sua especialidade, sua região e criar

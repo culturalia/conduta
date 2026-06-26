@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Perguntas Frequentes | Conduta Saúde',
   description:
-    'Tire suas dúvidas sobre a consultoria da Conduta Saúde para médicos que atendem particular: diagnóstico gratuito, automação com IA, criação de site profissional e investimento mensal.',
+    'Tire suas dúvidas sobre a consultoria da Conduta Saúde para profissionais de saúde: diagnóstico gratuito, automação com IA, gestão de processos.',
   alternates: { canonical: 'https://condutasaude.com/faq' },
 };
 
@@ -59,10 +59,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Para quais médicos vocês trabalham?',
+      name: 'Para quais profissionais vocês trabalham?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Médicos de todas as especialidades que atendem particular. Do consultório individual ao profissional que atende em múltiplos espaços. Cada proposta é adaptada à sua realidade e ao momento da sua carreira.',
+        text: 'Profissionais de saúde de todas as especialidades — do consultório individual à clínica com múltiplos profissionais. Cada proposta é adaptada à sua realidade e ao momento da sua carreira.',
       },
     },
     {
@@ -83,7 +83,7 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Vocês atendem médicos de reprodução humana?',
+      name: 'Vocês atendem especialistas em reprodução humana?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Sim. Nosso time tem experiência direta com medicina reprodutiva e fertilidade. Entendemos as particularidades do atendimento em reprodução assistida e podemos adaptar toda a comunicação e automação para essa especialidade.',
@@ -94,7 +94,7 @@ const faqSchema = {
       name: 'Posso começar apenas com o site?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Claro. Muitos médicos começam com a criação do site profissional e depois evoluem para automação do WhatsApp e organização de processos. Você escolhe o ritmo.',
+        text: 'Claro. Muitos profissionais começam com a criação do site e depois evoluem para automação do WhatsApp e organização de processos. Você escolhe o ritmo.',
       },
     },
   ],
@@ -123,7 +123,7 @@ export default function FAQPage() {
             Dúvidas sobre a <strong>Conduta Saúde</strong>
           </h1>
           <p className="hero-sub hero-anim">
-            Reunimos as perguntas mais comuns de médicos que atendem particular sobre nosso processo
+            Reunimos as perguntas mais comuns de profissionais de saúde sobre nosso processo
             de consultoria, automação e presença digital. Se sua dúvida não estiver aqui, fale com a
             gente pelo WhatsApp.
           </p>
@@ -171,10 +171,10 @@ export default function FAQPage() {
               className="faq-item reveal"
               style={{ '--d': '.15s' } as React.CSSProperties}
             >
-              <summary>Para quais médicos vocês trabalham?</summary>
+              <summary>Para quais profissionais vocês trabalham?</summary>
               <p>
-                Médicos de todas as especialidades que atendem particular. Do consultório individual
-                ao profissional que atende em múltiplos espaços. Cada proposta é adaptada à sua
+                Profissionais de saúde de todas as especialidades — do consultório individual
+                à clínica com múltiplos profissionais. Cada proposta é adaptada à sua
                 realidade e ao momento da sua carreira.
               </p>
             </details>
@@ -206,7 +206,7 @@ export default function FAQPage() {
               className="faq-item reveal"
               style={{ '--d': '.3s' } as React.CSSProperties}
             >
-              <summary>Vocês atendem médicos de reprodução humana?</summary>
+              <summary>Vocês atendem especialistas em reprodução humana?</summary>
               <p>
                 Sim. Nosso time tem experiência direta com medicina reprodutiva e fertilidade.
                 Entendemos as particularidades do atendimento em reprodução assistida e podemos
@@ -219,7 +219,7 @@ export default function FAQPage() {
             >
               <summary>Posso começar apenas com o site?</summary>
               <p>
-                Claro. Muitos médicos começam com a criação do site profissional e depois evoluem
+                Claro. Muitos profissionais começam com a criação do site e depois evoluem
                 para automação do WhatsApp e organização de processos. Você escolhe o ritmo.
               </p>
             </details>

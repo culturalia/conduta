@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Sobre a Conduta Saúde — Quem Somos',
   description:
-    'Conheça a equipe da Conduta Saúde. Consultoria especializada em gestão de processos e automação com IA para médicos que atendem particular.',
+    'Conheça a equipe da Conduta Saúde. Consultoria especializada em gestão de processos e automação com IA para clínicas e consultórios.',
   alternates: { canonical: 'https://condutasaude.com/sobre' },
 };
 
@@ -36,7 +36,7 @@ const TEAM = [
     initials: 'GF',
     color: '#0EA5E9',
     description:
-      'Responsável pela implementação técnica, produto digital e operação da plataforma Cloudia de automação via WhatsApp. Conecta tecnologia e saúde para criar soluções que simplificam o dia a dia do médico.',
+      'Responsável pela implementação técnica, produto digital e operação da plataforma Cloudia de automação via WhatsApp. Conecta tecnologia e saúde para criar soluções que simplificam o dia a dia do profissional de saúde.',
   },
   {
     name: 'Filipe',
@@ -44,7 +44,7 @@ const TEAM = [
     initials: 'FP',
     color: '#0369A1',
     description:
-      'Lidera o relacionamento com médicos e a estratégia comercial. Especialista em entender as necessidades de cada consultório e traduzir isso em uma proposta que gera resultado real.',
+      'Lidera o relacionamento com clientes e a estratégia comercial. Especialista em entender as necessidades de cada operação e traduzir isso em uma proposta que gera resultado real.',
   },
   {
     name: 'Hilary',
@@ -72,7 +72,7 @@ export default function SobrePage() {
             Processos claros. <strong>Tecnologia com propósito.</strong>
           </h1>
           <p className="hero-sub hero-anim" style={{ maxWidth: '640px' }}>
-            A Conduta Saúde nasceu da convicção de que médicos que atendem particular
+            A Conduta Saúde nasceu da convicção de que profissionais de saúde
             merecem uma operação organizada, digital e humana — sem precisar entender de tecnologia.
           </p>
         </div>
@@ -109,13 +109,13 @@ export default function SobrePage() {
                 marginBottom: '24px',
               }}
             >
-              Organizar a operação do seu consultório para que você se dedique
+              Organizar a operação da sua clínica para que você se dedique
               ao que importa: <strong>cuidar de pessoas.</strong>
             </h2>
             <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--text-secondary)', maxWidth: '700px' }}>
               Combinamos consultoria de processos com automação inteligente para transformar
-              a rotina de médicos que atendem particular. Do agendamento à presença digital,
-              cuidamos da estrutura para que seu consultório funcione com previsibilidade,
+              a rotina de profissionais de saúde. Do agendamento à presença digital,
+              cuidamos da estrutura para que sua clínica ou consultório funcione com previsibilidade,
               eficiência e profissionalismo.
             </p>
           </div>
@@ -152,7 +152,7 @@ export default function SobrePage() {
                 letterSpacing: '-0.5px',
               }}
             >
-              Não somos agência. Não somos software. <strong>Somos parceiros do seu consultório.</strong>
+              Não somos agência. Não somos software. <strong>Somos parceiros da sua operação.</strong>
             </h2>
           </div>
 
@@ -182,7 +182,7 @@ export default function SobrePage() {
               {
                 icon: '🏥',
                 title: 'Especialistas em saúde',
-                text: 'Entendemos as particularidades de um consultório médico: CFM, LGPD, jornada do paciente, no-show, agenda.',
+                text: 'Entendemos as particularidades de uma operação de saúde: CFM, LGPD, jornada do paciente, no-show, agenda.',
               },
             ].map(({ icon, title, text }) => (
               <div
@@ -352,7 +352,7 @@ export default function SobrePage() {
             }}
           >
             Agende um diagnóstico gratuito de 60 minutos. Sem compromisso, sem jargão técnico
-            — só uma conversa sobre como organizar o seu consultório.
+            — só uma conversa sobre como organizar a sua operação.
           </p>
           <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn-primary">
             Agendar diagnóstico gratuito

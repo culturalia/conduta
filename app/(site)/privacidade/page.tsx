@@ -53,13 +53,13 @@ export default function PrivacidadePage() {
             <li>Telefone / WhatsApp</li>
             <li>E-mail</li>
             <li>Especialidade médica</li>
-            <li>Informações sobre seu consultório (quando compartilhadas voluntariamente)</li>
+            <li>Informações sobre sua clínica ou consultório (quando compartilhadas voluntariamente)</li>
           </ul>
 
           <h2 style={h2Style}>2. Como usamos seus dados</h2>
           <p style={pStyle}>Utilizamos seus dados exclusivamente para:</p>
           <ul style={ulStyle}>
-            <li>Realizar o diagnóstico gratuito do seu consultório</li>
+            <li>Realizar o diagnóstico gratuito da sua operação</li>
             <li>Elaborar e enviar propostas comerciais</li>
             <li>Prestar os serviços contratados</li>
             <li>Enviar comunicações relevantes sobre nossos serviços (com seu consentimento)</li>

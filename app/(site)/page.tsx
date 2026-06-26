@@ -10,7 +10,7 @@ const medicalBusinessSchema = {
   '@type': ['MedicalBusiness', 'Organization'],
   name: 'Conduta Saúde',
   description:
-    'Consultoria especializada em presença digital e automação para médicos que atendem particular.',
+    'Consultoria especializada em gestão de processos e automação para clínicas e consultórios.',
   url: 'https://condutasaude.com',
   telephone: '+5516996131393',
   image: 'https://condutasaude.com/og-image.png',
@@ -64,7 +64,7 @@ const medicalBusinessSchema = {
           '@type': 'Service',
           name: 'Presença Digital e Autoridade',
           description:
-            'Gestão de redes sociais, conteúdo, Google Meu Negócio e reputação online para médicos.',
+            'Gestão de redes sociais, conteúdo, Google Meu Negócio e reputação online para profissionais de saúde.',
         },
       },
     ],
@@ -101,10 +101,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Para quais médicos vocês trabalham?',
+      name: 'Para quais profissionais vocês trabalham?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Atendemos médicos de todas as especialidades que atendem particular — do consultório individual ao médico que atende em diferentes espaços.',
+        text: 'Atendemos profissionais de saúde de todas as especialidades — do consultório individual à clínica com múltiplos profissionais.',
       },
     },
     {
@@ -143,7 +143,7 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-inner hero-split">
           <div className="hero-text">
-            <span className="hero-eyebrow hero-anim">Consultoria especializada para médicos</span>
+            <span className="hero-eyebrow hero-anim">Consultoria para profissionais de saúde</span>
             <h1 className="hero-anim">
               Processos organizados.
               <br />
@@ -170,7 +170,7 @@ export default function Home() {
           <div className="hero-image hero-anim">
             <Image
               src="/images/demos/doctor-tablet.jpg"
-              alt="Médica sorrindo em consultório médico moderno"
+              alt="Profissional de saúde sorrindo em consultório moderno"
               width={480}
               height={600}
               priority
@@ -195,11 +195,11 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="stats-grid" aria-label="Dados sobre o mercado médico">
+          <div className="stats-grid" aria-label="Dados sobre o mercado de saúde">
             <StatCard value={59} suffix="%" label="dos agendamentos acontecem fora do horário comercial" />
             <StatCard value={53} suffix="%" label="dos pacientes faltam porque simplesmente esquecem" />
-            <StatCard value={42} suffix="%" label="dos médicos têm dificuldade em confirmar consultas" />
-            <StatCard value={144} prefix="R$" suffix="mil" label="perda anual com problemas de agendamento por consultório" />
+            <StatCard value={42} suffix="%" label="dos profissionais de saúde têm dificuldade em confirmar consultas" />
+            <StatCard value={144} prefix="R$" suffix="mil" label="perda anual com problemas de agendamento por clínica" />
           </div>
         </div>
       </div>
@@ -213,7 +213,7 @@ export default function Home() {
               Já tentou usar uma IA ou uma ferramenta e <strong>não saiu do lugar?</strong>
             </h2>
             <p className="section-desc">
-              A maioria dos médicos sabe que precisa se modernizar — mas entre contratar uma
+              A maioria dos profissionais de saúde sabe que precisa se modernizar — mas entre contratar uma
               ferramenta e colocá-la para funcionar de verdade, existe um abismo. A Conduta existe
               para atravessar esse abismo com você.
             </p>
@@ -252,7 +252,7 @@ export default function Home() {
             >
               <h4>&ldquo;Demoro para responder e perco o paciente&rdquo;</h4>
               <p>
-                Paciente que não recebe resposta em minutos vai para outro médico.
+                Paciente que não recebe resposta em minutos vai para outro profissional.
                 Atendimento lento custa novos pacientes todos os dias.
               </p>
             </div>
@@ -274,7 +274,7 @@ export default function Home() {
             </div>
             <p className="section-desc">
               Atuamos nas áreas que mais impactam resultado. A combinação de frentes é definida no
-              diagnóstico — personalizada para cada médico.
+              diagnóstico — personalizada para cada profissional.
             </p>
           </div>
 
@@ -456,7 +456,7 @@ export default function Home() {
               <div>
                 <h3>Diagnóstico gratuito</h3>
                 <p>
-                  60 minutos para entender os processos, as dores e os objetivos do seu consultório.
+                  60 minutos para entender os processos, as dores e os objetivos da sua clínica ou consultório.
                   Remoto. Sem compromisso.
                 </p>
               </div>
@@ -524,7 +524,7 @@ export default function Home() {
             <span className="eyebrow">Para quem</span>
             <h2 className="section-title">Feito para quem cuida de pessoas</h2>
             <p className="section-desc">
-              A Conduta atende médicos em diferentes momentos — do profissional que está começando
+              A Conduta atende profissionais de saúde em diferentes momentos — do profissional que está começando
               ao especialista que quer escalar.
             </p>
           </div>
@@ -542,7 +542,7 @@ export default function Home() {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                 </svg>
               </div>
-              <h3>Médicos especialistas</h3>
+              <h3>Profissionais de saúde</h3>
               <p>
                 Profissionais de qualquer especialidade que querem organizar sua rotina, atrair mais
                 pacientes e reduzir faltas.
@@ -590,7 +590,7 @@ export default function Home() {
                   <rect x="16" y="10" width="6" height="11" rx="1" />
                 </svg>
               </div>
-              <h3>Médicos em crescimento</h3>
+              <h3>Clínicas em crescimento</h3>
               <p>
                 Profissionais que atendem em múltiplos consultórios ou estão expandindo sua atuação
                 e precisam de padronização.
@@ -605,7 +605,7 @@ export default function Home() {
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Diagnóstico gratuito</span>
           <h2>
-            Pronto para <strong>transformar</strong> seu consultório?
+            Pronto para <strong>transformar</strong> sua operação?
           </h2>
           <p>
             Comece com um diagnóstico gratuito de 60 minutos. Sem custo, sem compromisso — e
