@@ -478,8 +478,18 @@ button:focus-visible {
 
 /* ── CHALLENGE ── */
 
+/* Unified section header — always centered */
+.section-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+.section-header .section-desc {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .challenge { background: var(--white); }
-.challenge-header { margin-bottom: 44px; }
 
 .pain-grid {
   display: grid;
@@ -515,12 +525,15 @@ button:focus-visible {
 
 .services { background: var(--cream); }
 
+/* Legacy — replaced by .section-header */
 .services-header {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  align-items: end;
-  margin-bottom: 44px;
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+.services-header .section-desc {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .services-grid {
@@ -589,7 +602,15 @@ button:focus-visible {
 .technology .section-title { color: var(--white); }
 .technology .section-desc { color: rgba(255,255,255,0.80); }
 
-.tech-header { margin-bottom: 48px; max-width: 600px; }
+.tech-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+.tech-header .section-desc {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .tech-grid {
   display: grid;
@@ -717,7 +738,15 @@ button:focus-visible {
 
 .audience { background: var(--cream); }
 
-.audience-header { margin-bottom: 44px; }
+.audience-header {
+  text-align: center;
+  max-width: 680px;
+  margin: 0 auto 48px;
+}
+.audience-header .section-desc {
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .audience-grid {
   display: grid;
@@ -1040,7 +1069,7 @@ footer {
   .stat-card:nth-child(2)::after { display: none; }
   .stat-card:nth-child(-n+2) { border-bottom: 1px solid var(--border); }
 
-  .services-header { grid-template-columns: 1fr; gap: 16px; }
+  /* services-header is now centered, no grid override needed */
   .services-grid { grid-template-columns: 1fr; }
 
   .pain-grid { grid-template-columns: 1fr; }

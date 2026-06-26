@@ -55,15 +55,12 @@ export default function SitesMedicosPage() {
       {/* ── SHOWCASE CARDS ── */}
       <section className="showcase section-pad" id="templates">
         <div className="container">
-          <div
-            className="showcase-header reveal"
-            style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}
-          >
+          <div className="section-header reveal">
             <span className="eyebrow">Exemplos por especialidade</span>
             <h2 className="section-title">
               Cada especialidade tem sua <strong>linguagem.</strong>
             </h2>
-            <p className="section-desc" style={{ margin: '0 auto' }}>
+            <p className="section-desc">
               Ginecologia pede acolhimento. Cardiologia pede confiança. Pediatria pede
               leveza. O site precisa falar a língua do seu paciente.
             </p>
@@ -168,13 +165,11 @@ export default function SitesMedicosPage() {
       {/* ── O QUE ESTÁ INCLUÍDO ── */}
       <section className="services section-pad" id="incluido">
         <div className="container">
-          <div className="services-header reveal">
-            <div>
-              <span className="eyebrow">O que entregamos</span>
-              <h2 className="section-title">
-                Não é só um site. É a sua <strong>autoridade online.</strong>
-              </h2>
-            </div>
+          <div className="section-header reveal">
+            <span className="eyebrow">O que entregamos</span>
+            <h2 className="section-title">
+              Não é só um site. É a sua <strong>autoridade online.</strong>
+            </h2>
             <p className="section-desc">
               Cada site nasce do diagnóstico da sua operação. Sem templates genéricos —
               tudo pensado para a sua especialidade, a sua região e o paciente que você
@@ -339,12 +334,12 @@ export default function SitesMedicosPage() {
       {/* ── CHECKLIST VISUAL ── */}
       <section className="challenge section-pad" id="checklist">
         <div className="container">
-          <div className="challenge-header reveal" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 44px' }}>
+          <div className="section-header reveal">
             <span className="eyebrow">Checklist técnico</span>
             <h2 className="section-title">
               Todo site que sai da Conduta <strong>passa por isso.</strong>
             </h2>
-            <p className="section-desc" style={{ margin: '0 auto' }}>
+            <p className="section-desc">
               Padrão de excelência técnica. Sem exceção.
             </p>
           </div>

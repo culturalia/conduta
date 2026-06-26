@@ -208,13 +208,11 @@ export default function Home() {
       {/* ── CHALLENGE ── */}
       <section className="challenge section-pad" id="problema">
         <div className="container">
-          <div className="services-header reveal">
-            <div>
-              <span className="eyebrow">O problema real</span>
-              <h2 className="section-title">
-                Tecnologia sem processo <strong>é só mais um problema.</strong>
-              </h2>
-            </div>
+          <div className="section-header reveal">
+            <span className="eyebrow">O problema real</span>
+            <h2 className="section-title">
+              Tecnologia sem processo <strong>é só mais um problema.</strong>
+            </h2>
             <p className="section-desc">
               Ferramentas existem aos montes. O que falta é alguém que entenda
               sua operação antes de propor qualquer solução. Sem processo, a
@@ -267,15 +265,11 @@ export default function Home() {
       {/* ── SERVICES ── */}
 <section className="services section-pad" id="servicos">
         <div className="container">
-          <div className="services-header reveal">
-            <div>
-              <span className="eyebrow">Como atuamos</span>
-              <h2 className="section-title">
-                Quatro frentes.
-                <br />
-                Uma <strong>transformação.</strong>
-              </h2>
-            </div>
+          <div className="section-header reveal">
+            <span className="eyebrow">Como atuamos</span>
+            <h2 className="section-title">
+              Quatro frentes. Uma <strong>transformação.</strong>
+            </h2>
             <p className="section-desc">
               Cada proposta nasce do diagnóstico. Combinamos as frentes que fazem
               sentido para o seu momento — nada genérico, nada desnecessário.
@@ -444,12 +438,11 @@ export default function Home() {
 <section className="process section-pad" id="como-funciona">
         <div className="container">
           <div
-            className="process-header reveal"
-            style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto 56px' }}
+            className="section-header reveal"
           >
             <span className="eyebrow">O processo</span>
             <h2 className="section-title">Nada começa com uma proposta.</h2>
-            <p className="section-desc" style={{ margin: '0 auto' }}>
+            <p className="section-desc">
               Tudo começa com escuta. Entendemos antes de propor — porque sem
               diagnóstico, qualquer solução é chute.
             </p>
@@ -612,12 +605,12 @@ export default function Home() {
       {/* ── NOSSA CONDUTA (values teaser) ── */}
       <section className="section-pad" id="nossa-conduta" style={{ background: '#FFFFFF' }}>
         <div className="container">
-          <div className="reveal" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
+          <div className="section-header reveal">
             <span className="eyebrow">Nossa conduta</span>
             <h2 className="section-title">
               Nosso nome não é acidental.
             </h2>
-            <p className="section-desc" style={{ margin: '0 auto' }}>
+            <p className="section-desc">
               <strong>Conduta</strong> é protocolo. É ação. É a decisão sobre o que fazer em seguida.
               Esses são os princípios que guiam cada decisão que tomamos.
             </p>
