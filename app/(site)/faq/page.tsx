@@ -70,7 +70,7 @@ const faqSchema = {
       name: 'Como funciona a automação do WhatsApp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Utilizamos a Cloudia, IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade total e zero risco de banimento do seu número.',
+        text: 'Utilizamos a Cloudia, IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade total e risco mínimo de banimento do seu número.',
       },
     },
     {
@@ -185,7 +185,7 @@ export default function FAQPage() {
               <p>
                 Utilizamos a Cloudia, IA especializada em saúde, integrada à API
                 Oficial do WhatsApp (Meta). Isso significa: estabilidade total,
-                entregabilidade garantida e zero risco de banimento do seu número.
+                entregabilidade garantida e risco mínimo de banimento do seu número.
                 A Cloudia já realizou mais de 7 milhões de atendimentos e agendou
                 mais de 1 milhão de consultas automaticamente.
               </p>

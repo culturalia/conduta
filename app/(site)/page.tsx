@@ -10,7 +10,7 @@ const medicalBusinessSchema = {
   '@type': ['MedicalBusiness', 'Organization'],
   name: 'Conduta Saúde',
   description:
-    'Consultoria especializada em gestão de processos e automação para clínicas e consultórios. Organizamos sua operação para que o cuidado aconteça.',
+    'Consultoria especializada em gestão de processos e automação para clínicas e consultórios. Otimizamos sua operação para que o cuidado aconteça.',
   url: 'https://condutasaude.com',
   telephone: '+5516996131393',
   image: 'https://condutasaude.com/og-image.png',
@@ -112,7 +112,7 @@ const faqSchema = {
       name: 'Como funciona a automação do WhatsApp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade total e zero risco de banimento.',
+        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade total e risco mínimo de banimento.',
       },
     },
     {
@@ -151,7 +151,7 @@ export default function Home() {
             </h1>
             <p className="hero-sub hero-anim">
               Agenda, confirmação, WhatsApp, processos — tudo que consome seu dia
-              sem ter nada a ver com cuidar. A Conduta organiza sua operação
+              sem ter nada a ver com cuidar. A Conduta otimiza sua operação
               para que o atendimento funcione e o cuidado aconteça.
             </p>
             <div className="hero-actions hero-anim">
@@ -435,7 +435,7 @@ export default function Home() {
           <div className="api-note reveal">
             Para automação via WhatsApp, utilizamos a{' '}
             <strong>Cloudia — IA especializada em saúde</strong>, integrada à API Oficial do
-            WhatsApp (Meta). Estabilidade total, entregabilidade garantida e zero risco de
+            WhatsApp (Meta). Estabilidade total, entregabilidade garantida e risco mínimo de
             banimento do seu número.
           </div>
         </div>
