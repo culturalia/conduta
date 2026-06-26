@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Perguntas Frequentes | Conduta Saúde',
   description:
-    'Tire suas dúvidas sobre a consultoria da Conduta Saúde para profissionais de saúde: diagnóstico gratuito, automação com IA, gestão de processos.',
+    'Tire suas dúvidas sobre a consultoria da Conduta Saúde: diagnóstico gratuito, automação com IA, gestão de processos para clínicas e consultórios.',
   alternates: { canonical: 'https://condutasaude.com/faq' },
 };
 
@@ -38,7 +38,7 @@ const faqSchema = {
       name: 'O que é o diagnóstico gratuito?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'É uma conversa remota de 30 a 60 minutos onde analisamos a rotina do seu consultório, identificamos gargalos e entendemos seus objetivos. Rápido, sem custo e sem compromisso de contratação. Ao final, você recebe um panorama claro dos pontos de melhoria e das oportunidades de automação para o seu dia a dia.',
+        text: 'Uma conversa de 60 minutos onde entendemos sua operação, identificamos gargalos e mapeamos oportunidades. Sem custo, sem compromisso, sem apresentação de vendas. Você sai com clareza sobre o que precisa mudar.',
       },
     },
     {
@@ -46,7 +46,7 @@ const faqSchema = {
       name: 'Preciso entender de tecnologia para trabalhar com vocês?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Não. A Conduta cuida de toda a parte técnica. Configuramos, integramos e te acompanhamos em cada etapa para que você use as ferramentas com confiança. Você não precisa saber nada de tecnologia. Nosso papel é justamente traduzir a complexidade técnica em soluções simples para o seu consultório.',
+        text: 'Não. A Conduta cuida de toda a parte técnica — configuração, integração e acompanhamento. Nosso trabalho é traduzir complexidade em soluções simples. Você foca no que sabe fazer: cuidar de pessoas.',
       },
     },
     {
@@ -54,7 +54,7 @@ const faqSchema = {
       name: 'Quanto tempo leva para ver resultados?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Os primeiros resultados aparecem em 30 a 60 dias. A automação de confirmação de consultas, por exemplo, reduz faltas no seu consultório já na primeira semana de operação. Resultados mais estruturais, como reorganização completa de processos, amadurecem ao longo de 90 dias de acompanhamento.',
+        text: 'A automação de confirmação reduz faltas já na primeira semana. Resultados estruturais, como reorganização completa de processos, amadurecem em 60 a 90 dias de acompanhamento contínuo.',
       },
     },
     {
@@ -62,7 +62,7 @@ const faqSchema = {
       name: 'Para quais profissionais vocês trabalham?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Profissionais de saúde de todas as especialidades — do consultório individual à clínica com múltiplos profissionais. Cada proposta é adaptada à sua realidade e ao momento da sua carreira.',
+        text: 'Profissionais de saúde de todas as especialidades — do consultório individual à policlínica. Cada proposta é adaptada à sua realidade e ao momento da sua operação.',
       },
     },
     {
@@ -70,7 +70,7 @@ const faqSchema = {
       name: 'Como funciona a automação do WhatsApp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento do seu número.',
+        text: 'Utilizamos a Cloudia, IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade total e zero risco de banimento do seu número.',
       },
     },
     {
@@ -78,7 +78,7 @@ const faqSchema = {
       name: 'Qual o investimento mensal?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cada proposta é personalizada com base no diagnóstico. Temos planos a partir de valores que cabem no orçamento de um consultório individual, até o 360° com presença digital completa. O valor é definido após o diagnóstico gratuito, considerando as frentes de atuação necessárias.',
+        text: 'Cada proposta é personalizada com base no diagnóstico. Temos planos desde o consultório individual até a transformação completa com presença digital. O valor é definido após entendermos sua operação.',
       },
     },
     {
@@ -86,7 +86,7 @@ const faqSchema = {
       name: 'Vocês atendem especialistas em reprodução humana?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sim. Nosso time tem experiência direta com medicina reprodutiva e fertilidade. Entendemos as particularidades do atendimento em reprodução assistida e podemos adaptar toda a comunicação e automação para essa especialidade.',
+        text: 'Sim. Nosso time tem experiência direta com medicina reprodutiva e fertilidade. Entendemos as particularidades do atendimento em reprodução assistida.',
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       name: 'Posso começar apenas com o site?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Claro. Muitos profissionais começam com a criação do site e depois evoluem para automação do WhatsApp e organização de processos. Você escolhe o ritmo.',
+        text: 'Claro. Muitos profissionais começam pela presença digital e depois evoluem para automação e gestão de processos. Você escolhe o ritmo — a gente acompanha.',
       },
     },
   ],
@@ -120,12 +120,11 @@ export default function FAQPage() {
         <div className="hero-inner">
           <span className="hero-eyebrow hero-anim">Perguntas frequentes</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
-            Dúvidas sobre a <strong>Conduta Saúde</strong>
+            Sem letra miúda. <strong>Sem rodeios.</strong>
           </h1>
           <p className="hero-sub hero-anim">
-            Reunimos as perguntas mais comuns de profissionais de saúde sobre nosso processo
-            de consultoria, automação e presença digital. Se sua dúvida não estiver aqui, fale com a
-            gente pelo WhatsApp.
+            As dúvidas mais comuns de profissionais de saúde sobre como trabalhamos.
+            Se a sua não estiver aqui, manda pelo WhatsApp — a gente responde rápido.
           </p>
         </div>
       </section>
@@ -137,45 +136,45 @@ export default function FAQPage() {
             <details className="faq-item reveal">
               <summary>O que é o diagnóstico gratuito?</summary>
               <p>
-                É uma conversa remota de 30 a 60 minutos onde analisamos a rotina do seu
-                consultório, identificamos gargalos e entendemos seus objetivos. Rápido, sem custo e
-                sem compromisso de contratação. Ao final, você já sai com um panorama claro dos
-                pontos de melhoria e das oportunidades de automação para o seu dia a dia.
+                Uma conversa de 60 minutos — remota ou presencial — onde
+                entendemos sua operação de verdade. Processos, dores, objetivos.
+                Sem custo, sem compromisso, sem apresentação de vendas. Ao final,
+                você sai com um panorama claro do que precisa mudar e por onde começar.
               </p>
             </details>
             <details
               className="faq-item reveal"
               style={{ '--d': '.05s' } as React.CSSProperties}
             >
-              <summary>Preciso entender de tecnologia para trabalhar com vocês?</summary>
+              <summary>Preciso entender de tecnologia?</summary>
               <p>
-                Não. A Conduta cuida de toda a parte técnica. Configuramos, integramos e te
-                acompanhamos em cada etapa para que você use as ferramentas com confiança. Você não
-                precisa saber nada de tecnologia. Nosso papel é justamente traduzir a complexidade
-                técnica em soluções simples para o seu consultório.
+                Zero. A Conduta cuida de toda a parte técnica — configuração,
+                integração, treinamento. Nosso trabalho é traduzir complexidade
+                em soluções simples que funcionam na sua rotina. Você foca no que
+                sabe fazer: cuidar de pessoas.
               </p>
             </details>
             <details
               className="faq-item reveal"
               style={{ '--d': '.1s' } as React.CSSProperties}
             >
-              <summary>Quanto tempo leva para ver resultados?</summary>
+              <summary>Quanto tempo até ver resultado?</summary>
               <p>
-                Os primeiros resultados aparecem em 30 a 60 dias. A automação de confirmação de
-                consultas, por exemplo, reduz faltas no seu consultório já na primeira semana de
-                operação. Resultados mais estruturais, como a reorganização completa de processos,
-                amadurecem ao longo de 90 dias de acompanhamento contínuo.
+                A automação de confirmação reduz faltas já na primeira semana —
+                é o resultado mais imediato. Transformações mais profundas, como
+                reorganização completa de processos e adoção pela equipe, amadurecem
+                em 60 a 90 dias. A gente fica junto durante todo esse período.
               </p>
             </details>
             <details
               className="faq-item reveal"
               style={{ '--d': '.15s' } as React.CSSProperties}
             >
-              <summary>Para quais profissionais vocês trabalham?</summary>
+              <summary>Vocês trabalham com quais profissionais?</summary>
               <p>
-                Profissionais de saúde de todas as especialidades — do consultório individual
-                à clínica com múltiplos profissionais. Cada proposta é adaptada à sua
-                realidade e ao momento da sua carreira.
+                Profissionais de saúde de todas as especialidades — do consultório
+                individual à policlínica com múltiplos profissionais. Cada proposta
+                é adaptada à sua realidade. Não existe pacote engessado.
               </p>
             </details>
             <details
@@ -184,43 +183,47 @@ export default function FAQPage() {
             >
               <summary>Como funciona a automação do WhatsApp?</summary>
               <p>
-                Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API
-                Oficial do WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero
-                risco de banimento do seu número. A Cloudia já realizou mais de 7 milhões de
-                atendimentos e agendou mais de 1 milhão de consultas automaticamente.
+                Utilizamos a Cloudia, IA especializada em saúde, integrada à API
+                Oficial do WhatsApp (Meta). Isso significa: estabilidade total,
+                entregabilidade garantida e zero risco de banimento do seu número.
+                A Cloudia já realizou mais de 7 milhões de atendimentos e agendou
+                mais de 1 milhão de consultas automaticamente.
               </p>
             </details>
             <details
               className="faq-item reveal"
               style={{ '--d': '.25s' } as React.CSSProperties}
             >
-              <summary>Qual o investimento mensal?</summary>
+              <summary>Qual o investimento?</summary>
               <p>
-                Cada proposta é personalizada com base no diagnóstico. Temos planos a partir de
-                valores que cabem no orçamento de um consultório individual, até o 360° com presença
-                digital completa. O valor é definido após o diagnóstico gratuito, considerando as
-                frentes de atuação necessárias.
+                Cada proposta é personalizada — porque cada operação é diferente.
+                Temos planos desde o consultório individual até a transformação
+                completa com presença digital. O valor é definido após o diagnóstico
+                gratuito, quando já entendemos o que faz sentido para você.
               </p>
             </details>
             <details
               className="faq-item reveal"
               style={{ '--d': '.3s' } as React.CSSProperties}
             >
-              <summary>Vocês atendem especialistas em reprodução humana?</summary>
+              <summary>Atendem especialistas em reprodução humana?</summary>
               <p>
-                Sim. Nosso time tem experiência direta com medicina reprodutiva e fertilidade.
-                Entendemos as particularidades do atendimento em reprodução assistida e podemos
-                adaptar toda a comunicação e automação para essa especialidade.
+                Sim. Nosso time tem experiência direta com medicina reprodutiva e
+                fertilidade. Entendemos as particularidades do atendimento em
+                reprodução assistida e adaptamos toda a comunicação e automação
+                para essa especialidade.
               </p>
             </details>
             <details
               className="faq-item reveal"
               style={{ '--d': '.35s' } as React.CSSProperties}
             >
-              <summary>Posso começar apenas com o site?</summary>
+              <summary>Posso começar só com o site?</summary>
               <p>
-                Claro. Muitos profissionais começam com a criação do site e depois evoluem
-                para automação do WhatsApp e organização de processos. Você escolhe o ritmo.
+                Claro. Muitos profissionais começam pela presença digital e depois
+                evoluem para automação e gestão de processos. Você escolhe o ritmo
+                — a gente acompanha. A ideia é crescer junto, no tempo que faz
+                sentido para você.
               </p>
             </details>
           </div>
@@ -230,13 +233,13 @@ export default function FAQPage() {
       {/* ── CTA ── */}
       <section className="cta-section" id="diagnostico">
         <div className="cta-inner reveal">
-          <span className="cta-eyebrow">Ainda tem dúvidas?</span>
+          <span className="cta-eyebrow">Não achou sua dúvida?</span>
           <h2>
-            Fale com a gente e tire suas <strong>dúvidas</strong>
+            Pergunta direto. <strong>A gente responde.</strong>
           </h2>
           <p>
-            Agende seu diagnóstico gratuito ou envie sua pergunta diretamente pelo WhatsApp. Remoto,
-            rápido e sem compromisso.
+            Manda um WhatsApp ou agenda seu diagnóstico gratuito.
+            Sem robô, sem fila — conversa de verdade.
           </p>
           <a
             href={WHATSAPP_URL}
@@ -246,7 +249,7 @@ export default function FAQPage() {
           >
             Falar pelo WhatsApp
           </a>
-          <p className="cta-note">Atendimento remoto · Resposta em até 24h</p>
+          <p className="cta-note">Operação organizada, cuidado humanizado.</p>
         </div>
       </section>
     </>

@@ -94,6 +94,9 @@ export default function Footer() {
           SAÚDE
         </text>
       </svg>
+      <p className="footer-tagline">
+        Operação organizada, cuidado humanizado.
+      </p>
       <p className="footer-copy">
         &copy; 2026 Conduta Sa&uacute;de &middot; condutasaude.com
       </p>

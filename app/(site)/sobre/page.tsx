@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sobre a Conduta Saúde — Nossa Conduta',
+  title: 'Nossa Conduta — Propósito, Valores e Equipe',
   description:
-    'Conheça o propósito, os valores e a equipe por trás da Conduta Saúde. Consultoria operacional e automação para clínicas e consultórios.',
+    'Nosso nome não é acidental. Conduta é protocolo, ação e princípio. Conheça o propósito e a equipe que organiza operações para que o cuidado aconteça.',
   alternates: { canonical: 'https://condutasaude.com/sobre' },
 };
 

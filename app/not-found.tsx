@@ -36,7 +36,7 @@ export default function NotFound() {
             marginBottom: "12px",
           }}
         >
-          Página não encontrada
+          Essa página não existe.
         </h1>
         <p
           style={{
@@ -46,7 +46,7 @@ export default function NotFound() {
             lineHeight: 1.7,
           }}
         >
-          A página que você procura não existe ou foi movida.
+          Diferente de um paciente que falta, essa a gente não consegue recuperar. Mas podemos te levar de volta ao lugar certo.
         </p>
         <Link
           href="/"

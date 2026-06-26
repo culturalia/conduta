@@ -21,16 +21,16 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://condutasaude.com"),
   title: {
     default:
-      "Conduta Saúde — Consultoria e Automação para Profissionais de Saúde",
+      "Conduta Saúde — Você cuida de pessoas. A gente cuida do resto.",
     template: "%s | Conduta Saúde",
   },
   description:
-    "A Conduta Saúde organiza processos e implementa automação inteligente para clínicas e consultórios. Diagnóstico gratuito de 60 minutos.",
+    "Consultoria operacional e automação inteligente para clínicas e consultórios. Organizamos sua operação para que o cuidado aconteça. Diagnóstico gratuito.",
   openGraph: {
     title:
-      "Conduta Saúde — Consultoria e Automação para Profissionais de Saúde",
+      "Conduta Saúde — Operação organizada, cuidado humanizado.",
     description:
-      "Organizamos processos e implementamos automação inteligente para clínicas e consultórios. Diagnóstico gratuito de 60 minutos.",
+      "Consultoria operacional e automação inteligente para profissionais de saúde. Organizamos sua operação para que o cuidado aconteça.",
     url: "https://condutasaude.com",
     siteName: "Conduta Saúde",
     locale: "pt_BR",
@@ -39,9 +39,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Conduta Saúde — Consultoria e Automação para Profissionais de Saúde",
+    title: "Conduta Saúde — Operação organizada, cuidado humanizado.",
     description:
-      "Gestão de processos e automação para clínicas e consultórios. Diagnóstico gratuito.",
+      "Você cuida de pessoas. A gente cuida do resto. Consultoria operacional e automação para clínicas e consultórios.",
     images: ["/og-image.png"],
   },
   alternates: {

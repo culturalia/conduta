@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Presença Digital para Profissionais de Saúde — Portfolio',
+  title: 'Presença Digital para Profissionais de Saúde | Conduta Saúde',
   description:
-    'Exemplos de presença digital que criamos para profissionais de saúde. SEO otimizado, design responsivo, agendamento integrado.',
+    'Presença digital integrada à sua consultoria operacional. Sites otimizados para atrair pacientes, conectados à automação da sua clínica.',
   alternates: { canonical: 'https://condutasaude.com/portfolio' },
 };
 
@@ -23,7 +23,7 @@ const breadcrumbSchema = {
     {
       '@type': 'ListItem',
       position: 2,
-      name: 'Portfólio',
+      name: 'Presença Digital',
       item: 'https://condutasaude.com/portfolio',
     },
   ],
@@ -41,13 +41,13 @@ export default function SitesMedicosPage() {
         <div className="hero-inner">
           <span className="hero-eyebrow hero-anim">Presença digital</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
-            Presença digital para sua <strong>clínica</strong>
+            Quem te procura precisa <strong>te encontrar.</strong>
           </h1>
           <p className="hero-sub hero-anim" style={{ maxWidth: '640px' }}>
-            Seus pacientes pesquisam no Google antes de agendar. Como parte da nossa consultoria,
-            criamos sua presença digital — otimizada para SEO, com agendamento integrado e design
-            pensado para cada especialidade. Uma extensão da sua operação que transmite credibilidade
-            e converte visitantes em pacientes.
+            Seus pacientes pesquisam no Google antes de agendar. Como parte
+            da nossa consultoria, criamos sua presença digital — otimizada para
+            aparecer, transmitir credibilidade e converter visitantes em pacientes.
+            Uma extensão da sua operação, não um projeto isolado.
           </p>
         </div>
       </section>
@@ -59,13 +59,13 @@ export default function SitesMedicosPage() {
             className="showcase-header reveal"
             style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}
           >
-            <span className="eyebrow">Templates por especialidade</span>
+            <span className="eyebrow">Exemplos por especialidade</span>
             <h2 className="section-title">
-              Design pensado para cada <strong>especialidade</strong>
+              Cada especialidade tem sua <strong>linguagem.</strong>
             </h2>
             <p className="section-desc" style={{ margin: '0 auto' }}>
-              Cada template é projetado com identidade visual, paleta de cores e estrutura de
-              conteúdo adaptados à sua especialidade.
+              Fertilidade pede acolhimento. Cardiologia pede confiança. Pediatria pede
+              leveza. O site precisa falar a língua do seu paciente.
             </p>
           </div>
           <div className="showcase-grid">
@@ -80,7 +80,7 @@ export default function SitesMedicosPage() {
               </div>
               <div className="showcase-info">
                 <h3>Fertilidade</h3>
-                <p>Delicado, acolhedor, jornada do casal</p>
+                <p>Acolhedor, delicado, jornada do casal</p>
                 <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
@@ -97,7 +97,7 @@ export default function SitesMedicosPage() {
               </div>
               <div className="showcase-info">
                 <h3>Cardiologia</h3>
-                <p>Sério, institucional, credenciais em destaque</p>
+                <p>Institucional, sério, credenciais em destaque</p>
                 <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
@@ -170,27 +170,27 @@ export default function SitesMedicosPage() {
         <div className="container">
           <div className="services-header reveal">
             <div>
-              <span className="eyebrow">O que está incluído</span>
+              <span className="eyebrow">O que entregamos</span>
               <h2 className="section-title">
-                Tudo que você precisa para <strong>aparecer no Google</strong>
+                Não é só um site. É a sua <strong>autoridade online.</strong>
               </h2>
             </div>
             <p className="section-desc">
-              Cada site é desenvolvido com foco em performance, conversão e posicionamento nos
-              resultados de busca. Sem templates genéricos — tudo personalizado para a sua
-              especialidade.
+              Cada site nasce do diagnóstico da sua operação. Sem templates genéricos —
+              tudo pensado para a sua especialidade, a sua região e o paciente que você
+              quer atrair.
             </p>
           </div>
 
           <div className="services-grid">
             <div className="service-card reveal">
               <div className="service-accent-line"></div>
-              <h3 className="service-name">SEO otimizado</h3>
+              <h3 className="service-name">SEO que posiciona</h3>
               <div className="service-body">
                 <p>
-                  Estrutura semântica, meta tags, schema markup para saúde (MedicalBusiness,
-                  Physician), sitemap XML e otimização de Core Web Vitals. Seu site aparece para quem
-                  busca sua especialidade na sua região.
+                  Estrutura semântica, schema markup para saúde, sitemap e Core
+                  Web Vitals otimizados. Seu site aparece para quem busca sua
+                  especialidade na sua região — não para o mundo inteiro.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Schema markup</span>
@@ -206,12 +206,11 @@ export default function SitesMedicosPage() {
               style={{ '--d': '.1s' } as React.CSSProperties}
             >
               <div className="service-accent-line"></div>
-              <h3 className="service-name">Responsivo</h3>
+              <h3 className="service-name">Mobile primeiro</h3>
               <div className="service-body">
                 <p>
-                  Design que funciona perfeitamente em qualquer dispositivo — celular, tablet e
-                  desktop. Mais de 70% dos pacientes acessam pelo celular, e o site é construído
-                  priorizando essa experiência.
+                  Mais de 70% dos pacientes acessam pelo celular. O site é construído
+                  priorizando essa experiência — rápido, bonito e funcional em qualquer tela.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Mobile-first</span>
@@ -226,12 +225,12 @@ export default function SitesMedicosPage() {
               style={{ '--d': '.2s' } as React.CSSProperties}
             >
               <div className="service-accent-line"></div>
-              <h3 className="service-name">Agendamento integrado</h3>
+              <h3 className="service-name">Agendamento sem fricção</h3>
               <div className="service-body">
                 <p>
-                  Botão de agendamento direto no site — via WhatsApp, formulário ou integração com o
-                  sistema de agenda do consultório. O paciente encontra você no Google e agenda
-                  sem fricção.
+                  Botão de WhatsApp, formulário ou integração com sua agenda.
+                  O paciente encontra você no Google e agenda em segundos —
+                  sem ligar, sem esperar.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">WhatsApp</span>
@@ -246,12 +245,11 @@ export default function SitesMedicosPage() {
               style={{ '--d': '.3s' } as React.CSSProperties}
             >
               <div className="service-accent-line"></div>
-              <h3 className="service-name">Lighthouse 95+</h3>
+              <h3 className="service-name">Performance 95+</h3>
               <div className="service-body">
                 <p>
-                  Performance, acessibilidade, boas práticas e SEO acima de 95 no Google Lighthouse.
-                  Sites rápidos, acessíveis e otimizados — critérios que o Google usa para rankear
-                  sua página nos resultados de busca.
+                  Performance, acessibilidade e SEO acima de 95 no Google Lighthouse.
+                  Sites rápidos rankeiam melhor — e pacientes não esperam site lento.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Performance</span>
@@ -269,11 +267,12 @@ export default function SitesMedicosPage() {
       <section className="technology section-pad" id="diferenciais">
         <div className="container">
           <div className="tech-header reveal">
-            <span className="eyebrow">Por que a Conduta</span>
-            <h2 className="section-title">Presença digital integrada à sua estratégia</h2>
+            <span className="eyebrow">Por que com a Conduta</span>
+            <h2 className="section-title">Site é só o começo. O que muda é a estratégia por trás.</h2>
             <p className="section-desc">
-              A presença digital é parte da nossa consultoria. Integramos seu site à estratégia de
-              processos e automação para que cada visitante se torne paciente.
+              Diferente de uma agência, a presença digital é parte da sua consultoria
+              operacional. Integramos o site à automação, ao WhatsApp, ao Google —
+              tudo conectado.
             </p>
           </div>
 
@@ -281,10 +280,10 @@ export default function SitesMedicosPage() {
             <div className="tech-feat reveal">
               <div className="tech-dot"></div>
               <div>
-                <h4>Conteúdo otimizado para SEO</h4>
+                <h4>Conteúdo que atrai o paciente certo</h4>
                 <p>
-                  Textos escritos para posicionar você nas buscas locais. Cada página é
-                  pensada para atrair pacientes que procuram sua especialidade na região.
+                  Textos escritos para posicionar você nas buscas locais. Cada página
+                  é pensada para atrair quem procura a sua especialidade na sua região.
                 </p>
               </div>
             </div>
@@ -294,10 +293,10 @@ export default function SitesMedicosPage() {
             >
               <div className="tech-dot"></div>
               <div>
-                <h4>Schema markup para saúde</h4>
+                <h4>Google entende que você é referência</h4>
                 <p>
-                  Dados estruturados (MedicalBusiness, Physician, FAQPage) que ajudam o Google a
-                  entender e destacar seu consultório nos resultados de busca.
+                  Dados estruturados (MedicalBusiness, Physician, FAQPage) que ajudam
+                  o Google a entender e destacar seu consultório nos resultados de busca.
                 </p>
               </div>
             </div>
@@ -309,8 +308,8 @@ export default function SitesMedicosPage() {
               <div>
                 <h4>Google Meu Negócio integrado</h4>
                 <p>
-                  Configuramos e otimizamos seu perfil no Google Meu Negócio para aparecer no mapa,
-                  com avaliações, fotos e informações completas.
+                  Seu perfil configurado e otimizado para aparecer no mapa, com
+                  avaliações, fotos e informações que geram confiança.
                 </p>
               </div>
             </div>
@@ -320,20 +319,19 @@ export default function SitesMedicosPage() {
             >
               <div className="tech-dot"></div>
               <div>
-                <h4>Suporte e manutenção contínua</h4>
+                <h4>Parceria, não entrega</h4>
                 <p>
-                  Após o lançamento, acompanhamos métricas, atualizamos conteúdo e garantimos que o
-                  site continue performando e gerando agendamentos.
+                  Após o lançamento, acompanhamos métricas, atualizamos conteúdo e
+                  garantimos que o site continue gerando agendamentos. Mês a mês.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="api-note reveal">
-            <strong>Como funciona:</strong> Após o diagnóstico gratuito, definimos juntos o escopo do
-            site — especialidade, páginas, integrações e conteúdo. O prazo médio de entrega é de 2 a
-            4 semanas, com revisões ilimitadas até a aprovação final. O investimento é definido no
-            diagnóstico, de acordo com a complexidade do projeto.
+            <strong>Como funciona:</strong> Após o diagnóstico gratuito, definimos juntos o
+            escopo — especialidade, páginas, integrações e conteúdo. Prazo médio de 2 a 4
+            semanas, com revisões até a aprovação final. Investimento definido no diagnóstico.
           </div>
         </div>
       </section>
@@ -344,18 +342,18 @@ export default function SitesMedicosPage() {
           <div className="challenge-header reveal" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 44px' }}>
             <span className="eyebrow">Checklist técnico</span>
             <h2 className="section-title">
-              O que sua presença digital <strong>precisa ter</strong>
+              Todo site que sai da Conduta <strong>passa por isso.</strong>
             </h2>
             <p className="section-desc" style={{ margin: '0 auto' }}>
-              Cada site que entregamos passa por um checklist rigoroso de qualidade antes de ir ao ar.
+              Padrão de excelência técnica. Sem exceção.
             </p>
           </div>
           <div className="pain-grid">
             <div className="pain-card reveal">
               <h4>SEO otimizado</h4>
               <p>
-                Meta tags, headings semânticos, URLs amigáveis, sitemap XML e robots.txt configurados
-                para máxima indexação pelo Google.
+                Meta tags, headings semânticos, URLs amigáveis, sitemap XML e robots.txt
+                configurados para máxima indexação.
               </p>
             </div>
             <div
@@ -364,8 +362,8 @@ export default function SitesMedicosPage() {
             >
               <h4>Responsivo</h4>
               <p>
-                Layout adaptável para celular, tablet e desktop. Mobile-first: a experiência no
-                celular é prioridade absoluta.
+                Layout adaptável para celular, tablet e desktop. Mobile-first:
+                a experiência no celular é prioridade absoluta.
               </p>
             </div>
             <div
@@ -374,8 +372,8 @@ export default function SitesMedicosPage() {
             >
               <h4>Agendamento integrado</h4>
               <p>
-                Botão de WhatsApp, formulário de contato ou integração direta com o sistema de agenda
-                do consultório — sem fricção para o paciente.
+                WhatsApp, formulário ou integração direta com o sistema de agenda
+                — sem fricção para o paciente.
               </p>
             </div>
             <div
@@ -384,8 +382,8 @@ export default function SitesMedicosPage() {
             >
               <h4>Schema markup</h4>
               <p>
-                Dados estruturados para Google (MedicalBusiness, Physician, FAQPage) que aumentam
-                visibilidade e rich snippets nos resultados de busca.
+                Dados estruturados para Google que aumentam visibilidade e rich
+                snippets nos resultados de busca.
               </p>
             </div>
             <div
@@ -394,18 +392,18 @@ export default function SitesMedicosPage() {
             >
               <h4>Lighthouse 95+</h4>
               <p>
-                Performance, acessibilidade, boas práticas e SEO acima de 95 pontos no Google
-                Lighthouse — o padrão de excelência técnica.
+                Performance, acessibilidade, boas práticas e SEO acima de 95 pontos.
+                O padrão de excelência técnica.
               </p>
             </div>
             <div
               className="pain-card reveal"
               style={{ '--d': '.3s' } as React.CSSProperties}
             >
-              <h4>HTTPS e segurança</h4>
+              <h4>HTTPS e LGPD</h4>
               <p>
-                Certificado SSL, headers de segurança e conformidade com LGPD para proteger os dados
-                dos seus pacientes e do seu consultório.
+                Certificado SSL, headers de segurança e conformidade com LGPD.
+                Os dados dos seus pacientes, protegidos.
               </p>
             </div>
           </div>
@@ -415,13 +413,13 @@ export default function SitesMedicosPage() {
       {/* ── CTA ── */}
       <section className="cta-section" id="contato">
         <div className="cta-inner reveal">
-          <span className="cta-eyebrow">Presença digital</span>
+          <span className="cta-eyebrow">O primeiro passo</span>
           <h2>
-            Pronto para posicionar sua clínica <strong>no Google?</strong>
+            Pronto para ser <strong>encontrado?</strong>
           </h2>
           <p>
-            Comece com um diagnóstico gratuito. Vamos entender sua especialidade, sua região e criar
-            um site que atrai e converte pacientes.
+            Comece com um diagnóstico gratuito. Vamos entender sua especialidade,
+            sua região e criar uma presença digital que trabalha por você.
           </p>
           <a
             href={WHATSAPP_URL}
@@ -431,7 +429,7 @@ export default function SitesMedicosPage() {
           >
             Agendar diagnóstico gratuito
           </a>
-          <p className="cta-note">Ou fale direto pelo WhatsApp · Atendimento remoto</p>
+          <p className="cta-note">Operação organizada, cuidado humanizado.</p>
         </div>
       </section>
     </>

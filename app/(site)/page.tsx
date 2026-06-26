@@ -10,7 +10,7 @@ const medicalBusinessSchema = {
   '@type': ['MedicalBusiness', 'Organization'],
   name: 'Conduta Saúde',
   description:
-    'Consultoria especializada em gestão de processos e automação para clínicas e consultórios.',
+    'Consultoria operacional e automação inteligente para clínicas e consultórios. Organizamos sua operação para que o cuidado aconteça.',
   url: 'https://condutasaude.com',
   telephone: '+5516996131393',
   image: 'https://condutasaude.com/og-image.png',
@@ -53,9 +53,9 @@ const medicalBusinessSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Treinamento Personalizado',
+          name: 'Capacitação de Times',
           description:
-            'Acompanhamento para que sua equipe domine as ferramentas e processos da sua operação.',
+            'Treinamento e gestão de mudança para que sua equipe domine os novos processos e ferramentas.',
         },
       },
       {
@@ -64,7 +64,7 @@ const medicalBusinessSchema = {
           '@type': 'Service',
           name: 'Presença Digital e Autoridade',
           description:
-            'Gestão de redes sociais, conteúdo, Google Meu Negócio e reputação online para profissionais de saúde.',
+            'Sites, Google Meu Negócio, conteúdo e reputação online para profissionais de saúde.',
         },
       },
     ],
@@ -77,18 +77,18 @@ const faqSchema = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'O que é o diagnóstico gratuito?',
+      name: 'O que é o diagnóstico gratuito da Conduta Saúde?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'É uma reunião de 60 minutos — remota ou presencial — onde mapeamos os processos do seu consultório, identificamos gargalos e entendemos seus objetivos. Sem custo e sem compromisso de contratação.',
+        text: 'É uma conversa de 60 minutos — remota ou presencial — onde entendemos sua operação, identificamos gargalos e mapeamos oportunidades. Sem custo e sem compromisso.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Preciso entender de tecnologia para trabalhar com vocês?',
+      name: 'Preciso entender de tecnologia para trabalhar com a Conduta?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Não. A Conduta cuida de toda a parte técnica. Configuramos, integramos e te acompanhamos até você dominar as ferramentas. Você não precisa saber nada de tecnologia.',
+        text: 'Não. A Conduta cuida de toda a parte técnica — configuração, integração e acompanhamento. Você foca no que sabe fazer: cuidar de pessoas.',
       },
     },
     {
@@ -96,15 +96,15 @@ const faqSchema = {
       name: 'Quanto tempo leva para ver resultados?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Os primeiros resultados aparecem em 30 a 60 dias. A automação de confirmação de consultas, por exemplo, reduz faltas já na primeira semana de operação.',
+        text: 'A automação de confirmação de consultas reduz faltas já na primeira semana. Resultados mais estruturais, como reorganização completa de processos, amadurecem em 60 a 90 dias.',
       },
     },
     {
       '@type': 'Question',
-      name: 'Para quais profissionais vocês trabalham?',
+      name: 'Para quais profissionais de saúde a Conduta trabalha?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Atendemos profissionais de saúde de todas as especialidades — do consultório individual à clínica com múltiplos profissionais.',
+        text: 'Profissionais de saúde de todas as especialidades — do consultório individual à clínica com múltiplos profissionais. Cada proposta é adaptada à sua realidade.',
       },
     },
     {
@@ -112,7 +112,7 @@ const faqSchema = {
       name: 'Como funciona a automação do WhatsApp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento do seu número.',
+        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade total e zero risco de banimento.',
       },
     },
     {
@@ -120,7 +120,7 @@ const faqSchema = {
       name: 'Qual o investimento mensal?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cada proposta é personalizada com base no diagnóstico. Temos planos a partir do Essencial (consultório individual) até o 360° (transformação completa com presença digital).',
+        text: 'Cada proposta é personalizada com base no diagnóstico. Temos planos desde o consultório individual até a transformação completa com presença digital.',
       },
     },
   ],
@@ -143,15 +143,16 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-inner hero-split">
           <div className="hero-text">
-            <span className="hero-eyebrow hero-anim">Consultoria para profissionais de saúde</span>
+            <span className="hero-eyebrow hero-anim">Consultoria operacional para saúde</span>
             <h1 className="hero-anim">
-              Processos organizados.
+              Você cuida de pessoas.
               <br />
-              Automação <strong>que funciona.</strong>
+              <strong>A gente cuida do resto.</strong>
             </h1>
             <p className="hero-sub hero-anim">
-              A Conduta Saúde organiza sua rotina e implementa automações que realmente funcionam
-              — para você parar de apagar incêndio e focar no que importa: seus pacientes.
+              Agenda, confirmação, WhatsApp, processos — tudo que consome seu dia
+              sem ter nada a ver com cuidar. A Conduta organiza sua operação
+              para que o atendimento funcione e o cuidado aconteça.
             </p>
             <div className="hero-actions hero-anim">
               <a
@@ -195,10 +196,10 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="stats-grid" aria-label="Dados sobre o mercado de saúde">
+          <div className="stats-grid" aria-label="O custo de não organizar">
             <StatCard value={59} suffix="%" label="dos agendamentos acontecem fora do horário comercial" />
             <StatCard value={53} suffix="%" label="dos pacientes faltam porque simplesmente esquecem" />
-            <StatCard value={42} suffix="%" label="dos profissionais de saúde têm dificuldade em confirmar consultas" />
+            <StatCard value={42} suffix="%" label="dos profissionais têm dificuldade em confirmar consultas" />
             <StatCard value={144} prefix="R$" suffix="mil" label="perda anual com problemas de agendamento por clínica" />
           </div>
         </div>
@@ -209,23 +210,23 @@ export default function Home() {
         <div className="container">
           <div className="services-header reveal">
             <div>
-              <span className="eyebrow">O problema</span>
+              <span className="eyebrow">O problema real</span>
               <h2 className="section-title">
-                Já tentou usar uma IA ou uma ferramenta e <strong>não saiu do lugar?</strong>
+                Tecnologia sem processo <strong>é só mais um problema.</strong>
               </h2>
             </div>
             <p className="section-desc">
-              A maioria dos profissionais de saúde sabe que precisa se modernizar — mas entre contratar uma
-              ferramenta e colocá-la para funcionar de verdade, existe um abismo. A Conduta existe
-              para atravessar esse abismo com você.
+              Ferramentas existem aos montes. O que falta é alguém que entenda
+              sua operação antes de propor qualquer solução. Sem processo, a
+              tecnologia amplifica o caos — não resolve.
             </p>
           </div>
           <div className="pain-grid">
             <div className="pain-card reveal">
               <h4>&ldquo;Contratei uma IA e ninguém usa&rdquo;</h4>
               <p>
-                Ferramentas implementadas pela metade, sem acompanhamento e sem processo por
-                trás — não funcionam.
+                Implementação pela metade, sem acompanhamento e sem processo por trás.
+                A ferramenta não falhou — faltou quem fizesse ela funcionar na sua rotina.
               </p>
             </div>
             <div
@@ -234,18 +235,19 @@ export default function Home() {
             >
               <h4>&ldquo;Cada um faz do seu jeito&rdquo;</h4>
               <p>
-                Sem processos definidos, nenhuma ferramenta resolve. A tecnologia amplifica o caos,
-                não resolve.
+                Sem processos definidos, a equipe improvisa. A recepção faz de um jeito,
+                o financeiro de outro. Resultado: retrabalho, erro e paciente insatisfeito.
               </p>
             </div>
             <div
               className="pain-card reveal"
               style={{ '--d': '.15s' } as React.CSSProperties}
             >
-              <h4>&ldquo;Ainda perdemos consultas por falha de comunicação&rdquo;</h4>
+              <h4>&ldquo;Perco consultas por falha de comunicação&rdquo;</h4>
               <p>
-                Confirmações manuais, remarcações esquecidas e agenda ociosa — tudo resolvível com a
-                ferramenta certa implementada do jeito certo.
+                Confirmação manual, remarcação esquecida, agenda com buracos.
+                Cada consulta perdida é receita que vai embora — e um paciente
+                que talvez não volte.
               </p>
             </div>
             <div
@@ -254,8 +256,8 @@ export default function Home() {
             >
               <h4>&ldquo;Demoro para responder e perco o paciente&rdquo;</h4>
               <p>
-                Paciente que não recebe resposta em minutos vai para outro profissional.
-                Atendimento lento custa novos pacientes todos os dias.
+                O paciente mandou mensagem às 21h. Você viu às 8h. Ele já agendou
+                com outro profissional. Atendimento lento custa pacientes todos os dias.
               </p>
             </div>
           </div>
@@ -267,16 +269,16 @@ export default function Home() {
         <div className="container">
           <div className="services-header reveal">
             <div>
-              <span className="eyebrow">O que fazemos</span>
+              <span className="eyebrow">Como atuamos</span>
               <h2 className="section-title">
-                Quatro frentes,
+                Quatro frentes.
                 <br />
-                uma <strong>solução integrada</strong>
+                Uma <strong>transformação.</strong>
               </h2>
             </div>
             <p className="section-desc">
-              Atuamos nas áreas que mais impactam resultado. A combinação de frentes é definida no
-              diagnóstico — personalizada para cada profissional.
+              Cada proposta nasce do diagnóstico. Combinamos as frentes que fazem
+              sentido para o seu momento — nada genérico, nada desnecessário.
             </p>
           </div>
 
@@ -286,9 +288,9 @@ export default function Home() {
               <h3 className="service-name">Gestão de Processos</h3>
               <div className="service-body">
                 <p>
-                  Mapeamento e redesenho dos fluxos operacionais. Eliminação de gargalos, criação de
-                  rotinas, SOPs e checklists que funcionam na sua rotina. Acompanhamento contínuo com
-                  reuniões e relatórios.
+                  Entramos na sua operação, mapeamos cada fluxo e transformamos
+                  caos em rotina. SOPs que a equipe realmente segue, KPIs que mostram
+                  a verdade, e acompanhamento contínuo para garantir que funcione.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Mapeamento de fluxos</span>
@@ -304,12 +306,12 @@ export default function Home() {
               style={{ '--d': '.1s' } as React.CSSProperties}
             >
               <div className="service-accent-line"></div>
-              <h3 className="service-name">Implementação de IA no atendimento</h3>
+              <h3 className="service-name">Implementação de IA</h3>
               <div className="service-body">
                 <p>
-                  Ajudamos você a escolher, implementar e colocar em operação a IA certa para o
-                  seu atendimento — agendamento, confirmação, follow-up e comunicação automática com
-                  pacientes via WhatsApp.
+                  Escolhemos a ferramenta certa, configuramos, integramos e ficamos
+                  junto até a equipe dominar. Agendamento, confirmação, follow-up
+                  — tudo automático, via WhatsApp, sem risco para o seu número.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Automação WhatsApp</span>
@@ -324,12 +326,12 @@ export default function Home() {
               style={{ '--d': '.2s' } as React.CSSProperties}
             >
               <div className="service-accent-line"></div>
-              <h3 className="service-name">Treinamento Personalizado</h3>
+              <h3 className="service-name">Capacitação de Times</h3>
               <div className="service-body">
                 <p>
-                  Acompanhamento individual para que você e sua equipe dominem os novos processos e
-                  ferramentas. Gestão de mudança para garantir que a transformação aconteça na
-                  prática.
+                  A melhor ferramenta do mundo não funciona se a equipe não compra a
+                  ideia. Treinamos, acompanhamos e gerenciamos a mudança — porque
+                  se a equipe não adota, a implementação falhou, não a equipe.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Onboarding</span>
@@ -347,12 +349,12 @@ export default function Home() {
               <h3 className="service-name">Presença Digital &amp; Autoridade</h3>
               <div className="service-body">
                 <p>
-                  Gestão de redes sociais, produção de conteúdo, Google Meu Negócio e reputação
-                  online. Posicionamento como referência e autoridade na sua especialidade
-                  e região.
+                  Seus pacientes pesquisam no Google antes de agendar. Criamos sua
+                  presença digital — site, conteúdo, Google Meu Negócio — para que
+                  quem te procura, te encontre. E confie.
                 </p>
                 <div className="service-tags">
-                  <span className="service-tag">Redes sociais</span>
+                  <span className="service-tag">Site profissional</span>
                   <span className="service-tag">Conteúdo</span>
                   <span className="service-tag">Google Meu Negócio</span>
                   <span className="service-tag">Reputação</span>
@@ -367,13 +369,14 @@ export default function Home() {
 <section className="technology section-pad" id="ferramentas">
         <div className="container">
           <div className="tech-header reveal">
-            <span className="eyebrow">Implementação de ferramentas</span>
+            <span className="eyebrow">Tecnologia a serviço do humano</span>
             <h2 className="section-title">
-              Ajudamos você a implementar IA no seu atendimento
+              A ferramenta certa, implementada do jeito certo.
             </h2>
             <p className="section-desc">
-              Não basta contratar uma ferramenta — ela precisa ser configurada, integrada ao seu
-              processo e você precisa saber usar. É exatamente isso que a Conduta faz.
+              Não basta contratar — precisa funcionar na sua rotina real.
+              Avaliamos, configuramos, treinamos e acompanhamos. Esse é o trabalho
+              que ninguém faz e que faz toda a diferença.
             </p>
           </div>
 
@@ -381,10 +384,10 @@ export default function Home() {
             <div className="tech-feat reveal">
               <div className="tech-dot"></div>
               <div>
-                <h4>Escolhemos a ferramenta certa</h4>
+                <h4>Diagnóstico antes de receita</h4>
                 <p>
-                  Avaliamos o seu perfil e indicamos a solução que realmente faz sentido — sem
-                  empurrar o que não funciona.
+                  Primeiro entendemos sua operação. Depois — e só depois — indicamos
+                  a solução que realmente faz sentido. Sem empurrar o que não funciona.
                 </p>
               </div>
             </div>
@@ -394,10 +397,10 @@ export default function Home() {
             >
               <div className="tech-dot"></div>
               <div>
-                <h4>Implementamos do zero</h4>
+                <h4>Implementação completa</h4>
                 <p>
-                  Configuramos, integramos e colocamos em operação. Você não precisa saber nada
-                  de tecnologia.
+                  Configuramos, integramos e colocamos em operação. Você não precisa
+                  saber nada de tecnologia — esse é o nosso trabalho.
                 </p>
               </div>
             </div>
@@ -407,10 +410,10 @@ export default function Home() {
             >
               <div className="tech-dot"></div>
               <div>
-                <h4>Te acompanhamos</h4>
+                <h4>Treinamento da equipe</h4>
                 <p>
-                  Sem acompanhamento, a ferramenta fica parada. Garantimos que você vai dominar a
-                  ferramenta.
+                  Ferramenta parada é dinheiro jogado fora. Garantimos que toda a equipe
+                  domine e confie no novo processo.
                 </p>
               </div>
             </div>
@@ -420,10 +423,10 @@ export default function Home() {
             >
               <div className="tech-dot"></div>
               <div>
-                <h4>Acompanhamos e ajustamos</h4>
+                <h4>Acompanhamento contínuo</h4>
                 <p>
-                  Ficamos junto depois da implementação para ajustar, otimizar e garantir que o
-                  resultado apareça.
+                  Não entregamos e sumimos. Ficamos junto depois — ajustando,
+                  otimizando e medindo até o resultado aparecer nos números.
                 </p>
               </div>
             </div>
@@ -432,8 +435,8 @@ export default function Home() {
           <div className="api-note reveal">
             Para automação via WhatsApp, utilizamos a{' '}
             <strong>Cloudia — IA especializada em saúde</strong>, integrada à API Oficial do
-            WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento
-            do seu número.
+            WhatsApp (Meta). Estabilidade total, entregabilidade garantida e zero risco de
+            banimento do seu número.
           </div>
         </div>
       </section>
@@ -446,9 +449,10 @@ export default function Home() {
             style={{ textAlign: 'center', maxWidth: '560px', margin: '0 auto 56px' }}
           >
             <span className="eyebrow">O processo</span>
-            <h2 className="section-title">Como funciona na prática</h2>
+            <h2 className="section-title">Nada começa com uma proposta.</h2>
             <p className="section-desc" style={{ margin: '0 auto' }}>
-              Nada começa com uma proposta. Tudo começa com escuta.
+              Tudo começa com escuta. Entendemos antes de propor — porque sem
+              diagnóstico, qualquer solução é chute.
             </p>
           </div>
 
@@ -458,8 +462,9 @@ export default function Home() {
               <div>
                 <h3>Diagnóstico gratuito</h3>
                 <p>
-                  60 minutos para entender os processos, as dores e os objetivos da sua clínica ou consultório.
-                  Remoto. Sem compromisso.
+                  60 minutos para entender sua operação de verdade — processos, dores,
+                  objetivos. Remoto, sem custo, sem compromisso. Você sai com clareza
+                  sobre o que precisa mudar.
                 </p>
               </div>
             </div>
@@ -469,10 +474,10 @@ export default function Home() {
             >
               <div className="step-circle">02</div>
               <div>
-                <h3>Proposta personalizada</h3>
+                <h3>Proposta sob medida</h3>
                 <p>
-                  Com base no diagnóstico, montamos uma proposta com as frentes de atuação que fazem
-                  sentido para aquele momento específico.
+                  Com base no que ouvimos, montamos uma proposta com as frentes
+                  que fazem sentido para o seu momento. Sem pacote engessado.
                 </p>
               </div>
             </div>
@@ -482,10 +487,10 @@ export default function Home() {
             >
               <div className="step-circle">03</div>
               <div>
-                <h3>Mapeamento e Planejamento</h3>
+                <h3>Mapeamento e planejamento</h3>
                 <p>
-                  Mapeamos todos os fluxos e planejamos as mudanças com clareza — antes de mexer em
-                  qualquer coisa.
+                  Mapeamos todos os fluxos e planejamos cada mudança com clareza
+                  — antes de mexer em qualquer coisa. Sem surpresa.
                 </p>
               </div>
             </div>
@@ -495,10 +500,11 @@ export default function Home() {
             >
               <div className="step-circle">04</div>
               <div>
-                <h3>Implementação e Execução</h3>
+                <h3>Implementação</h3>
                 <p>
-                  Configuramos as ferramentas, redesenhamos os processos e te acompanhamos para que
-                  a mudança aconteça de verdade.
+                  Configuramos as ferramentas, redesenhamos os processos e
+                  acompanhamos sua equipe para que a mudança aconteça — de verdade,
+                  não só no papel.
                 </p>
               </div>
             </div>
@@ -508,10 +514,10 @@ export default function Home() {
             >
               <div className="step-circle">05</div>
               <div>
-                <h3>Acompanhamento Contínuo</h3>
+                <h3>Parceria contínua</h3>
                 <p>
-                  Ficamos junto após a implementação — monitorando resultados e garantindo que as
-                  melhorias se sustentem.
+                  Ficamos junto após a implementação. Monitoramos resultados,
+                  ajustamos o que precisar e crescemos com você. Parceria, não projeto.
                 </p>
               </div>
             </div>
@@ -524,10 +530,10 @@ export default function Home() {
         <div className="container">
           <div className="audience-header reveal">
             <span className="eyebrow">Para quem</span>
-            <h2 className="section-title">Feito para quem cuida de pessoas</h2>
+            <h2 className="section-title">Para quem cuida — e quer parar de apagar incêndio.</h2>
             <p className="section-desc">
-              A Conduta atende profissionais de saúde em diferentes momentos — do profissional que está começando
-              ao especialista que quer escalar.
+              Se você é profissional de saúde e sente que passa mais tempo resolvendo
+              problemas operacionais do que atendendo pacientes, a Conduta é para você.
             </p>
           </div>
           <div className="audience-grid">
@@ -544,10 +550,11 @@ export default function Home() {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                 </svg>
               </div>
-              <h3>Profissionais de saúde</h3>
+              <h3>Consultórios</h3>
               <p>
-                Profissionais de qualquer especialidade que querem organizar sua rotina, atrair mais
-                pacientes e reduzir faltas.
+                Profissionais que atendem sozinhos ou com equipe enxuta e
+                precisam organizar agenda, comunicação e rotina — sem perder
+                a proximidade com o paciente.
               </p>
             </div>
             <div
@@ -568,10 +575,11 @@ export default function Home() {
                   <path d="M9 14l3-2 3 2" />
                 </svg>
               </div>
-              <h3>Dentistas</h3>
+              <h3>Clínicas e policlínicas</h3>
               <p>
-                Cirurgiões-dentistas que precisam organizar agenda, atendimento e comunicação com
-                pacientes.
+                Operações com múltiplos profissionais que precisam de
+                padronização, processos claros e ferramentas que funcionem
+                para toda a equipe.
               </p>
             </div>
             <div
@@ -592,10 +600,76 @@ export default function Home() {
                   <rect x="16" y="10" width="6" height="11" rx="1" />
                 </svg>
               </div>
-              <h3>Clínicas em crescimento</h3>
+              <h3>Em crescimento</h3>
               <p>
-                Profissionais que atendem em múltiplos consultórios ou estão expandindo sua atuação
-                e precisam de padronização.
+                Profissionais expandindo para novos espaços ou especialidades
+                e que sabem: crescer sem processo é multiplicar o caos.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── NOSSA CONDUTA (values teaser) ── */}
+      <section className="section-pad" id="nossa-conduta" style={{ background: '#FFFFFF' }}>
+        <div className="container">
+          <div className="services-header reveal" style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 48px' }}>
+            <span className="eyebrow">Nossa conduta</span>
+            <h2 className="section-title">
+              Nosso nome não é acidental.
+            </h2>
+            <p className="section-desc" style={{ margin: '0 auto' }}>
+              <strong>Conduta</strong> é protocolo. É ação. É a decisão sobre o que fazer em seguida.
+              Esses são os princípios que guiam cada decisão que tomamos.
+            </p>
+          </div>
+
+          <div className="pain-grid">
+            <div className="pain-card reveal">
+              <h4>Conduta antes de tudo</h4>
+              <p>
+                Fazemos a coisa certa, mesmo quando ninguém está olhando.
+                Se a solução mais simples resolve, é ela que recomendamos.
+              </p>
+            </div>
+            <div
+              className="pain-card reveal"
+              style={{ '--d': '.08s' } as React.CSSProperties}
+            >
+              <h4>Diagnóstico antes de receita</h4>
+              <p>
+                Entendemos antes de propor. Escutamos antes de falar.
+                Sem entender sua realidade, qualquer proposta é chute.
+              </p>
+            </div>
+            <div
+              className="pain-card reveal"
+              style={{ '--d': '.16s' } as React.CSSProperties}
+            >
+              <h4>Resultado que se mede</h4>
+              <p>
+                Se não dá para medir, não dá para melhorar. Cada projeto tem
+                KPIs desde o dia 1. Celebramos números, não sensações.
+              </p>
+            </div>
+            <div
+              className="pain-card reveal"
+              style={{ '--d': '.24s' } as React.CSSProperties}
+            >
+              <h4>Tecnologia a serviço do humano</h4>
+              <p>
+                A IA existe para que você tenha mais tempo para o que só humanos fazem:
+                olhar nos olhos, escutar, cuidar.
+              </p>
+            </div>
+            <div
+              className="pain-card reveal"
+              style={{ '--d': '.32s' } as React.CSSProperties}
+            >
+              <h4>Parceria, não projeto</h4>
+              <p>
+                Não entregamos e sumimos. Estamos junto, mês a mês,
+                ajustando, medindo, crescendo com você.
               </p>
             </div>
           </div>
@@ -605,13 +679,13 @@ export default function Home() {
       {/* ── CTA ── */}
 <section className="cta-section" id="diagnostico">
         <div className="cta-inner reveal">
-          <span className="cta-eyebrow">Diagnóstico gratuito</span>
+          <span className="cta-eyebrow">O primeiro passo</span>
           <h2>
-            Pronto para <strong>transformar</strong> sua operação?
+            O próximo passo é <strong>uma conversa.</strong>
           </h2>
           <p>
-            Comece com um diagnóstico gratuito de 60 minutos. Sem custo, sem compromisso — e
-            descubra como atrair mais pacientes e organizar sua rotina.
+            60 minutos. Sem custo, sem compromisso. Só a clareza que você precisa
+            para transformar sua operação.
           </p>
           <a
             href={WHATSAPP_URL}
@@ -621,7 +695,7 @@ export default function Home() {
           >
             Agendar diagnóstico gratuito
           </a>
-          <p className="cta-note">Ou fale direto pelo WhatsApp · Atendimento remoto</p>
+          <p className="cta-note">Operação organizada, cuidado humanizado.</p>
         </div>
       </section>
     </>
