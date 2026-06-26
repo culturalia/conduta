@@ -188,7 +188,7 @@ export default function SobrePage() {
               },
               {
                 label: 'Visão',
-                text: 'Ser a referência em consultoria operacional para saúde no Brasil — a primeira ligação quando um profissional quer organizar, automatizar e crescer.',
+                text: 'Ser a referência em gestão e automação para saúde no Brasil — a primeira ligação quando um profissional quer organizar, automatizar e crescer.',
               },
             ].map(({ label, text }) => (
               <div

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Presença Digital para Profissionais de Saúde | Conduta Saúde',
   description:
-    'Presença digital integrada à sua consultoria operacional. Sites otimizados para atrair pacientes, conectados à automação da sua clínica.',
+    'Presença digital integrada à sua consultoria de gestão e automação. Sites otimizados para atrair pacientes, conectados à operação da sua clínica.',
   alternates: { canonical: 'https://condutasaude.com/portfolio' },
 };
 

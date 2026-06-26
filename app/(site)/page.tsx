@@ -10,7 +10,7 @@ const medicalBusinessSchema = {
   '@type': ['MedicalBusiness', 'Organization'],
   name: 'Conduta Saúde',
   description:
-    'Consultoria operacional e automação inteligente para clínicas e consultórios. Organizamos sua operação para que o cuidado aconteça.',
+    'Consultoria especializada em gestão de processos e automação para clínicas e consultórios. Organizamos sua operação para que o cuidado aconteça.',
   url: 'https://condutasaude.com',
   telephone: '+5516996131393',
   image: 'https://condutasaude.com/og-image.png',
@@ -143,7 +143,7 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-inner hero-split">
           <div className="hero-text">
-            <span className="hero-eyebrow hero-anim">Consultoria operacional para saúde</span>
+            <span className="hero-eyebrow hero-anim">Gestão e automação para saúde</span>
             <h1 className="hero-anim">
               Você cuida de pessoas.
               <br />
