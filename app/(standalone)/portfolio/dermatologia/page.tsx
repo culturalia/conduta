@@ -31,6 +31,8 @@ const styles = `
   text-decoration: none;
   color: inherit;
 }
+.demo-derma-root a[class*="btn-primary"] { color: #FFFFFF; }
+.demo-derma-root a[class*="btn-white"] { color: var(--rose); }
 
 .demo-derma-root img {
   max-width: 100%;

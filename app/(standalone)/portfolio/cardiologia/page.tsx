@@ -68,6 +68,8 @@ export default function CardiologiaDemo() {
   box-sizing: border-box;
 }
 .demo-cardio-root a { text-decoration: none; color: inherit; }
+.demo-cardio-root a[class*="btn-primary"] { color: #FFFFFF; }
+.demo-cardio-root a[class*="btn-secondary"] { color: #1E3A5F; }
 .demo-cardio-root ul { list-style: none; padding: 0; margin: 0; }
 .demo-cardio-root p { margin: 0; }
 

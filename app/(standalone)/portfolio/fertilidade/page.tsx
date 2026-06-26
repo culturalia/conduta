@@ -31,6 +31,8 @@ const styles = `
   text-decoration: none;
   color: inherit;
 }
+.demo-fertil-root a[class*="btn-primary"] { color: #FFFFFF; }
+.demo-fertil-root a[class*="btn-white"] { color: var(--violet); }
 
 .demo-fertil-root img {
   max-width: 100%;
