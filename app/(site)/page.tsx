@@ -102,10 +102,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'A automação do WhatsApp usa a API oficial?',
+      name: 'Como funciona a automação do WhatsApp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Sim. Trabalhamos exclusivamente com a API Oficial do WhatsApp (Meta), o que reduz o risco de banimento do número da clínica.',
+        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento do número da clínica.',
       },
     },
     {
@@ -430,10 +430,10 @@ export default function Home() {
           </div>
 
           <div className="api-note reveal">
-            Quando a implementação envolve automação via WhatsApp, trabalhamos{' '}
-            <strong>exclusivamente com a API Oficial do WhatsApp (Meta)</strong> — para reduzir o
-            risco de banimento do número da clínica. Custo Meta de USD 0,05 por mensagem de template
-            cobrado à parte conforme uso.
+            Para automação via WhatsApp, utilizamos a{' '}
+            <strong>Cloudia — IA especializada em saúde</strong>, integrada à API Oficial do
+            WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento
+            do número da clínica.
           </div>
         </div>
       </section>
