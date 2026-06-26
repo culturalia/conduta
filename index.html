@@ -685,6 +685,124 @@
     }
 
 
+    /* ── FAQ ── */
+
+    .faq { background: var(--cream); }
+
+    .faq-grid {
+      max-width: 760px;
+      margin: 48px auto 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:first-child { border-top: 1px solid var(--border); }
+
+    .faq-item summary {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--text);
+      padding: 22px 40px 22px 0;
+      cursor: pointer;
+      list-style: none;
+      position: relative;
+      line-height: 1.4;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      position: absolute; right: 0; top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px; font-weight: 300;
+      color: var(--accent);
+      transition: transform 0.2s;
+    }
+    .faq-item[open] summary::after {
+      content: '−';
+    }
+
+    .faq-item p {
+      font-size: 15px;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      padding: 0 40px 22px 0;
+    }
+
+
+    /* ── SHOWCASE ── */
+
+    .showcase { background: var(--white); }
+
+    .showcase-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 48px;
+    }
+
+    .showcase-grid {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .showcase-card {
+      background: var(--cream);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: box-shadow 0.25s, transform 0.25s;
+      cursor: pointer;
+      text-decoration: none; color: inherit;
+      display: block;
+    }
+    .showcase-card:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-3px);
+    }
+
+    .showcase-preview {
+      height: 180px;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+
+    .showcase-preview-derma { background: linear-gradient(135deg, #FFF1F2 0%, #FECDD3 100%); }
+    .showcase-preview-cardio { background: linear-gradient(135deg, #EFF6FF 0%, #BFDBFE 100%); }
+    .showcase-preview-pedia { background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); }
+    .showcase-preview-odonto { background: linear-gradient(135deg, #F0F9FF 0%, #E0F2FE 100%); }
+
+    .showcase-preview svg {
+      width: 48px; height: 48px; opacity: 0.5;
+    }
+
+    .showcase-info {
+      padding: 20px 24px 24px;
+    }
+    .showcase-info h3 {
+      font-family: 'Work Sans', sans-serif;
+      font-size: 16px; font-weight: 600;
+      color: var(--text); margin-bottom: 4px;
+    }
+    .showcase-info p {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+    .showcase-badge {
+      display: inline-block;
+      font-family: 'Inter', sans-serif;
+      font-size: 10px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px;
+      padding: 3px 8px; border-radius: 4px;
+      background: var(--accent-tag-bg);
+      color: var(--accent-tag-text);
+      margin-top: 10px;
+    }
+
+
     /* ── CTA ── */
 
     .cta-section {
@@ -842,6 +960,7 @@
       }
 
       .audience-grid { grid-template-columns: 1fr; }
+      .showcase-grid { grid-template-columns: 1fr 1fr; }
 
       footer { flex-direction: column; align-items: flex-start; }
     }
@@ -852,6 +971,7 @@
       .stat-card:nth-child(-n+2) { border-bottom: none; }
       .stat-card { border-bottom: 1px solid var(--border); padding: 28px 24px; }
       .stat-card:last-child { border-bottom: none; }
+      .showcase-grid { grid-template-columns: 1fr; }
       .stat-number { font-size: 34px; }
     }
   </style>
@@ -1184,6 +1304,97 @@
 </section>
 
 
+<!-- ── FAQ ── -->
+<section class="faq section-pad" id="faq">
+  <div class="container">
+    <div class="reveal" style="text-align:center; max-width:640px; margin:0 auto;">
+      <span class="eyebrow">Perguntas frequentes</span>
+      <h2 class="section-title">Dúvidas sobre a Conduta</h2>
+    </div>
+    <div class="faq-grid">
+      <details class="faq-item reveal">
+        <summary>O que é o diagnóstico gratuito?</summary>
+        <p>É uma reunião de 60 minutos — remota ou presencial — onde mapeamos os processos da sua clínica, identificamos gargalos e entendemos seus objetivos. Sem custo e sem compromisso de contratação.</p>
+      </details>
+      <details class="faq-item reveal" style="--d:.05s">
+        <summary>Preciso entender de tecnologia para trabalhar com vocês?</summary>
+        <p>Não. A Conduta cuida de toda a parte técnica. Configuramos, integramos e treinamos seu time para usar as ferramentas. Você não precisa saber nada de tecnologia.</p>
+      </details>
+      <details class="faq-item reveal" style="--d:.1s">
+        <summary>Quanto tempo leva para ver resultados?</summary>
+        <p>Os primeiros resultados aparecem em 30 a 60 dias. A automação de confirmação de consultas, por exemplo, reduz faltas já na primeira semana de operação.</p>
+      </details>
+      <details class="faq-item reveal" style="--d:.15s">
+        <summary>Vocês trabalham com quais tipos de clínica?</summary>
+        <p>Atendemos clínicas médicas, odontológicas e grupos com múltiplas unidades. Do consultório com 1 profissional ao grupo com 15+ colaboradores.</p>
+      </details>
+      <details class="faq-item reveal" style="--d:.2s">
+        <summary>A automação do WhatsApp usa a API oficial?</summary>
+        <p>Sim. Trabalhamos exclusivamente com a API Oficial do WhatsApp (Meta), o que reduz o risco de banimento do número da clínica. O custo da Meta é de USD 0,05 por mensagem de template.</p>
+      </details>
+      <details class="faq-item reveal" style="--d:.25s">
+        <summary>Qual o investimento mensal?</summary>
+        <p>Cada proposta é personalizada com base no diagnóstico. Temos planos a partir do Essencial (para consultórios pequenos) até o 360° (para clínicas que querem transformação completa com presença digital).</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SHOWCASE ── -->
+<section class="showcase section-pad" id="sites-medicos">
+  <div class="container">
+    <div class="showcase-header reveal">
+      <span class="eyebrow">Presença digital</span>
+      <h2 class="section-title">Criamos o site da sua clínica</h2>
+      <p class="section-desc" style="margin:0 auto;">Seus pacientes estão no Google. A Conduta cria sites profissionais, otimizados para SEO, com agendamento integrado — para cada especialidade.</p>
+    </div>
+    <div class="showcase-grid">
+      <a href="#diagnostico" class="showcase-card reveal">
+        <div class="showcase-preview showcase-preview-derma">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#BE123C" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+        </div>
+        <div class="showcase-info">
+          <h3>Dermatologia</h3>
+          <p>Clean, luminoso, galeria de procedimentos</p>
+          <span class="showcase-badge">Template</span>
+        </div>
+      </a>
+      <a href="#diagnostico" class="showcase-card reveal" style="--d:.1s">
+        <div class="showcase-preview showcase-preview-cardio">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <div class="showcase-info">
+          <h3>Cardiologia</h3>
+          <p>Sério, institucional, credenciais em destaque</p>
+          <span class="showcase-badge">Template</span>
+        </div>
+      </a>
+      <a href="#diagnostico" class="showcase-card reveal" style="--d:.2s">
+        <div class="showcase-preview showcase-preview-pedia">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" stroke-width="1.5"><path d="M12 2a5 5 0 0 1 5 5v3a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z"/><path d="M8 14v1a4 4 0 0 0 8 0v-1"/><line x1="12" y1="18" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg>
+        </div>
+        <div class="showcase-info">
+          <h3>Pediatria</h3>
+          <p>Acolhedor, pastel, foco na família</p>
+          <span class="showcase-badge">Template</span>
+        </div>
+      </a>
+      <a href="#diagnostico" class="showcase-card reveal" style="--d:.3s">
+        <div class="showcase-preview showcase-preview-odonto">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#0369A1" stroke-width="1.5"><path d="M12 5.5c-1.5-2-4-2.5-5.5-1S4 7 6 9.5C8 12 12 18 12 18s4-6 6-8.5c2-2.5 1-4.5-.5-5s-4 1-5.5 1z"/></svg>
+        </div>
+        <div class="showcase-info">
+          <h3>Odontologia</h3>
+          <p>Moderno, sorriso em destaque, tratamentos</p>
+          <span class="showcase-badge">Template</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+
 <!-- ── CTA ── -->
 <section class="cta-section" id="diagnostico">
   <div class="cta-inner reveal">
@@ -1327,6 +1538,62 @@
       }
     ]
   }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "O que é o diagnóstico gratuito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "É uma reunião de 60 minutos — remota ou presencial — onde mapeamos os processos da sua clínica, identificamos gargalos e entendemos seus objetivos. Sem custo e sem compromisso de contratação."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Preciso entender de tecnologia para trabalhar com vocês?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Não. A Conduta cuida de toda a parte técnica. Configuramos, integramos e treinamos seu time para usar as ferramentas. Você não precisa saber nada de tecnologia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo leva para ver resultados?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Os primeiros resultados aparecem em 30 a 60 dias. A automação de confirmação de consultas, por exemplo, reduz faltas já na primeira semana de operação."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês trabalham com quais tipos de clínica?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Atendemos clínicas médicas, odontológicas e grupos com múltiplas unidades. Do consultório com 1 profissional ao grupo com 15+ colaboradores."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "A automação do WhatsApp usa a API oficial?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Trabalhamos exclusivamente com a API Oficial do WhatsApp (Meta), o que reduz o risco de banimento do número da clínica."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Qual o investimento mensal?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cada proposta é personalizada com base no diagnóstico. Temos planos a partir do Essencial (consultórios pequenos) até o 360° (transformação completa com presença digital)."
+      }
+    }
+  ]
 }
 </script>
 
