@@ -60,7 +60,7 @@ export default function Header() {
   }, [isHome]);
 
   return (
-    <nav aria-label="Navegação principal">
+    <nav className="site-nav" aria-label="Navegação principal">
       <Link href="/" className="nav-logo" aria-label="Conduta Saúde — início">
         <svg
           xmlns="http://www.w3.org/2000/svg"

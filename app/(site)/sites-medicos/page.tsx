@@ -15,37 +15,6 @@ export default function SitesMedicosPage() {
       {/* ── HERO / HEADER ── */}
       <section className="hero" style={{ paddingBottom: '48px' }}>
         <div className="hero-inner" style={{ maxWidth: '840px' }}>
-          <nav aria-label="Breadcrumb" style={{ marginBottom: '32px' }}>
-            <ol
-              style={{
-                display: 'flex',
-                gap: '8px',
-                listStyle: 'none',
-                padding: 0,
-                margin: 0,
-                fontFamily: "'Inter', sans-serif",
-                fontSize: '14px',
-              }}
-            >
-              <li>
-                <a
-                  href="/"
-                  style={{
-                    color: 'var(--accent)',
-                    textDecoration: 'none',
-                  }}
-                >
-                  Home
-                </a>
-              </li>
-              <li style={{ color: 'var(--text-muted)' }} aria-hidden="true">
-                &rsaquo;
-              </li>
-              <li style={{ color: 'var(--text-secondary)' }} aria-current="page">
-                Sites para Médicos
-              </li>
-            </ol>
-          </nav>
           <span className="hero-eyebrow hero-anim">Presença digital</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
             Criamos o site da sua <strong>clínica</strong>

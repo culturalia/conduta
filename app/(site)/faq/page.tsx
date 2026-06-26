@@ -79,37 +79,6 @@ export default function FAQPage() {
         style={{ paddingBottom: '48px' }}
       >
         <div className="hero-inner">
-          <nav aria-label="Breadcrumb" style={{ marginBottom: '32px' }}>
-            <ol
-              style={{
-                display: 'flex',
-                gap: '8px',
-                listStyle: 'none',
-                padding: 0,
-                margin: 0,
-                fontFamily: "'Inter', sans-serif",
-                fontSize: '14px',
-              }}
-            >
-              <li>
-                <a
-                  href="/"
-                  style={{
-                    color: 'var(--accent)',
-                    textDecoration: 'none',
-                  }}
-                >
-                  Home
-                </a>
-              </li>
-              <li style={{ color: 'var(--text-muted)' }} aria-hidden="true">
-                &rsaquo;
-              </li>
-              <li style={{ color: 'var(--text-secondary)' }} aria-current="page">
-                FAQ
-              </li>
-            </ol>
-          </nav>
           <span className="hero-eyebrow hero-anim">Perguntas frequentes</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
             Dúvidas sobre a <strong>Conduta Saúde</strong>
