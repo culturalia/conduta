@@ -9,7 +9,7 @@ export default function RevealOnScroll() {
   useEffect(() => {
     // Small delay to let new page DOM render
     const timer = setTimeout(() => {
-      const revealElements = document.querySelectorAll(".reveal:not(.visible)");
+      const revealElements = document.querySelectorAll("[class*='reveal']:not(.visible)");
 
       if (revealElements.length === 0) return;
 

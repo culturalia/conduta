@@ -16,18 +16,20 @@ export default function WaveDivider({
       style={{
         background: bgColor,
         lineHeight: 0,
+        marginTop: "-1px",
+        marginBottom: "-1px",
         transform: flip ? "scaleY(-1)" : undefined,
       }}
       aria-hidden="true"
     >
       <svg
-        viewBox="0 0 1440 56"
+        viewBox="0 0 1440 48"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{ display: "block", width: "100%", height: "clamp(32px, 4vw, 56px)" }}
+        style={{ display: "block", width: "100%", height: "clamp(24px, 3.5vw, 48px)" }}
       >
         <path
-          d="M0,28 C240,56 480,0 720,28 C960,56 1200,0 1440,28 L1440,56 L0,56 Z"
+          d="M0,24 C360,48 720,0 1080,24 C1260,36 1380,20 1440,24 L1440,48 L0,48 Z"
           fill={color}
         />
       </svg>
