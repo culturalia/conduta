@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -7,16 +8,41 @@ const WHATSAPP_URL =
   "https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA";
 
 const NAV_LINKS = [
-  { label: "Serviços", href: "/#servicos" },
+  { label: "Serviços", href: "/" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "FAQ", href: "/faq" },
 ];
 
 export default function Header() {
   const pathname = usePathname();
+  const [hidden, setHidden] = useState(false);
+  const lastScroll = useRef(0);
+
+  useEffect(() => {
+    const onScroll = () => {
+      const current = window.scrollY;
+      // Only hide after scrolling past the hero (200px)
+      if (current > 200) {
+        setHidden(current > lastScroll.current && current - lastScroll.current > 5);
+      } else {
+        setHidden(false);
+      }
+      lastScroll.current = current;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="site-nav" aria-label="Navegação principal">
+    <nav
+      className="site-nav"
+      aria-label="Navegação principal"
+      style={{
+        transform: hidden ? "translateY(-100%)" : "translateY(0)",
+        transition: "transform 0.3s ease",
+      }}
+    >
       <Link href="/" className="nav-logo" aria-label="Conduta Saúde — início">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -112,7 +138,11 @@ export default function Header() {
           <Link
             key={item.href}
             href={item.href}
-            className={pathname === item.href || (item.href !== "/#servicos" && pathname.startsWith(item.href)) ? "active" : ""}
+            className={
+              item.href === "/"
+                ? pathname === "/" ? "active" : ""
+                : pathname.startsWith(item.href) ? "active" : ""
+            }
           >
             {item.label}
           </Link>
