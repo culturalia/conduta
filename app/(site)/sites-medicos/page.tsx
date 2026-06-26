@@ -76,7 +76,7 @@ export default function SitesMedicosPage() {
             </p>
           </div>
           <div className="showcase-grid">
-            <a href="#contato" className="showcase-card reveal">
+            <a href="/demos/dermatologia" className="showcase-card reveal" target="_blank">
               <div className="showcase-preview showcase-preview-derma">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#BE123C" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10" />
@@ -88,13 +88,14 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Dermatologia</h3>
                 <p>Clean, luminoso, galeria de procedimentos</p>
-                <span className="showcase-badge">Template</span>
+                <span className="showcase-badge">Ver demo</span>
               </div>
             </a>
             <a
-              href="#contato"
+              href="/demos/cardiologia"
               className="showcase-card reveal"
               style={{ '--d': '.1s' } as React.CSSProperties}
+              target="_blank"
             >
               <div className="showcase-preview showcase-preview-cardio">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#1D4ED8" strokeWidth="1.5">
@@ -104,13 +105,14 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Cardiologia</h3>
                 <p>Sério, institucional, credenciais em destaque</p>
-                <span className="showcase-badge">Template</span>
+                <span className="showcase-badge">Ver demo</span>
               </div>
             </a>
             <a
-              href="#contato"
+              href="/demos/pediatria"
               className="showcase-card reveal"
               style={{ '--d': '.2s' } as React.CSSProperties}
+              target="_blank"
             >
               <div className="showcase-preview showcase-preview-pedia">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#D97706" strokeWidth="1.5">
@@ -123,13 +125,14 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Pediatria</h3>
                 <p>Acolhedor, pastel, foco na família</p>
-                <span className="showcase-badge">Template</span>
+                <span className="showcase-badge">Ver demo</span>
               </div>
             </a>
             <a
-              href="#contato"
+              href="/demos/odontologia"
               className="showcase-card reveal"
               style={{ '--d': '.3s' } as React.CSSProperties}
+              target="_blank"
             >
               <div className="showcase-preview showcase-preview-odonto">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#0369A1" strokeWidth="1.5">
@@ -139,7 +142,7 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Odontologia</h3>
                 <p>Moderno, sorriso em destaque, tratamentos</p>
-                <span className="showcase-badge">Template</span>
+                <span className="showcase-badge">Ver demo</span>
               </div>
             </a>
           </div>

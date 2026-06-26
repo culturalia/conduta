@@ -1,8 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Work_Sans, Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 const workSans = Work_Sans({
@@ -70,12 +68,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className={`${workSans.variable} ${inter.variable}`}>
       <body>
-        <a href="#inicio" className="skip-link">
-          Pular para o conteúdo
-        </a>
-        <Header />
         {children}
-        <Footer />
         <RevealOnScroll />
       </body>
     </html>
