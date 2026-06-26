@@ -101,7 +101,7 @@ export default function Footer() {
         <a href={WHATSAPP_URL} target="_blank" rel="noopener">
           Contato
         </a>
-        <Link href="/sites-medicos">Sites para Médicos</Link>
+        <Link href="/portfolio">Portfolio</Link>
         <Link href="/faq">FAQ</Link>
         <a
           href="https://www.instagram.com/conduta.saude/"

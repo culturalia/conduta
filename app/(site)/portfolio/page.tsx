@@ -1,9 +1,10 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sites para Médicos | Conduta Saúde',
+  title: 'Sites para Médicos e Clínicas — Portfolio',
   description:
-    'Criamos sites profissionais para médicos e clínicas com SEO otimizado, design responsivo, agendamento integrado e schema markup. Lighthouse 95+.',
+    'Veja exemplos de sites profissionais que criamos para médicos e clínicas. SEO otimizado, design responsivo, agendamento integrado. Veja nosso portfolio.',
+  alternates: { canonical: 'https://condutasaude.com/portfolio' },
 };
 
 const WHATSAPP_URL =
@@ -45,7 +46,7 @@ export default function SitesMedicosPage() {
             </p>
           </div>
           <div className="showcase-grid">
-            <a href="/demos/dermatologia" className="showcase-card reveal" target="_blank">
+            <a href="/portfolio/dermatologia" className="showcase-card reveal" target="_blank">
               <div className="showcase-preview showcase-preview-derma">
                 <svg viewBox="0 0 24 24" fill="none" stroke="#BE123C" strokeWidth="1.5">
                   <circle cx="12" cy="12" r="10" />
@@ -57,11 +58,11 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Dermatologia</h3>
                 <p>Clean, luminoso, galeria de procedimentos</p>
-                <span className="showcase-badge">Ver demo</span>
+                <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
             <a
-              href="/demos/cardiologia"
+              href="/portfolio/cardiologia"
               className="showcase-card reveal"
               style={{ '--d': '.1s' } as React.CSSProperties}
               target="_blank"
@@ -74,11 +75,11 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Cardiologia</h3>
                 <p>Sério, institucional, credenciais em destaque</p>
-                <span className="showcase-badge">Ver demo</span>
+                <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
             <a
-              href="/demos/pediatria"
+              href="/portfolio/pediatria"
               className="showcase-card reveal"
               style={{ '--d': '.2s' } as React.CSSProperties}
               target="_blank"
@@ -94,11 +95,11 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Pediatria</h3>
                 <p>Acolhedor, pastel, foco na família</p>
-                <span className="showcase-badge">Ver demo</span>
+                <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
             <a
-              href="/demos/odontologia"
+              href="/portfolio/odontologia"
               className="showcase-card reveal"
               style={{ '--d': '.3s' } as React.CSSProperties}
               target="_blank"
@@ -111,10 +112,13 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Odontologia</h3>
                 <p>Moderno, sorriso em destaque, tratamentos</p>
-                <span className="showcase-badge">Ver demo</span>
+                <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
           </div>
+          <p className="reveal" style={{ textAlign: 'center', fontSize: '13px', color: 'var(--text-muted)', marginTop: '24px' }}>
+            * Exemplos com dados ilustrativos. Cada site é criado sob medida para o médico e sua especialidade.
+          </p>
         </div>
       </section>
 

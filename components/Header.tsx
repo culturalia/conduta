@@ -1,63 +1,19 @@
 "use client";
 
-import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
 const WHATSAPP_URL =
   "https://wa.me/5516996131393?text=Oi%20Hilary%2C%20vim%20do%20site%20da%20Conduta%20Sa%C3%BAde%20e%20quero%20agendar%20meu%20diagn%C3%B3stico%20com%20voc%C3%AA";
 
-const HOME_ANCHORS = [
-  { label: "O problema", href: "#problema" },
-  { label: "Serviços", href: "#servicos" },
-  { label: "Processo", href: "#como-funciona" },
-];
-
-const PAGE_LINKS = [
-  { label: "Sites para Médicos", href: "/sites-medicos" },
+const NAV_LINKS = [
+  { label: "Serviços", href: "/#servicos" },
+  { label: "Portfolio", href: "/portfolio" },
   { label: "FAQ", href: "/faq" },
 ];
 
 export default function Header() {
-  const navLinksRef = useRef<HTMLDivElement>(null);
   const pathname = usePathname();
-  const isHome = pathname === "/";
-
-  useEffect(() => {
-    const navLinksEl = navLinksRef.current;
-    if (!navLinksEl || !isHome) return;
-
-    const links = navLinksEl.querySelectorAll<HTMLAnchorElement>('a[href^="#"]');
-    const sections: { el: HTMLElement; link: HTMLAnchorElement }[] = [];
-
-    links.forEach((link) => {
-      const id = link.getAttribute("href")!.slice(1);
-      const sec = document.getElementById(id);
-      if (sec) sections.push({ el: sec, link });
-    });
-
-    if (sections.length === 0) return;
-
-    const navObs = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) {
-            links.forEach((l) => l.classList.remove("active"));
-            sections.forEach((s) => {
-              if (s.el === e.target) s.link.classList.add("active");
-            });
-          }
-        });
-      },
-      { threshold: 0.2, rootMargin: "-64px 0px -50% 0px" }
-    );
-
-    sections.forEach((s) => navObs.observe(s.el));
-
-    return () => {
-      navObs.disconnect();
-    };
-  }, [isHome]);
 
   return (
     <nav className="site-nav" aria-label="Navegação principal">
@@ -151,19 +107,12 @@ export default function Header() {
           </text>
         </svg>
       </Link>
-      <div className="nav-links" ref={navLinksRef}>
-        {isHome
-          ? HOME_ANCHORS.map((item) => (
-              <a key={item.href} href={item.href}>
-                {item.label}
-              </a>
-            ))
-          : null}
-        {PAGE_LINKS.map((item) => (
+      <div className="nav-links">
+        {NAV_LINKS.map((item) => (
           <Link
             key={item.href}
             href={item.href}
-            className={pathname === item.href ? "active" : ""}
+            className={pathname === item.href || (item.href !== "/#servicos" && pathname.startsWith(item.href)) ? "active" : ""}
           >
             {item.label}
           </Link>
