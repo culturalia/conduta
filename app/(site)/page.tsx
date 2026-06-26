@@ -207,11 +207,13 @@ export default function Home() {
       {/* ── CHALLENGE ── */}
       <section className="challenge section-pad" id="problema">
         <div className="container">
-          <div className="challenge-header reveal">
-            <span className="eyebrow">O problema</span>
-            <h2 className="section-title">
-              Já tentou usar uma IA ou uma ferramenta e <strong>não saiu do lugar?</strong>
-            </h2>
+          <div className="services-header reveal">
+            <div>
+              <span className="eyebrow">O problema</span>
+              <h2 className="section-title">
+                Já tentou usar uma IA ou uma ferramenta e <strong>não saiu do lugar?</strong>
+              </h2>
+            </div>
             <p className="section-desc">
               A maioria dos profissionais de saúde sabe que precisa se modernizar — mas entre contratar uma
               ferramenta e colocá-la para funcionar de verdade, existe um abismo. A Conduta existe
