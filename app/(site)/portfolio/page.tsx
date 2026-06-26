@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sites para Médicos e Clínicas — Portfolio',
+  title: 'Sites para Médicos que Atendem Particular — Portfolio',
   description:
-    'Veja exemplos de sites profissionais que criamos para médicos e clínicas. SEO otimizado, design responsivo, agendamento integrado. Veja nosso portfolio.',
+    'Veja exemplos de sites profissionais que criamos para médicos. SEO otimizado, design responsivo, agendamento integrado. Veja nosso portfolio.',
   alternates: { canonical: 'https://condutasaude.com/portfolio' },
 };
 
@@ -18,13 +18,13 @@ export default function SitesMedicosPage() {
         <div className="hero-inner" style={{ maxWidth: '840px' }}>
           <span className="hero-eyebrow hero-anim">Presença digital</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
-            Criamos o site da sua <strong>clínica</strong>
+            Criamos o site do seu <strong>consultório</strong>
           </h1>
           <p className="hero-sub hero-anim" style={{ maxWidth: '640px' }}>
             Seus pacientes estão no Google. A Conduta cria sites profissionais, otimizados para SEO,
             com agendamento integrado e design pensado para cada especialidade médica. Sites que
-            transmitem credibilidade, convertem visitantes em pacientes e posicionam sua clínica como
-            referência na região.
+            transmitem credibilidade, convertem visitantes em pacientes e posicionam você como
+            referência na sua região.
           </p>
         </div>
       </section>
@@ -42,22 +42,22 @@ export default function SitesMedicosPage() {
             </h2>
             <p className="section-desc" style={{ margin: '0 auto' }}>
               Cada template é projetado com identidade visual, paleta de cores e estrutura de
-              conteúdo adaptados à área de atuação da clínica.
+              conteúdo adaptados à sua especialidade.
             </p>
           </div>
           <div className="showcase-grid">
-            <a href="/portfolio/dermatologia" className="showcase-card reveal" target="_blank">
-              <div className="showcase-preview showcase-preview-derma">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#BE123C" strokeWidth="1.5">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="M8 14s1.5 2 4 2 4-2 4-2" />
-                  <line x1="9" y1="9" x2="9.01" y2="9" />
-                  <line x1="15" y1="9" x2="15.01" y2="9" />
+            <a href="/portfolio/fertilidade" className="showcase-card reveal" target="_blank">
+              <div
+                className="showcase-preview"
+                style={{ background: 'linear-gradient(135deg, #FAF5FF 0%, #F3E8FF 100%)' }}
+              >
+                <svg viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="1.5">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 1 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z" />
                 </svg>
               </div>
               <div className="showcase-info">
-                <h3>Dermatologia</h3>
-                <p>Clean, luminoso, galeria de procedimentos</p>
+                <h3>Fertilidade</h3>
+                <p>Delicado, acolhedor, jornada do casal</p>
                 <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
@@ -79,9 +79,46 @@ export default function SitesMedicosPage() {
               </div>
             </a>
             <a
-              href="/portfolio/pediatria"
+              href="/portfolio/odontologia"
               className="showcase-card reveal"
               style={{ '--d': '.2s' } as React.CSSProperties}
+              target="_blank"
+            >
+              <div className="showcase-preview showcase-preview-odonto">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#0369A1" strokeWidth="1.5">
+                  <path d="M12 5.5c-1.5-2-4-2.5-5.5-1S4 7 6 9.5C8 12 12 18 12 18s4-6 6-8.5c2-2.5 1-4.5-.5-5s-4 1-5.5 1z" />
+                </svg>
+              </div>
+              <div className="showcase-info">
+                <h3>Odontologia</h3>
+                <p>Moderno, sorriso em destaque, tratamentos</p>
+                <span className="showcase-badge">Ver exemplo</span>
+              </div>
+            </a>
+            <a
+              href="/portfolio/dermatologia"
+              className="showcase-card reveal"
+              style={{ '--d': '.3s' } as React.CSSProperties}
+              target="_blank"
+            >
+              <div className="showcase-preview showcase-preview-derma">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#BE123C" strokeWidth="1.5">
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                  <line x1="9" y1="9" x2="9.01" y2="9" />
+                  <line x1="15" y1="9" x2="15.01" y2="9" />
+                </svg>
+              </div>
+              <div className="showcase-info">
+                <h3>Dermatologia</h3>
+                <p>Clean, luminoso, galeria de procedimentos</p>
+                <span className="showcase-badge">Ver exemplo</span>
+              </div>
+            </a>
+            <a
+              href="/portfolio/pediatria"
+              className="showcase-card reveal"
+              style={{ '--d': '.4s' } as React.CSSProperties}
               target="_blank"
             >
               <div className="showcase-preview showcase-preview-pedia">
@@ -95,23 +132,6 @@ export default function SitesMedicosPage() {
               <div className="showcase-info">
                 <h3>Pediatria</h3>
                 <p>Acolhedor, pastel, foco na família</p>
-                <span className="showcase-badge">Ver exemplo</span>
-              </div>
-            </a>
-            <a
-              href="/portfolio/odontologia"
-              className="showcase-card reveal"
-              style={{ '--d': '.3s' } as React.CSSProperties}
-              target="_blank"
-            >
-              <div className="showcase-preview showcase-preview-odonto">
-                <svg viewBox="0 0 24 24" fill="none" stroke="#0369A1" strokeWidth="1.5">
-                  <path d="M12 5.5c-1.5-2-4-2.5-5.5-1S4 7 6 9.5C8 12 12 18 12 18s4-6 6-8.5c2-2.5 1-4.5-.5-5s-4 1-5.5 1z" />
-                </svg>
-              </div>
-              <div className="showcase-info">
-                <h3>Odontologia</h3>
-                <p>Moderno, sorriso em destaque, tratamentos</p>
                 <span className="showcase-badge">Ver exemplo</span>
               </div>
             </a>
@@ -129,7 +149,7 @@ export default function SitesMedicosPage() {
             <div>
               <span className="eyebrow">O que está incluído</span>
               <h2 className="section-title">
-                Tudo que sua clínica precisa para <strong>aparecer no Google</strong>
+                Tudo que você precisa para <strong>aparecer no Google</strong>
               </h2>
             </div>
             <p className="section-desc">
@@ -187,7 +207,7 @@ export default function SitesMedicosPage() {
               <div className="service-body">
                 <p>
                   Botão de agendamento direto no site — via WhatsApp, formulário ou integração com o
-                  sistema de agenda da clínica. O paciente encontra sua clínica no Google e agenda
+                  sistema de agenda do consultório. O paciente encontra você no Google e agenda
                   sem fricção.
                 </p>
                 <div className="service-tags">
@@ -230,7 +250,7 @@ export default function SitesMedicosPage() {
             <h2 className="section-title">Mais do que um site bonito</h2>
             <p className="section-desc">
               Não entregamos apenas um site — entregamos uma presença digital completa, integrada à
-              estratégia da sua clínica. O site é a porta de entrada; o processo por trás é o que
+              sua estratégia. O site é a porta de entrada; o processo por trás é o que
               converte.
             </p>
           </div>
@@ -241,7 +261,7 @@ export default function SitesMedicosPage() {
               <div>
                 <h4>Conteúdo otimizado para SEO</h4>
                 <p>
-                  Textos escritos para posicionar sua clínica nas buscas locais. Cada página é
+                  Textos escritos para posicionar você nas buscas locais. Cada página é
                   pensada para atrair pacientes que procuram sua especialidade na região.
                 </p>
               </div>
@@ -255,7 +275,7 @@ export default function SitesMedicosPage() {
                 <h4>Schema markup médico</h4>
                 <p>
                   Dados estruturados (MedicalBusiness, Physician, FAQPage) que ajudam o Google a
-                  entender e destacar sua clínica nos resultados de busca.
+                  entender e destacar seu consultório nos resultados de busca.
                 </p>
               </div>
             </div>
@@ -333,7 +353,7 @@ export default function SitesMedicosPage() {
               <h4>Agendamento integrado</h4>
               <p>
                 Botão de WhatsApp, formulário de contato ou integração direta com o sistema de agenda
-                da clínica — sem fricção para o paciente.
+                do consultório — sem fricção para o paciente.
               </p>
             </div>
             <div
@@ -363,7 +383,7 @@ export default function SitesMedicosPage() {
               <h4>HTTPS e segurança</h4>
               <p>
                 Certificado SSL, headers de segurança e conformidade com LGPD para proteger os dados
-                dos pacientes e da clínica.
+                dos seus pacientes e do seu consultório.
               </p>
             </div>
           </div>
@@ -375,7 +395,7 @@ export default function SitesMedicosPage() {
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Presença digital</span>
           <h2>
-            Pronto para colocar sua clínica <strong>no Google?</strong>
+            Pronto para colocar seu consultório <strong>no Google?</strong>
           </h2>
           <p>
             Comece com um diagnóstico gratuito. Vamos entender sua especialidade, sua região e criar

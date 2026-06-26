@@ -8,7 +8,7 @@ const medicalBusinessSchema = {
   '@type': 'MedicalBusiness',
   name: 'Conduta Saúde',
   description:
-    'Consultoria especializada em gestão de processos e automação para clínicas médicas e odontológicas.',
+    'Consultoria especializada em presença digital e automação para médicos que atendem particular.',
   url: 'https://condutasaude.com',
   telephone: '+5516996131393',
   image: 'https://condutasaude.com/og-image.png',
@@ -46,9 +46,9 @@ const medicalBusinessSchema = {
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Service',
-          name: 'Capacitação de Times',
+          name: 'Treinamento Personalizado',
           description:
-            'Treinamento da equipe para adoção de novos processos e ferramentas. Gestão de mudança organizacional.',
+            'Acompanhamento individual para que você domine as ferramentas e processos do seu consultório.',
         },
       },
       {
@@ -57,7 +57,7 @@ const medicalBusinessSchema = {
           '@type': 'Service',
           name: 'Presença Digital e Autoridade',
           description:
-            'Gestão de redes sociais, conteúdo, Google Meu Negócio e reputação online para clínicas.',
+            'Gestão de redes sociais, conteúdo, Google Meu Negócio e reputação online para médicos.',
         },
       },
     ],
@@ -73,7 +73,7 @@ const faqSchema = {
       name: 'O que é o diagnóstico gratuito?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'É uma reunião de 60 minutos — remota ou presencial — onde mapeamos os processos da sua clínica, identificamos gargalos e entendemos seus objetivos. Sem custo e sem compromisso de contratação.',
+        text: 'É uma reunião de 60 minutos — remota ou presencial — onde mapeamos os processos do seu consultório, identificamos gargalos e entendemos seus objetivos. Sem custo e sem compromisso de contratação.',
       },
     },
     {
@@ -81,7 +81,7 @@ const faqSchema = {
       name: 'Preciso entender de tecnologia para trabalhar com vocês?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Não. A Conduta cuida de toda a parte técnica. Configuramos, integramos e treinamos seu time para usar as ferramentas. Você não precisa saber nada de tecnologia.',
+        text: 'Não. A Conduta cuida de toda a parte técnica. Configuramos, integramos e te acompanhamos até você dominar as ferramentas. Você não precisa saber nada de tecnologia.',
       },
     },
     {
@@ -94,10 +94,10 @@ const faqSchema = {
     },
     {
       '@type': 'Question',
-      name: 'Vocês trabalham com quais tipos de clínica?',
+      name: 'Para quais médicos vocês trabalham?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Atendemos clínicas médicas, odontológicas e grupos com múltiplas unidades. Do consultório com 1 profissional ao grupo com 15+ colaboradores.',
+        text: 'Atendemos médicos de todas as especialidades que atendem particular — do consultório individual ao médico que atende em diferentes espaços.',
       },
     },
     {
@@ -105,7 +105,7 @@ const faqSchema = {
       name: 'Como funciona a automação do WhatsApp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento do número da clínica.',
+        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento do seu número.',
       },
     },
     {
@@ -113,7 +113,7 @@ const faqSchema = {
       name: 'Qual o investimento mensal?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Cada proposta é personalizada com base no diagnóstico. Temos planos a partir do Essencial (consultórios pequenos) até o 360° (transformação completa com presença digital).',
+        text: 'Cada proposta é personalizada com base no diagnóstico. Temos planos a partir do Essencial (consultório individual) até o 360° (transformação completa com presença digital).',
       },
     },
   ],
@@ -135,16 +135,15 @@ export default function Home() {
       {/* ── HERO ── */}
       <section className="hero" id="inicio">
         <div className="hero-inner">
-          <span className="hero-eyebrow hero-anim">Consultoria especializada em clínicas</span>
+          <span className="hero-eyebrow hero-anim">Consultoria especializada para médicos</span>
           <h1 className="hero-anim">
             Processos organizados.
             <br />
             Automação <strong>que funciona.</strong>
           </h1>
           <p className="hero-sub hero-anim">
-            A Conduta Saúde estrutura os processos da sua clínica e implementa automações que
-            realmente funcionam no dia a dia — para você parar de apagar incêndio e começar a
-            crescer.
+            A Conduta Saúde organiza sua rotina e implementa automações que realmente funcionam
+            — para você parar de apagar incêndio e focar no que importa: seus pacientes.
           </p>
           <div className="hero-actions hero-anim">
             <a
@@ -177,7 +176,7 @@ export default function Home() {
               />
             </svg>
           </div>
-          <div className="stats-grid" aria-label="Dados sobre o mercado de clínicas">
+          <div className="stats-grid" aria-label="Dados sobre o mercado médico">
             <div className="stat-card">
               <div className="stat-number">59%</div>
               <div className="stat-label">
@@ -193,13 +192,13 @@ export default function Home() {
             <div className="stat-card">
               <div className="stat-number">42%</div>
               <div className="stat-label">
-                das clínicas têm dificuldade em confirmar consultas
+                dos médicos têm dificuldade em confirmar consultas
               </div>
             </div>
             <div className="stat-card">
               <div className="stat-number">R$144mil</div>
               <div className="stat-label">
-                perda anual com problemas de agendamento por clínica
+                perda anual com problemas de agendamento por consultório
               </div>
             </div>
           </div>
@@ -215,7 +214,7 @@ export default function Home() {
               Já tentou usar uma IA ou uma ferramenta e <strong>não saiu do lugar?</strong>
             </h2>
             <p className="section-desc">
-              A maioria das clínicas sabe que precisa se modernizar — mas entre contratar uma
+              A maioria dos médicos sabe que precisa se modernizar — mas entre contratar uma
               ferramenta e colocá-la para funcionar de verdade, existe um abismo. A Conduta existe
               para atravessar esse abismo com você.
             </p>
@@ -224,7 +223,7 @@ export default function Home() {
             <div className="pain-card reveal">
               <h4>&ldquo;Contratei uma IA e ninguém usa&rdquo;</h4>
               <p>
-                Ferramentas implementadas pela metade, sem treinamento do time e sem processo por
+                Ferramentas implementadas pela metade, sem acompanhamento e sem processo por
                 trás — não funcionam.
               </p>
             </div>
@@ -254,7 +253,7 @@ export default function Home() {
             >
               <h4>&ldquo;Demoro para responder e perco o paciente&rdquo;</h4>
               <p>
-                Paciente que não recebe resposta em minutos vai para a clínica concorrente.
+                Paciente que não recebe resposta em minutos vai para outro médico.
                 Atendimento lento custa novos pacientes todos os dias.
               </p>
             </div>
@@ -276,7 +275,7 @@ export default function Home() {
             </div>
             <p className="section-desc">
               Atuamos nas áreas que mais impactam resultado. A combinação de frentes é definida no
-              diagnóstico — personalizada para cada clínica.
+              diagnóstico — personalizada para cada médico.
             </p>
           </div>
 
@@ -287,7 +286,7 @@ export default function Home() {
               <div className="service-body">
                 <p>
                   Mapeamento e redesenho dos fluxos operacionais. Eliminação de gargalos, criação de
-                  rotinas, SOPs e checklists que o time realmente usa. Acompanhamento contínuo com
+                  rotinas, SOPs e checklists que funcionam na sua rotina. Acompanhamento contínuo com
                   reuniões e relatórios.
                 </p>
                 <div className="service-tags">
@@ -307,7 +306,7 @@ export default function Home() {
               <h3 className="service-name">Implementação de IA no atendimento</h3>
               <div className="service-body">
                 <p>
-                  Ajudamos a clínica a escolher, implementar e colocar em operação a IA certa para o
+                  Ajudamos você a escolher, implementar e colocar em operação a IA certa para o
                   seu atendimento — agendamento, confirmação, follow-up e comunicação automática com
                   pacientes via WhatsApp.
                 </p>
@@ -324,12 +323,12 @@ export default function Home() {
               style={{ '--d': '.2s' } as React.CSSProperties}
             >
               <div className="service-accent-line"></div>
-              <h3 className="service-name">Capacitação de Times</h3>
+              <h3 className="service-name">Treinamento Personalizado</h3>
               <div className="service-body">
                 <p>
-                  Treinamento completo da equipe para adoção dos novos processos e ferramentas.
-                  Gestão de mudança organizacional para garantir que a transformação aconteça na
-                  prática — não só no papel.
+                  Acompanhamento individual para que você e sua equipe dominem os novos processos e
+                  ferramentas. Gestão de mudança para garantir que a transformação aconteça na
+                  prática.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Onboarding</span>
@@ -348,7 +347,7 @@ export default function Home() {
               <div className="service-body">
                 <p>
                   Gestão de redes sociais, produção de conteúdo, Google Meu Negócio e reputação
-                  online. Posicionamento da clínica como referência e autoridade na sua especialidade
+                  online. Posicionamento como referência e autoridade na sua especialidade
                   e região.
                 </p>
                 <div className="service-tags">
@@ -372,8 +371,8 @@ export default function Home() {
               Ajudamos você a implementar IA no seu atendimento
             </h2>
             <p className="section-desc">
-              Não basta contratar uma ferramenta — ela precisa ser configurada, integrada ao processo
-              da clínica e o time precisa saber usar. É exatamente isso que a Conduta faz.
+              Não basta contratar uma ferramenta — ela precisa ser configurada, integrada ao seu
+              processo e você precisa saber usar. É exatamente isso que a Conduta faz.
             </p>
           </div>
 
@@ -383,7 +382,7 @@ export default function Home() {
               <div>
                 <h4>Escolhemos a ferramenta certa</h4>
                 <p>
-                  Avaliamos o perfil da clínica e indicamos a solução que realmente faz sentido — sem
+                  Avaliamos o seu perfil e indicamos a solução que realmente faz sentido — sem
                   empurrar o que não funciona.
                 </p>
               </div>
@@ -396,8 +395,8 @@ export default function Home() {
               <div>
                 <h4>Implementamos do zero</h4>
                 <p>
-                  Configuramos, integramos e colocamos em operação. A clínica não precisa saber nada
-                  de tecnologia para isso.
+                  Configuramos, integramos e colocamos em operação. Você não precisa saber nada
+                  de tecnologia.
                 </p>
               </div>
             </div>
@@ -407,10 +406,10 @@ export default function Home() {
             >
               <div className="tech-dot"></div>
               <div>
-                <h4>Treinamos o time</h4>
+                <h4>Te acompanhamos</h4>
                 <p>
-                  Sem treinamento, a ferramenta fica parada. Garantimos a adoção real pela equipe da
-                  clínica.
+                  Sem acompanhamento, a ferramenta fica parada. Garantimos que você vai dominar a
+                  ferramenta.
                 </p>
               </div>
             </div>
@@ -433,7 +432,7 @@ export default function Home() {
             Para automação via WhatsApp, utilizamos a{' '}
             <strong>Cloudia — IA especializada em saúde</strong>, integrada à API Oficial do
             WhatsApp (Meta). Isso garante estabilidade, entregabilidade e zero risco de banimento
-            do número da clínica.
+            do seu número.
           </div>
         </div>
       </section>
@@ -458,8 +457,8 @@ export default function Home() {
               <div>
                 <h3>Diagnóstico gratuito</h3>
                 <p>
-                  60 minutos para entender os processos, as dores e os objetivos da clínica. Remoto.
-                  Sem compromisso.
+                  60 minutos para entender os processos, as dores e os objetivos do seu consultório.
+                  Remoto. Sem compromisso.
                 </p>
               </div>
             </div>
@@ -497,7 +496,7 @@ export default function Home() {
               <div>
                 <h3>Implementação e Execução</h3>
                 <p>
-                  Configuramos as ferramentas, redesenhamos os processos e treinamos o time para que
+                  Configuramos as ferramentas, redesenhamos os processos e te acompanhamos para que
                   a mudança aconteça de verdade.
                 </p>
               </div>
@@ -526,8 +525,8 @@ export default function Home() {
             <span className="eyebrow">Para quem</span>
             <h2 className="section-title">Feito para quem cuida de pessoas</h2>
             <p className="section-desc">
-              A Conduta atende clínicas em diferentes estágios — do consultório que quer se organizar
-              ao grupo que quer escalar.
+              A Conduta atende médicos em diferentes momentos — do profissional que está começando
+              ao especialista que quer escalar.
             </p>
           </div>
           <div className="audience-grid">
@@ -544,10 +543,10 @@ export default function Home() {
                   <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                 </svg>
               </div>
-              <h3>Clínicas médicas</h3>
+              <h3>Médicos especialistas</h3>
               <p>
-                Clínicas gerais, especialidades e centros de saúde que querem processos mais
-                eficientes e menor taxa de no-show.
+                Profissionais de qualquer especialidade que querem organizar sua rotina, atrair mais
+                pacientes e reduzir faltas.
               </p>
             </div>
             <div
@@ -568,10 +567,10 @@ export default function Home() {
                   <path d="M9 14l3-2 3 2" />
                 </svg>
               </div>
-              <h3>Clínicas odontológicas</h3>
+              <h3>Dentistas</h3>
               <p>
-                Consultórios e clínicas de odontologia que precisam organizar agenda, atendimento e
-                comunicação com pacientes.
+                Cirurgiões-dentistas que precisam organizar agenda, atendimento e comunicação com
+                pacientes.
               </p>
             </div>
             <div
@@ -592,10 +591,10 @@ export default function Home() {
                   <rect x="16" y="10" width="6" height="11" rx="1" />
                 </svg>
               </div>
-              <h3>Grupos e redes</h3>
+              <h3>Médicos em crescimento</h3>
               <p>
-                Grupos com múltiplas unidades que precisam de padronização e escala com qualidade
-                consistente em todas as unidades.
+                Profissionais que atendem em múltiplos consultórios ou estão expandindo sua atuação
+                e precisam de padronização.
               </p>
             </div>
           </div>
@@ -607,11 +606,11 @@ export default function Home() {
         <div className="cta-inner reveal">
           <span className="cta-eyebrow">Diagnóstico gratuito</span>
           <h2>
-            Pronto para <strong>transformar</strong> sua clínica?
+            Pronto para <strong>transformar</strong> seu consultório?
           </h2>
           <p>
             Comece com um diagnóstico gratuito de 60 minutos. Sem custo, sem compromisso — e
-            descubra onde sua clínica pode melhorar.
+            descubra como atrair mais pacientes e organizar sua rotina.
           </p>
           <a
             href={WHATSAPP_URL}
