@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sobre a Conduta Saúde — Quem Somos',
+  title: 'Sobre a Conduta Saúde — Nossa Conduta',
   description:
-    'Conheça a equipe da Conduta Saúde. Consultoria especializada em gestão de processos e automação com IA para clínicas e consultórios.',
+    'Conheça o propósito, os valores e a equipe por trás da Conduta Saúde. Consultoria operacional e automação para clínicas e consultórios.',
   alternates: { canonical: 'https://condutasaude.com/sobre' },
 };
 
@@ -29,6 +29,29 @@ const breadcrumbSchema = {
   ],
 };
 
+const VALUES = [
+  {
+    title: 'Conduta antes de tudo',
+    text: 'Fazemos a coisa certa, mesmo quando ninguém está olhando. Se a solução mais simples resolve, é ela que recomendamos.',
+  },
+  {
+    title: 'Diagnóstico antes de receita',
+    text: 'Entendemos antes de propor. Escutamos antes de falar. Sem entender sua realidade, qualquer proposta é chute.',
+  },
+  {
+    title: 'Resultado que se mede',
+    text: 'Se não dá para medir, não dá para melhorar. Cada projeto tem KPIs desde o dia 1. Celebramos números, não sensações.',
+  },
+  {
+    title: 'Tecnologia a serviço do humano',
+    text: 'A IA existe para que você tenha mais tempo para o que só humanos fazem: olhar nos olhos, escutar, cuidar.',
+  },
+  {
+    title: 'Parceria, não projeto',
+    text: 'Não entregamos e sumimos. Estamos junto, mês a mês, ajustando, medindo, crescendo com você.',
+  },
+];
+
 const TEAM = [
   {
     name: 'Guilherme Ferreira',
@@ -36,7 +59,7 @@ const TEAM = [
     initials: 'GF',
     color: '#0EA5E9',
     description:
-      'Responsável pela implementação técnica, produto digital e operação da plataforma Cloudia de automação via WhatsApp. Conecta tecnologia e saúde para criar soluções que simplificam o dia a dia do profissional de saúde.',
+      'Transforma complexidade técnica em soluções que funcionam na rotina real. Opera a plataforma Cloudia e conecta tecnologia à realidade de quem cuida de pessoas.',
   },
   {
     name: 'Filipe',
@@ -44,7 +67,7 @@ const TEAM = [
     initials: 'FP',
     color: '#0369A1',
     description:
-      'Lidera o relacionamento com clientes e a estratégia comercial. Especialista em entender as necessidades de cada operação e traduzir isso em uma proposta que gera resultado real.',
+      'Escuta antes de vender. Entende a necessidade de cada clínica e traduz em uma proposta que faz sentido — sem promessa vazia, só resultado.',
   },
   {
     name: 'Hilary',
@@ -52,7 +75,7 @@ const TEAM = [
     initials: 'HY',
     color: '#0369A1',
     description:
-      'Conduz a consultoria de processos — mapeamento de fluxos, criação de SOPs, KPIs e gestão de mudança. Garante que cada implementação gere impacto mensurável no consultório.',
+      'A pessoa que entra na sua operação, mapeia cada processo e transforma caos em rotina. SOPs, KPIs, gestão de mudança — ela garante que a transformação aconteça.',
   },
 ];
 
@@ -67,63 +90,149 @@ export default function SobrePage() {
       {/* ── HERO ── */}
       <section className="hero">
         <div className="hero-inner">
-          <span className="hero-eyebrow hero-anim">Quem somos</span>
+          <span className="hero-eyebrow hero-anim">Nossa conduta</span>
           <h1 className="hero-anim" style={{ fontSize: 'clamp(32px, 4.5vw, 52px)' }}>
-            Processos claros. <strong>Tecnologia com propósito.</strong>
+            Quando a operação funciona,
+            <br />
+            <strong>o cuidado acontece.</strong>
           </h1>
           <p className="hero-sub hero-anim" style={{ maxWidth: '640px' }}>
-            A Conduta Saúde nasceu da convicção de que profissionais de saúde
-            merecem uma operação organizada, digital e humana — sem precisar entender de tecnologia.
+            Nosso nome não é acidental. Conduta é protocolo. É ação. É a decisão
+            sobre o que fazer em seguida. É o passo que transforma diagnóstico em resultado.
           </p>
         </div>
       </section>
 
-      {/* ── MISSÃO ── */}
+      {/* ── MANIFESTO ── */}
       <section className="section-pad" style={{ background: '#FFFFFF' }}>
-        <div style={{ maxWidth: '840px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '780px', margin: '0 auto' }}>
           <div className="reveal">
-            <span
+            <div
               style={{
-                display: 'inline-block',
-                background: 'rgba(14,165,233,0.08)',
-                color: '#0369A1',
-                padding: '4px 12px',
-                borderRadius: '50px',
-                fontSize: '11px',
-                fontWeight: 700,
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-                marginBottom: '20px',
+                borderLeft: '3px solid #0EA5E9',
+                paddingLeft: '32px',
+                marginBottom: '48px',
               }}
             >
-              Nossa missão
-            </span>
-            <h2
-              style={{
-                fontFamily: 'var(--font-work-sans)',
-                fontSize: 'clamp(24px, 3vw, 36px)',
-                fontWeight: 300,
-                color: 'var(--text)',
-                lineHeight: 1.3,
-                letterSpacing: '-0.5px',
-                marginBottom: '24px',
-              }}
-            >
-              Organizar a operação da sua clínica para que você se dedique
-              ao que importa: <strong>cuidar de pessoas.</strong>
-            </h2>
-            <p style={{ fontSize: '16px', lineHeight: 1.8, color: 'var(--text-secondary)', maxWidth: '700px' }}>
-              Combinamos consultoria de processos com automação inteligente para transformar
-              a rotina de profissionais de saúde. Do agendamento à presença digital,
-              cuidamos da estrutura para que sua clínica ou consultório funcione com previsibilidade,
-              eficiência e profissionalismo.
-            </p>
+              <p
+                style={{
+                  fontFamily: 'var(--font-work-sans)',
+                  fontSize: 'clamp(20px, 2.5vw, 28px)',
+                  fontWeight: 300,
+                  color: 'var(--text)',
+                  lineHeight: 1.6,
+                  letterSpacing: '-0.3px',
+                }}
+              >
+                Existe um momento em que todo profissional de saúde percebe:
+                cuidar de pessoas é a parte que ele ama.{' '}
+                <strong style={{ fontWeight: 600 }}>O resto é o que consome.</strong>
+              </p>
+            </div>
+
+            <div style={{ fontSize: '16px', lineHeight: 1.9, color: 'var(--text-secondary)' }}>
+              <p style={{ marginBottom: '20px' }}>
+                Agenda desorganizada. WhatsApp sem controle. Confirmação manual.
+                Paciente que não aparece. Equipe sobrecarregada. Processos que cada um
+                faz de um jeito.
+              </p>
+              <p style={{ marginBottom: '20px' }}>
+                A Conduta Saúde existe para resolver esse &ldquo;resto&rdquo;.
+              </p>
+              <p style={{ marginBottom: '20px' }}>
+                Não somos uma agência que faz sites bonitos.
+                Não somos um software que cobra por acesso.
+                Somos consultores que sentam com você, entendem sua operação,
+                e constroem — <strong>junto</strong> — o caminho para ela funcionar.
+              </p>
+              <p style={{ marginBottom: '20px', color: 'var(--text)', fontWeight: 500 }}>
+                Acreditamos que quando a operação funciona, o cuidado acontece.
+                Que a tecnologia certa, implementada da maneira certa, liberta.
+                Que um processo bem desenhado vale mais que qualquer ferramenta.
+                E que resultado se mede em números, não em sensações.
+              </p>
+              <p
+                style={{
+                  fontFamily: 'var(--font-work-sans)',
+                  fontSize: '18px',
+                  fontWeight: 600,
+                  color: 'var(--text)',
+                  marginTop: '32px',
+                }}
+              >
+                Essa é a nossa conduta.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* ── O QUE NOS DIFERENCIA ── */}
+      {/* ── PROPÓSITO + MISSÃO + VISÃO ── */}
       <section className="section-pad" style={{ background: 'var(--cream)' }}>
+        <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+              gap: '24px',
+            }}
+          >
+            {[
+              {
+                label: 'Propósito',
+                text: 'Transformar a saúde pela organização. Quando a operação funciona, o cuidado acontece.',
+              },
+              {
+                label: 'Missão',
+                text: 'Organizar a operação de clínicas e consultórios com consultoria de processos e automação inteligente — para que profissionais de saúde foquem no que importa: cuidar de pessoas.',
+              },
+              {
+                label: 'Visão',
+                text: 'Ser a referência em consultoria operacional para saúde no Brasil — a primeira ligação quando um profissional quer organizar, automatizar e crescer.',
+              },
+            ].map(({ label, text }) => (
+              <div
+                key={label}
+                className="reveal"
+                style={{
+                  background: '#FFFFFF',
+                  borderRadius: '16px',
+                  padding: '36px 32px',
+                  borderTop: '3px solid #0EA5E9',
+                }}
+              >
+                <span
+                  style={{
+                    display: 'inline-block',
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    letterSpacing: '0.08em',
+                    textTransform: 'uppercase',
+                    color: '#0369A1',
+                    marginBottom: '16px',
+                  }}
+                >
+                  {label}
+                </span>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-work-sans)',
+                    fontSize: '18px',
+                    fontWeight: 400,
+                    color: 'var(--text)',
+                    lineHeight: 1.6,
+                  }}
+                >
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── VALORES ── */}
+      <section className="section-pad" style={{ background: '#FFFFFF' }}>
         <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
           <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
             <span
@@ -140,7 +249,7 @@ export default function SobrePage() {
                 marginBottom: '16px',
               }}
             >
-              Por que a Conduta
+              Nossos valores
             </span>
             <h2
               style={{
@@ -152,65 +261,59 @@ export default function SobrePage() {
                 letterSpacing: '-0.5px',
               }}
             >
-              Não somos agência. Não somos software. <strong>Somos parceiros da sua operação.</strong>
+              Não são frases na parede. São <strong>critérios de decisão.</strong>
             </h2>
           </div>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(2, 1fr)',
-              gap: '24px',
-            }}
-          >
-            {[
-              {
-                icon: '🔍',
-                title: 'Diagnóstico real',
-                text: 'Antes de qualquer solução, entendemos sua rotina. 60 minutos de conversa gratuita para mapear o que realmente precisa de atenção.',
-              },
-              {
-                icon: '🤝',
-                title: 'Acompanhamento contínuo',
-                text: 'Não entregamos e sumimos. Monitoramos indicadores, ajustamos processos e te acompanhamos mês a mês.',
-              },
-              {
-                icon: '⚡',
-                title: 'Tecnologia acessível',
-                text: 'Automação via WhatsApp, sites profissionais e ferramentas digitais — tudo configurado e explicado para você.',
-              },
-              {
-                icon: '🏥',
-                title: 'Especialistas em saúde',
-                text: 'Entendemos as particularidades de uma operação de saúde: CFM, LGPD, jornada do paciente, no-show, agenda.',
-              },
-            ].map(({ icon, title, text }) => (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+            {VALUES.map(({ title, text }, i) => (
               <div
                 key={title}
                 className="reveal"
                 style={{
-                  background: '#FFFFFF',
+                  display: 'grid',
+                  gridTemplateColumns: '48px 1fr',
+                  gap: '24px',
+                  alignItems: 'start',
+                  background: 'var(--cream)',
                   borderRadius: '16px',
                   padding: '32px',
-                  boxShadow: '0 2px 12px rgba(0,0,0,0.04)',
                   border: '1px solid rgba(0,0,0,0.04)',
                 }}
               >
-                <div style={{ fontSize: '28px', marginBottom: '16px' }}>{icon}</div>
-                <h3
+                <div
                   style={{
+                    width: '48px',
+                    height: '48px',
+                    borderRadius: '12px',
+                    background: 'rgba(14,165,233,0.08)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
                     fontFamily: 'var(--font-work-sans)',
+                    fontWeight: 700,
                     fontSize: '18px',
-                    fontWeight: 600,
-                    color: 'var(--text)',
-                    marginBottom: '10px',
+                    color: '#0369A1',
                   }}
                 >
-                  {title}
-                </h3>
-                <p style={{ fontSize: '14.5px', lineHeight: 1.7, color: 'var(--text-secondary)' }}>
-                  {text}
-                </p>
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <div>
+                  <h3
+                    style={{
+                      fontFamily: 'var(--font-work-sans)',
+                      fontSize: '20px',
+                      fontWeight: 600,
+                      color: 'var(--text)',
+                      marginBottom: '8px',
+                    }}
+                  >
+                    {title}
+                  </h3>
+                  <p style={{ fontSize: '15px', lineHeight: 1.7, color: 'var(--text-secondary)' }}>
+                    {text}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -218,7 +321,7 @@ export default function SobrePage() {
       </section>
 
       {/* ── EQUIPE ── */}
-      <section className="section-pad" style={{ background: '#FFFFFF' }}>
+      <section className="section-pad" style={{ background: 'var(--cream)' }}>
         <div style={{ maxWidth: '1080px', margin: '0 auto' }}>
           <div className="reveal" style={{ textAlign: 'center', marginBottom: '56px' }}>
             <span
@@ -263,7 +366,7 @@ export default function SobrePage() {
                 key={name}
                 className="reveal"
                 style={{
-                  background: 'var(--cream)',
+                  background: '#FFFFFF',
                   borderRadius: '20px',
                   padding: '40px 32px',
                   textAlign: 'center',
@@ -323,40 +426,29 @@ export default function SobrePage() {
 
       {/* ── CTA ── */}
       <section
-        className="section-pad"
-        style={{
-          background: 'linear-gradient(180deg, var(--cream) 0%, #FFFFFF 100%)',
-          textAlign: 'center',
-        }}
+        className="cta-section"
+        style={{ textAlign: 'center' }}
       >
-        <div className="reveal" style={{ maxWidth: '600px', margin: '0 auto' }}>
-          <h2
-            style={{
-              fontFamily: 'var(--font-work-sans)',
-              fontSize: 'clamp(24px, 3.5vw, 40px)',
-              fontWeight: 300,
-              color: 'var(--text)',
-              lineHeight: 1.2,
-              letterSpacing: '-1px',
-              marginBottom: '16px',
-            }}
-          >
-            Vamos <strong>conversar?</strong>
+        <div className="cta-inner reveal">
+          <span className="cta-eyebrow">O primeiro passo</span>
+          <h2>
+            Pronto para ter a <strong>conduta certa?</strong>
           </h2>
-          <p
-            style={{
-              fontSize: '16px',
-              lineHeight: 1.7,
-              color: 'var(--text-secondary)',
-              marginBottom: '32px',
-            }}
-          >
-            Agende um diagnóstico gratuito de 60 minutos. Sem compromisso, sem jargão técnico
-            — só uma conversa sobre como organizar a sua operação.
+          <p>
+            60 minutos de conversa. Sem custo, sem compromisso.
+            Só a clareza que você precisa para dar o próximo passo.
           </p>
-          <a href={WHATSAPP_URL} target="_blank" rel="noopener" className="btn-primary">
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener"
+            className="btn-cta"
+          >
             Agendar diagnóstico gratuito
           </a>
+          <p className="cta-note">
+            Operação organizada, cuidado humanizado.
+          </p>
         </div>
       </section>
     </>
