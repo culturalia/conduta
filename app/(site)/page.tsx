@@ -112,7 +112,7 @@ const faqSchema = {
       name: 'Como funciona a automação do WhatsApp?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade total e risco mínimo de banimento.',
+        text: 'Utilizamos a Cloudia, plataforma de IA especializada em saúde, integrada à API Oficial do WhatsApp (Meta). Estabilidade e entregabilidade garantidas.',
       },
     },
     {
@@ -311,7 +311,7 @@ export default function Home() {
                 <p>
                   Escolhemos a ferramenta certa, configuramos, integramos e ficamos
                   junto até a equipe dominar. Agendamento, confirmação, follow-up
-                  — tudo automático, via WhatsApp, sem risco para o seu número.
+                  — tudo automático, via WhatsApp, com a API Oficial da Meta.
                 </p>
                 <div className="service-tags">
                   <span className="service-tag">Automação WhatsApp</span>
@@ -435,8 +435,7 @@ export default function Home() {
           <div className="api-note reveal">
             Para automação via WhatsApp, utilizamos a{' '}
             <strong>Cloudia — IA especializada em saúde</strong>, integrada à API Oficial do
-            WhatsApp (Meta). Estabilidade total, entregabilidade garantida e risco mínimo de
-            banimento do seu número.
+            WhatsApp (Meta). Estabilidade e entregabilidade garantidas pela API Oficial.
           </div>
         </div>
       </section>
