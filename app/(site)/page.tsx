@@ -143,6 +143,37 @@ export default function Home() {
       <section className="hero" id="inicio">
         <div className="hero-inner hero-split">
           <div className="hero-text">
+            {/* Logo reforço de marca na hero */}
+            <div className="hero-brand hero-anim">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 520 120"
+                className="hero-brand-logo"
+                aria-label="Conduta Saúde"
+              >
+                <defs>
+                  <linearGradient id="hg1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style={{ stopColor: '#0EA5E9' }} />
+                    <stop offset="100%" style={{ stopColor: '#14B8A6' }} />
+                  </linearGradient>
+                  <linearGradient id="hg2" x1="0%" y1="0%" x2="100%" y2="0%">
+                    <stop offset="0%" style={{ stopColor: '#0EA5E9' }} />
+                    <stop offset="100%" style={{ stopColor: '#14B8A6' }} />
+                  </linearGradient>
+                  <linearGradient id="hg3" x1="0%" y1="0%" x2="100%" y2="0%" gradientUnits="userSpaceOnUse">
+                    <stop offset="0%" style={{ stopColor: '#0EA5E9', stopOpacity: 0 }} />
+                    <stop offset="18%" style={{ stopColor: '#0EA5E9', stopOpacity: 1 }} />
+                    <stop offset="82%" style={{ stopColor: '#14B8A6', stopOpacity: 1 }} />
+                    <stop offset="100%" style={{ stopColor: '#14B8A6', stopOpacity: 0 }} />
+                  </linearGradient>
+                </defs>
+                <path d="M 90 15 A 48 48 0 1 0 90 105" fill="none" stroke="url(#hg1)" strokeWidth="7" strokeLinecap="round" />
+                <polyline points="48,60 62,60 68,38 75,82 82,48 89,60 100,60 112,60" fill="none" stroke="url(#hg3)" strokeWidth="5.5" strokeLinecap="round" strokeLinejoin="round" />
+                <text x="128" y="56" fontFamily="Inter,'Helvetica Neue',Arial,sans-serif" fontSize="34" fontWeight="700" letterSpacing="-0.5" fill="#1A1A2E">conduta</text>
+                <line x1="128" y1="64" x2="390" y2="64" stroke="rgba(26,26,46,0.08)" strokeWidth="1" />
+                <text x="128" y="88" fontFamily="Inter,'Helvetica Neue',Arial,sans-serif" fontSize="26" fontWeight="300" letterSpacing="6" fill="url(#hg2)">SAÚDE</text>
+              </svg>
+            </div>
             <span className="hero-eyebrow hero-anim">Gestão e automação para saúde</span>
             <h1 className="hero-anim">
               Você cuida de pessoas.

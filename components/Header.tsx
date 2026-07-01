@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, useCallback } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 
@@ -16,46 +16,26 @@ const NAV_LINKS = [
 
 export default function Header() {
   const pathname = usePathname();
-  const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
-  const lastScrollY = useRef(0);
-  const accumulated = useRef(0);
 
   const closeMenu = useCallback(() => setMenuOpen(false), []);
 
   useEffect(() => {
     const onScroll = () => {
       const current = window.scrollY;
-      const delta = current - lastScrollY.current;
-      lastScrollY.current = current;
 
       // Scroll progress bar
       const docHeight = document.documentElement.scrollHeight - window.innerHeight;
       setScrollProgress(docHeight > 0 ? current / docHeight : 0);
 
       // Close mobile menu on scroll
-      if (menuOpen && Math.abs(delta) > 10) {
+      if (menuOpen && Math.abs(current - (onScroll as any)._lastY) > 10) {
         setMenuOpen(false);
       }
-
-      // Auto-hide nav
-      if (current < 80) {
-        accumulated.current = 0;
-        setHidden(false);
-        return;
-      }
-
-      if (delta > 0) {
-        accumulated.current += delta;
-        if (accumulated.current > 15) {
-          setHidden(true);
-        }
-      } else if (delta < 0) {
-        accumulated.current = 0;
-        setHidden(false);
-      }
+      (onScroll as any)._lastY = current;
     };
+    (onScroll as any)._lastY = 0;
 
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
@@ -73,7 +53,7 @@ export default function Header() {
         className="site-nav"
         aria-label="Navegação principal"
         style={{
-          transform: hidden && !menuOpen ? "translateY(-100%)" : "translateY(0)",
+          transform: "translateY(0)",
         }}
       >
         {/* Scroll progress bar */}
@@ -87,8 +67,8 @@ export default function Header() {
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 520 120"
-            width="176"
-            height="40"
+            width="200"
+            height="46"
             aria-hidden="true"
           >
             <defs>
